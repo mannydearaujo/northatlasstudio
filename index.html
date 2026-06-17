@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Local growth agency — websites, local SEO & lead tracking that get the phone ringing</title>
+<meta name="description" content="I build and improve local business websites that rank better, convert better, and give owners real visibility into leads. Real builds: Golden Paws Pet Grooming & AlphaGutterCo." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  /* =========================================================
+     EDIT ME: swap the wordmark text, the contact email, and
+     replace every [PLACEHOLDER] with your real numbers/URLs.
+     ========================================================= */
+  :root{
+    --ink:#121310;
+    --ink-2:#1c1d18;
+    --paper:#f4f1ea;
+    --paper-2:#eae5da;
+    --accent:#ff4a1c;
+    --accent-ink:#c93308;
+    --muted:#56564e;
+    --muted-on-dark:#a6a69b;
+    --line:rgba(18,19,16,.14);
+    --line-on-dark:rgba(244,241,234,.16);
+    --maxw:1180px;
+    --r:14px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,h4,.display{font-family:'Space Grotesk',sans-serif;letter-spacing:-.02em;line-height:1.02}
+  .serif{font-family:'Instrument Serif',serif;font-weight:400;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .accent{color:var(--accent)}
+  .eyebrow{
+    font-family:'Space Grotesk',sans-serif;
+    font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--accent-ink);display:inline-flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);display:inline-block}
+  .on-dark .eyebrow{color:var(--accent)}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;
+    padding:15px 26px;border-radius:999px;border:1.5px solid var(--ink);
+    transition:transform .25s var(--ease),background .25s var(--ease),color .25s var(--ease);
+    cursor:pointer;white-space:nowrap;
+  }
+  .btn svg{transition:transform .3s var(--ease)}
+  .btn:hover svg{transform:translateX(4px)}
+  .btn-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);background:var(--accent-ink);border-color:var(--accent-ink)}
+  .btn-dark{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+  .btn-dark:hover{transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--paper)}
+  .on-dark .btn-ghost{color:var(--paper);border-color:var(--paper)}
+  .on-dark .btn-ghost:hover{background:var(--paper);color:var(--ink)}
+
+  /* ---------- header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(244,241,234,.82);
+    backdrop-filter:saturate(140%) blur(12px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;letter-spacing:-.03em;display:flex;align-items:center;gap:9px}
+  .logo .dot{width:11px;height:11px;background:var(--accent);border-radius:3px;transform:rotate(45deg);display:inline-block}
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{font-size:15px;font-weight:500;color:var(--muted);transition:color .2s}
+  .nav-links a:hover{color:var(--ink)}
+  .nav .btn{padding:11px 20px;font-size:14px}
+  @media(max-width:860px){.nav-links a:not(.btn){display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:clamp(64px,9vw,128px) 0 clamp(56px,7vw,96px);position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(40px,7vw,82px);font-weight:700;max-width:14ch}
+  .hero h1 .mark{position:relative;white-space:nowrap}
+  .hero h1 .mark::after{
+    content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;
+    background:var(--accent);opacity:.9;z-index:-1;border-radius:2px;
+  }
+  .hero .lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:54ch;margin-top:28px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+  .trust{display:flex;gap:30px;flex-wrap:wrap;margin-top:54px;padding-top:30px;border-top:1px solid var(--line)}
+  .trust .t-item{display:flex;flex-direction:column}
+  .trust .t-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(26px,3vw,34px)}
+  .trust .t-lab{font-size:13.5px;color:var(--muted);margin-top:2px}
+
+  /* ---------- section scaffolding ---------- */
+  section{padding:clamp(72px,9vw,120px) 0}
+  .sec-head{max-width:62ch}
+  .sec-head h2{font-size:clamp(30px,4.5vw,52px);font-weight:700;margin-top:18px}
+  .sec-head p{font-size:18px;color:var(--muted);margin-top:18px;max-width:56ch}
+  .on-dark{background:var(--ink);color:var(--paper)}
+  .on-dark .sec-head p{color:var(--muted-on-dark)}
+  .on-dark h2,.on-dark h3{color:var(--paper)}
+
+  /* ---------- results / proof ---------- */
+  .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+  @media(max-width:840px){.proof-grid{grid-template-columns:1fr}}
+  .proof-card{
+    border:1px solid var(--line-on-dark);border-radius:var(--r);padding:34px;
+    background:var(--ink-2);transition:transform .35s var(--ease),border-color .35s var(--ease);
+  }
+  .proof-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+  .proof-card .pc-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .proof-card .pc-name{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:22px}
+  .proof-card .pc-tag{font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);border:1px solid var(--line-on-dark);padding:5px 11px;border-radius:999px}
+  .proof-card .pc-sub{color:var(--muted-on-dark);font-size:15px;margin-top:6px}
+  .pc-stats{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:28px 0 24px;padding:24px 0;border-top:1px solid var(--line-on-dark);border-bottom:1px solid var(--line-on-dark)}
+  .pc-stat .s-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:clamp(24px,3vw,32px);color:var(--paper)}
+  .pc-stat .s-lab{font-size:13px;color:var(--muted-on-dark);margin-top:4px}
+  .pc-list{list-style:none;display:flex;flex-direction:column;gap:11px}
+  .pc-list li{display:flex;gap:11px;font-size:15px;color:#dcdcd3}
+  .pc-list li svg{flex:0 0 auto;margin-top:3px;color:var(--accent)}
+
+  /* ---------- services ---------- */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px}
+  @media(max-width:900px){.svc-grid{grid-template-columns:1fr;max-width:560px}}
+  .svc{border:1px solid var(--line);border-radius:var(--r);padding:32px;background:#fbfaf6;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .svc:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(18,19,16,.4)}
+  .svc .ic{width:46px;height:46px;border-radius:11px;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+  .svc h3{font-size:21px;font-weight:600}
+  .svc p{color:var(--muted);font-size:15.5px;margin-top:12px}
+  .svc .sub{font-size:13.5px;color:var(--accent-ink);font-weight:600;margin-top:16px;font-family:'Space Grotesk',sans-serif}
+
+  /* ---------- why ---------- */
+  .why-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;margin-top:24px}
+  @media(max-width:880px){.why-grid{grid-template-columns:1fr;gap:40px}}
+  .why-list{display:flex;flex-direction:column;gap:0}
+  .why-item{padding:26px 0;border-top:1px solid var(--line);display:flex;gap:22px}
+  .why-item:last-child{border-bottom:1px solid var(--line)}
+  .why-item .wn{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--accent);flex:0 0 auto}
+  .why-item h3{font-size:19px;font-weight:600}
+  .why-item p{color:var(--muted);font-size:15.5px;margin-top:7px}
+
+  /* ---------- process ---------- */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px;counter-reset:step}
+  @media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:540px){.steps{grid-template-columns:1fr}}
+  .step{position:relative;padding-top:28px;border-top:2px solid var(--ink)}
+  .step .num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;letter-spacing:.1em;color:var(--accent-ink)}
+  .step h3{font-size:20px;font-weight:600;margin-top:14px}
+  .step p{color:var(--muted);font-size:15px;margin-top:10px}
+
+  /* ---------- case preview cards ---------- */
+  .cases{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:56px}
+  @media(max-width:840px){.cases{grid-template-columns:1fr}}
+  .case{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .case:hover{transform:translateY(-4px);box-shadow:0 22px 50px -28px rgba(18,19,16,.45)}
+  .case-vis{height:190px;position:relative;display:flex;align-items:flex-end;padding:24px;color:#fff;overflow:hidden}
+  .case-vis.gp{background:linear-gradient(150deg,#1d3b2f,#0f231b)}
+  .case-vis.ag{background:linear-gradient(150deg,#2a2a2e,#121316)}
+  .case-vis .badge{position:absolute;top:20px;right:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+  .case-vis .cv-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:25px;position:relative;z-index:2}
+  .case-vis .cv-glyph{position:absolute;right:-10px;bottom:-30px;font-size:150px;opacity:.12;line-height:1;font-family:'Space Grotesk',sans-serif;font-weight:700}
+  .case-body{padding:28px}
+  .case-body .ind{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .case-body h3{font-size:21px;font-weight:600;margin-top:8px}
+  .case-body p{color:var(--muted);font-size:15px;margin-top:12px}
+  .case-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .case-tags span{font-size:12.5px;font-weight:500;color:var(--ink);background:var(--paper-2);padding:6px 12px;border-radius:999px}
+  .case-link{display:inline-flex;align-items:center;gap:8px;margin-top:22px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:15px;color:var(--accent-ink)}
+  .case-link svg{transition:transform .3s var(--ease)}
+  .case:hover .case-link svg{transform:translateX(4px)}
+
+  /* ---------- FAQ ---------- */
+  .faq-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:56px;margin-top:24px}
+  @media(max-width:880px){.faq-grid{grid-template-columns:1fr;gap:32px}}
+  .faq-item{border-top:1px solid var(--line)}
+  .faq-item:last-child{border-bottom:1px solid var(--line)}
+  .faq-q{width:100%;background:none;border:none;text-align:left;cursor:pointer;padding:24px 0;display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:18px;color:var(--ink)}
+  .faq-q .pm{flex:0 0 auto;width:26px;height:26px;border:1.5px solid var(--ink);border-radius:50%;position:relative;transition:background .25s,border-color .25s}
+  .faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;background:var(--ink);left:50%;top:50%;transform:translate(-50%,-50%);transition:opacity .25s,background .25s}
+  .faq-q .pm::before{width:11px;height:1.5px}
+  .faq-q .pm::after{width:1.5px;height:11px}
+  .faq-item.open .pm{background:var(--accent);border-color:var(--accent)}
+  .faq-item.open .pm::before,.faq-item.open .pm::after{background:#fff}
+  .faq-item.open .pm::after{opacity:0}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+  .faq-a p{padding:0 0 24px;color:var(--muted);font-size:16px;max-width:60ch}
+
+  /* ---------- final CTA ---------- */
+  .cta-final{text-align:center}
+  .cta-final h2{font-size:clamp(34px,6vw,68px);font-weight:700;max-width:16ch;margin:18px auto 0}
+  .cta-final p{font-size:19px;color:var(--muted-on-dark);max-width:50ch;margin:22px auto 0}
+  .cta-final .hero-cta{justify-content:center;margin-top:40px}
+  .cta-final .reassure{margin-top:26px;font-size:14.5px;color:var(--muted-on-dark)}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--muted-on-dark);padding:54px 0 40px;border-top:1px solid var(--line-on-dark)}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px}
+  .foot .logo{color:var(--paper)}
+  .foot a{color:var(--muted-on-dark);transition:color .2s}
+  .foot a:hover{color:var(--paper)}
+  .foot-links{display:flex;gap:26px;font-size:15px}
+  .foot-copy{font-size:13.5px;color:#6f6f66;margin-top:30px;padding-top:24px;border-top:1px solid var(--line-on-dark)}
+
+  /* ---------- reveal anim ---------- */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo"><span class="dot"></span>Manny&nbsp;de&nbsp;Araujo</a>
+    <nav class="nav-links">
+      <a href="#proof">Results</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="btn btn-dark">Get a free site audit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow reveal">Growth agency for local service businesses</span>
+    <h1 class="reveal" style="margin-top:24px">
+      Websites that <span class="mark">rank, convert,</span> and get the phone ringing.
+    </h1>
+    <p class="lede reveal">
+      I build and improve local business websites with proper SEO structure and real lead tracking —
+      so you stop guessing and start seeing exactly how many calls, quote requests, and bookings your site brings in.
+    </p>
+    <div class="hero-cta reveal">
+      <a href="#contact" class="btn btn-primary">
+        Get a free site audit
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#proof" class="btn btn-ghost">See real results</a>
+    </div>
+    <div class="trust reveal">
+      <div class="t-item"><span class="t-num">2</span><span class="t-lab">Live builds shipped &amp; tracked</span></div>
+      <div class="t-item"><span class="t-num">100%</span><span class="t-lab">Lead tracking verified in GA4</span></div>
+      <div class="t-item"><span class="t-num">Calls · Quotes · Bookings</span><span class="t-lab">Measured, not guessed</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF / RESULTS ============ -->
+<section class="on-dark" id="proof">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Real builds, real tracking</span>
+      <h2>Proof, not promises.</h2>
+      <p>These aren't strategy decks. They're live business websites I rebuilt for conversion and wired with
+         lead tracking that's confirmed firing in Google Analytics 4 — so every owner can see their results week to week.</p>
+    </div>
+
+    <div class="proof-grid">
+      <!-- Golden Paws -->
+      <article class="proof-card reveal">
+        <div class="pc-top">
+          <div>
+            <div class="pc-name">Golden Paws Pet Grooming</div>
+            <div class="pc-sub">Pet services · booking-driven</div>
+          </div>
+          <span class="pc-tag">Live</span>
+        </div>
+        <div class="pc-stats">
+          <div class="pc-stat"><div class="s-num">[+X%]</div><div class="s-lab">Booking clicks vs. baseline</div></div>
+          <div class="pc-stat"><div class="s-num">5</div><div class="s-lab">Lead events tracked in GA4</div></div>
+        </div>
+        <ul class="pc-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Homepage, booking, &amp; service-area pages rebuilt for stronger conversion paths</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tracking live for bookings, phone taps, texts &amp; booking-widget interaction</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Owner now sees real bookings &amp; calls in a weekly report</li>
+        </ul>
+      </article>
+
+      <!-- AlphaGutterCo -->
+      <article class="proof-card reveal">
+        <div class="pc-top">
+          <div>
+            <div class="pc-name">AlphaGutterCo</div>
+            <div class="pc-sub">Home services · quote-driven</div>
+          </div>
+          <span class="pc-tag">Live</span>
+        </div>
+        <div class="pc-stats">
+          <div class="pc-stat"><div class="s-num">[+X%]</div><div class="s-lab">Quote requests vs. baseline</div></div>
+          <div class="pc-stat"><div class="s-num">5</div><div class="s-lab">Lead events tracked in GA4</div></div>
+        </div>
+        <ul class="pc-list">
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Homepage, service-area &amp; local town pages rebuilt for quote &amp; call conversion</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Tracking live for quote submits, phone taps, texts &amp; email clicks</li>
+          <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3.2 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Local pages built to rank for the towns the business actually serves</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What I do</span>
+      <h2>Three things, done properly.</h2>
+      <p>No bloated retainers for work you can't see. Every service ends in something measurable: more visibility, more conversions, more leads you can actually count.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 8h18M7 21h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Conversion-focused websites</h3>
+        <p>New builds and rebuilds for local service businesses — fast, sharp, and structured so visitors actually call, book, or request a quote instead of bouncing.</p>
+        <div class="sub">Build &amp; rebuild →</div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Local SEO &amp; landing pages</h3>
+        <p>Service-area and per-town pages built to rank where your customers are searching — so the right local people find you before they find a competitor.</p>
+        <div class="sub">Get found locally →</div>
+      </article>
+
+      <article class="svc reveal">
+        <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Lead tracking &amp; reporting</h3>
+        <p>GA4 set up and verified to track every call, text, quote, and booking — delivered in a plain-English weekly report so you finally know what your site is doing.</p>
+        <div class="sub">See your leads →</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY THIS WORKS ============ -->
+<section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="reveal">
+        <span class="eyebrow">Why this works</span>
+        <h2 class="serif" style="font-size:clamp(30px,4.5vw,52px);margin-top:18px;line-height:1.05">
+          Most local sites look fine and <span class="accent">leak leads silently.</span>
+        </h2>
+        <p style="color:var(--muted);font-size:18px;margin-top:20px;max-width:46ch">
+          The problem usually isn't a prettier logo. It's weak conversion paths, no local SEO structure,
+          and zero visibility into what's actually generating calls. I fix all three — and use AI behind the
+          scenes for faster reporting and operations, never as the pitch.
+        </p>
+      </div>
+
+      <div class="why-list">
+        <div class="why-item reveal"><span class="wn">01</span><div><h3>Built for the action, not the applause</h3><p>Every page is structured around one job: turn a visitor into a call, quote, or booking.</p></div></div>
+        <div class="why-item reveal"><span class="wn">02</span><div><h3>Local SEO baked into the structure</h3><p>Service-area and town pages so you show up for the searches that bring real local customers.</p></div></div>
+        <div class="why-item reveal"><span class="wn">03</span><div><h3>You can finally see your leads</h3><p>Verified GA4 tracking means results are measured, not assumed. No more "I think the site's working."</p></div></div>
+        <div class="why-item reveal"><span class="wn">04</span><div><h3>Real builds, not slide decks</h3><p>I've shipped and improved live business websites end-to-end — design, SEO, and tracking included.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>A simple, four-step process.</h2>
+      <p>No drawn-out agency runaround. You always know what's happening and what it's for.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal"><div class="num">STEP 01</div><h3>Free site audit</h3><p>I review your current site, local visibility, and whether you're tracking leads at all — then show you the gaps.</p></div>
+      <div class="step reveal"><div class="num">STEP 02</div><h3>Build &amp; improve</h3><p>I rebuild the pages that matter for conversion and structure them for local SEO.</p></div>
+      <div class="step reveal"><div class="num">STEP 03</div><h3>Install tracking</h3><p>GA4 set up and verified so every call, quote, and booking is captured — nothing guessed.</p></div>
+      <div class="step reveal"><div class="num">STEP 04</div><h3>Report &amp; refine</h3><p>A weekly report shows real leads, and I keep tuning what converts. Growth you can watch.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE PREVIEW CARDS ============ -->
+<section style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Case studies</span>
+      <h2>Two businesses, two different goals.</h2>
+      <p>Same approach: rebuild for conversion, structure for local search, and prove it with tracking.</p>
+    </div>
+
+    <div class="cases">
+      <article class="case reveal">
+        <div class="case-vis gp">
+          <span class="badge">Pet services</span>
+          <span class="cv-glyph">GP</span>
+          <span class="cv-name">Golden Paws<br>Pet Grooming</span>
+        </div>
+        <div class="case-body">
+          <div class="ind">Goal · more bookings &amp; calls</div>
+          <h3>From flat pages to a booking machine</h3>
+          <p>Rebuilt the homepage, booking, and service-area pages around clear conversion paths, then wired up five GA4 lead events so every booking and call is now tracked.</p>
+          <div class="case-tags"><span>Website rebuild</span><span>Booking funnel</span><span>GA4 tracking</span><span>Local SEO</span></div>
+          <a href="#contact" class="case-link">Ask about this build <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-vis ag">
+          <span class="badge">Home services</span>
+          <span class="cv-glyph">AG</span>
+          <span class="cv-name">AlphaGutterCo</span>
+        </div>
+        <div class="case-body">
+          <div class="ind">Goal · more quote requests</div>
+          <h3>Local pages built to win the quote</h3>
+          <p>Rebuilt the homepage and added service-area and town pages aimed at quote and phone conversion, with five GA4 events tracking submits, calls, texts, and email clicks.</p>
+          <div class="case-tags"><span>Local landing pages</span><span>Quote funnel</span><span>GA4 tracking</span><span>Local SEO</span></div>
+          <a href="#contact" class="case-link">Ask about this build <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="reveal">
+        <span class="eyebrow">FAQ</span>
+        <h2 style="font-size:clamp(30px,4.5vw,48px);font-weight:700;margin-top:18px">Questions, answered straight.</h2>
+        <p style="color:var(--muted);font-size:17px;margin-top:18px">Still unsure? The free site audit is the easiest way to find out if I can help.</p>
+        <a href="#contact" class="btn btn-dark" style="margin-top:24px">Get your free audit</a>
+      </div>
+
+      <div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Do you only build new sites, or improve existing ones?<span class="pm"></span></button>
+          <div class="faq-a"><p>Both. Plenty of businesses already have a site that just isn't converting or ranking. I'll rebuild the pages that matter and add tracking — you don't always need to start from scratch.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What exactly does "lead tracking" mean?<span class="pm"></span></button>
+          <div class="faq-a"><p>I set up Google Analytics 4 to record real actions — phone taps, quote requests, bookings, texts, email clicks — and verify each one is firing. You get a weekly report showing how many real leads your site generated, instead of vague traffic numbers.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">Is this an "AI agency"?<span class="pm"></span></button>
+          <div class="faq-a"><p>No. This is a practical growth agency for local service businesses. I use AI behind the scenes to work faster on reporting and operations where it genuinely helps — but what you're buying is a better website, real local SEO, and visibility into your leads.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What kind of businesses do you work with?<span class="pm"></span></button>
+          <div class="faq-a"><p>Local, owner-operated service businesses — contractors, home services, pet services, and similar. If you rely on local customers calling, booking, or requesting quotes, this is built for you.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">How long does a build take?<span class="pm"></span></button>
+          <div class="faq-a"><p>It depends on scope, but most conversion rebuilds move quickly because the process is repeatable. We'll set clear timelines in the audit so you know exactly what to expect.</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <button class="faq-q">What happens after launch?<span class="pm"></span></button>
+          <div class="faq-a"><p>You can take the keys and run, or stay on a simple monthly plan where I send your weekly lead report, keep improving what converts, and add new pages or content as you grow.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="on-dark" id="contact">
+  <div class="wrap cta-final">
+    <span class="eyebrow reveal" style="display:inline-flex">Let's talk</span>
+    <h2 class="reveal">Find out what your website is really doing.</h2>
+    <p class="reveal">Send me your site and I'll do a free audit — current conversion gaps, local SEO issues, and whether you're tracking a single lead. No pressure, no jargon.</p>
+    <div class="hero-cta reveal">
+      <a href="mailto:mannydearaujo@gmail.com?subject=Free%20site%20audit%20request&body=Hi%20Manny%2C%20here%27s%20my%20website%3A%20" class="btn btn-primary">
+        Email me for a free audit
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="mailto:mannydearaujo@gmail.com" class="btn btn-ghost">mannydearaujo@gmail.com</a>
+    </div>
+    <div class="reassure reveal">Typically replies same day · Local service businesses only</div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="logo"><span class="dot"></span>Manny de Araujo</a>
+      <div class="foot-links">
+        <a href="#proof">Results</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+        <a href="mailto:mannydearaujo@gmail.com">Contact</a>
+      </div>
+    </div>
+    <div class="foot-copy">
+      © <span id="yr"></span> Manny de Araujo — Growth agency for local service businesses. Websites · Local SEO · Lead tracking.
+    </div>
+  </div>
+</footer>
+
+<script>
+  // year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click', function(){
+      var item = q.parentElement;
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){
+        i.classList.remove('open');
+        i.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!open){
+        item.classList.add('open');
+        var a = item.querySelector('.faq-a');
+        a.style.maxHeight = a.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // scroll reveal
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:.14, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el,i){
+    el.style.transitionDelay = (i % 4 * 0.06) + 's';
+    io.observe(el);
+  });
+</script>
+</body>
+</html>
