@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agency-site-rho-pearl.vercel.app/sitemap.xml
