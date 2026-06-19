@@ -26,5 +26,10 @@ Modern professional tech brand with:
 - `assets/brand/mockups/` contains concept boards and rendering references.
 - `styles/northpoint-brand.css` contains reusable CSS tokens/classes.
 
-## Implementation rule
-Do not swap this directly into the live page until we choose the exact nav/hero update. For now, use this pack as the brand source-of-truth.
+## Implementation status — done
+The mark is live in production: the nav logo, favicon, and apple-touch-icon all reference
+this pack (`assets/brand/svg/northpoint-mark.svg`, `assets/brand/svg/favicon.svg`,
+`assets/brand/png/favicon-512.png`). Verified rendering correctly on
+`https://northpoint-digital.vercel.app` as of 2026-06-19. This pack remains the
+brand source-of-truth for anything not yet on the site (social banners, proposal
+covers, future hero treatments).
