@@ -12,9 +12,15 @@ npm-debug.log*
 .env
 .env.local
 
+# Generated audit reports — keep local, never deploy
+ai-search-audit-*.html
+
 # Internal strategy docs — keep local, never deploy
 GA4-lead-logic.md
 weekly-report-template.md
 90-day-rollout-plan.md
 ai-search-reference.md
 NEXT-STEPS.md
+BUSINESS-BLUEPRINT.md
+audit-kpi-dashboard-examples.html
+scripts/

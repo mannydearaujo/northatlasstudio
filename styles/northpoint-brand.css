@@ -1,0 +1,42 @@
+:root {
+  --npd-bg: #0A0F1A;
+  --npd-bg-site: #0D1017;
+  --npd-card: #141A25;
+  --npd-card-2: #1A212E;
+  --npd-steel: #1D2736;
+  --npd-cyan: #00D2FF;
+  --npd-cyan-site: #06B6D4;
+  --npd-cyan-light: #38D6F0;
+  --npd-text: #F0F4FA;
+  --npd-muted: #8A98A8;
+  --npd-line: rgba(255,255,255,.08);
+  --npd-radius: 16px;
+  --npd-radius-sm: 12px;
+  --npd-glow: rgba(0,210,255,.18);
+  --npd-font-heading: 'Inter Tight', 'Space Grotesk', Inter, system-ui, sans-serif;
+  --npd-font-body: Inter, system-ui, sans-serif;
+}
+
+.npd-logo-mark {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--npd-cyan-site), var(--npd-cyan-light));
+  clip-path: polygon(50% 0%, 100% 100%, 50% 73%, 0% 100%);
+}
+
+.npd-brand-card {
+  background: linear-gradient(180deg, var(--npd-card), var(--npd-bg));
+  border: 1px solid var(--npd-line);
+  border-radius: var(--npd-radius);
+  color: var(--npd-text);
+  box-shadow: 0 0 40px -24px var(--npd-glow);
+}
+
+.npd-primary-button {
+  background: var(--npd-cyan-site);
+  color: #04141a;
+  border: 1px solid var(--npd-cyan-site);
+  border-radius: 999px;
+  font-family: var(--npd-font-heading);
+  font-weight: 700;
+}

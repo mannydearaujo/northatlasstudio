@@ -3,19 +3,22 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>NorthPoint Digital — Websites, Local SEO & Lead Tracking for Service Businesses</title>
-<meta name="description" content="NorthPoint Digital builds and improves websites for local service businesses — structured for Google, local SEO, and AI search, with GA4 lead tracking so owners see real calls, quotes, and bookings." />
+<title>NorthPoint Digital — Websites, Local SEO & Lead Tracking for Local Service Businesses</title>
+<meta name="description" content="NorthPoint Digital builds local service business websites for Google, local SEO, AI-assisted discovery, and GA4 lead tracking — turning searches into calls, quote requests, and bookings." />
 <link rel="canonical" href="https://agency-site-rho-pearl.vercel.app/" />
+<link rel="icon" href="assets/brand/svg/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/brand/png/favicon-512.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://agency-site-rho-pearl.vercel.app/" />
+<meta property="og:site_name" content="NorthPoint Digital" />
 <meta property="og:title" content="NorthPoint Digital — Websites, Local SEO & Lead Tracking" />
-<meta property="og:description" content="Websites built so Google and AI search tools can understand your business — with lead tracking that shows real calls, quotes, and bookings." />
+<meta property="og:description" content="Local service business websites built for Google, local SEO, AI-assisted discovery, conversion paths, and GA4 lead tracking." />
 <meta property="og:image" content="https://agency-site-rho-pearl.vercel.app/og-image.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="NorthPoint Digital — Websites, Local SEO & Lead Tracking" />
-<meta name="twitter:description" content="Websites built so Google and AI search tools can understand your business — with GA4 lead tracking." />
+<meta name="twitter:description" content="Websites for local service businesses that turn searches into calls, quote requests, and bookings — measured in GA4." />
 <meta name="twitter:image" content="https://agency-site-rho-pearl.vercel.app/og-image.png" />
 
 <script type="application/ld+json">
@@ -24,16 +27,47 @@
   "@type": "ProfessionalService",
   "name": "NorthPoint Digital",
   "url": "https://agency-site-rho-pearl.vercel.app/",
-  "description": "Website builds, local SEO, AI search readiness, and GA4 lead tracking for local service businesses.",
+  "description": "Website builds, local SEO, AI-assisted discovery readiness, conversion paths, and GA4 lead tracking for local service businesses.",
   "founder": { "@type": "Person", "name": "Manny de Araujo" },
+  "image": "https://agency-site-rho-pearl.vercel.app/og-image.png",
   "areaServed": "United States",
   "serviceType": [
     "Conversion website builds",
     "Local SEO",
-    "AI search readiness",
+    "AI-assisted discovery readiness",
     "GA4 lead tracking",
     "Weekly lead reporting"
   ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "NorthPoint Digital services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Conversion website builds",
+          "description": "Website builds and rebuilds for local service businesses that need more calls, quote requests, and bookings."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local SEO and AI-assisted discovery readiness",
+          "description": "Service, location, FAQ, and structured data improvements that help Google and AI-assisted search tools understand the business."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "GA4 lead tracking and reporting",
+          "description": "Tracking and reporting for high-intent actions including calls, forms, quote requests, bookings, texts, and emails."
+        }
+      }
+    ]
+  },
   "email": "mannydearaujo@gmail.com"
 }
 </script>
@@ -41,6 +75,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;450;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/northpoint-brand.css" />
 
 <style>
 /* ── CARBON TOKENS ────────────────────────────────────── */
@@ -111,8 +146,8 @@ a{color:inherit;text-decoration:none}
 /* ── NAV ──────────────────────────────────────────────── */
 header{position:sticky;top:0;z-index:50;background:rgba(13,16,23,.82);backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-.logo{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.04em;display:flex;align-items:center;gap:9px;color:var(--text)}
-.logo-mark{width:30px;height:30px;background:var(--cyan);border-radius:8px;display:grid;place-items:center;flex:0 0 auto;box-shadow:0 0 18px -2px var(--cyan-glow)}
+.logo{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;letter-spacing:-.04em;display:flex;align-items:center;gap:10px;min-height:44px;color:var(--text)}
+.logo-mark{width:32px;height:32px;display:block;flex:0 0 auto;filter:drop-shadow(0 0 12px rgba(6,182,212,.22))}
 .nav-links{display:flex;gap:8px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 6px}
 .nav-links a{font-size:14px;font-weight:450;color:var(--muted);transition:color .2s,background .2s;padding:8px 15px;border-radius:999px}
 .nav-links a:hover{color:var(--text);background:var(--card-2)}
@@ -120,6 +155,13 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,16,23,.82);backdrop-f
 .nav .btn{padding:10px 18px;font-size:14px}
 @media(max-width:880px){.nav-links{display:none}}
 @media(max-width:560px){.nav-right .btn-ghost-mobile{display:none}}
+@media(max-width:360px){
+  .wrap{padding-left:18px;padding-right:18px}
+  .nav{height:66px}
+  .logo{font-size:16px;gap:8px}
+  .logo-mark{width:28px;height:28px}
+  .nav .btn{padding:9px 12px;font-size:13px}
+}
 
 /* ── HERO (centered, Syncrun-style) ───────────────────── */
 .hero{position:relative;text-align:center;padding:clamp(70px,9vw,120px) 0 clamp(60px,7vw,90px);overflow:hidden}
@@ -148,20 +190,20 @@ section{padding:clamp(76px,9vw,116px) 0}
 .alt{background:var(--bg-2)}
 
 /* ── BENTO SERVICES ───────────────────────────────────── */
-.bento{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:16px;margin-top:54px}
+.bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:54px}
 @media(max-width:880px){.bento{grid-template-columns:1fr 1fr}}
 @media(max-width:600px){.bento{grid-template-columns:1fr}}
 .bento .b-wide{grid-column:span 1}
 .b-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;transition:border-color .35s var(--ease),transform .35s var(--ease),background .35s}
 .b-card:hover{border-color:var(--line-2);transform:translateY(-3px);background:var(--card-2)}
-.b-card.feature{grid-row:span 2;display:flex;flex-direction:column}
+.b-card.feature{display:flex;flex-direction:column}
 @media(max-width:880px){.b-card.feature{grid-column:span 2;grid-row:span 1}}
 @media(max-width:600px){.b-card.feature{grid-column:span 1}}
 .b-ic{width:46px;height:46px;border-radius:11px;background:var(--cyan-glow);border:1px solid rgba(6,182,212,.25);display:flex;align-items:center;justify-content:center;color:var(--cyan);margin-bottom:20px}
 .b-num{font-size:12px;font-weight:600;letter-spacing:.1em;color:var(--muted-2);text-transform:uppercase}
 .b-card h3{font-size:20px;font-weight:600;margin-top:10px}
 .b-card p{color:var(--muted);font-size:14.5px;margin-top:11px;line-height:1.62}
-.b-card.feature h3{font-size:24px}
+.b-card.feature h3{font-size:20px}
 .b-list{list-style:none;margin-top:auto;padding-top:22px;display:flex;flex-direction:column;gap:11px}
 .b-list li{display:flex;gap:10px;font-size:14px;color:#c2cbd9;line-height:1.5}
 .b-list li svg{flex:0 0 auto;margin-top:3px;color:var(--cyan)}
@@ -173,7 +215,7 @@ section{padding:clamp(76px,9vw,116px) 0}
 .ai-lede h2 span{color:var(--cyan)}
 .ai-lede p{font-size:16.5px;color:var(--muted);margin-top:18px;line-height:1.7;max-width:48ch}
 .ai-source{margin-top:22px;display:flex;flex-direction:column;gap:10px}
-.ai-source a{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);transition:color .2s}
+.ai-source a{display:inline-flex;align-items:center;gap:8px;min-height:34px;padding:4px 0;font-size:13.5px;color:var(--muted);transition:color .2s}
 .ai-source a:hover{color:var(--cyan)}
 .ai-source a svg{flex:0 0 auto;color:var(--cyan)}
 .ai-panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative;overflow:hidden}
@@ -185,6 +227,23 @@ section{padding:clamp(76px,9vw,116px) 0}
 .ai-points{list-style:none;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
 .ai-points li{display:flex;gap:12px;font-size:14.5px;color:#c2cbd9;line-height:1.5}
 .ai-points li svg{flex:0 0 auto;margin-top:2px;color:var(--cyan)}
+
+/* ── SEARCH THESIS ───────────────────────────────────── */
+.thesis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:54px}
+@media(max-width:860px){.thesis-grid{grid-template-columns:1fr}}
+.thesis-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:28px;transition:border-color .3s,transform .3s var(--ease)}
+.thesis-card:hover{border-color:var(--line-2);transform:translateY(-3px)}
+.thesis-card .tag{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.thesis-card h3{font-size:19px;font-weight:600}
+.thesis-card p{color:var(--muted);font-size:14.5px;margin-top:10px;line-height:1.65}
+.standard-box{margin-top:16px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(180deg,var(--card),rgba(20,26,37,.72));padding:28px;display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:start}
+@media(max-width:760px){.standard-box{grid-template-columns:1fr}}
+.standard-box h3{font-size:22px}
+.standard-box p{color:var(--muted);font-size:14.5px;margin-top:10px;line-height:1.65}
+.standard-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 16px}
+@media(max-width:560px){.standard-list{grid-template-columns:1fr}}
+.standard-list li{display:flex;gap:10px;color:#c2cbd9;font-size:14px;line-height:1.5}
+.standard-list li svg{flex:0 0 auto;margin-top:3px;color:var(--cyan)}
 
 /* ── PROOF CARDS ──────────────────────────────────────── */
 .proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:54px}
@@ -239,7 +298,7 @@ section{padding:clamp(76px,9vw,116px) 0}
 .case-body p{color:var(--muted);font-size:14.5px;margin-top:10px;line-height:1.62}
 .case-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
 .case-chips span{font-size:12px;font-weight:450;background:rgba(255,255,255,.04);border:1px solid var(--line);padding:5px 11px;border-radius:999px;color:var(--muted)}
-.case-link{display:inline-flex;align-items:center;gap:7px;margin-top:18px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:14px;color:var(--cyan)}
+.case-link{display:inline-flex;align-items:center;gap:7px;min-height:34px;padding:4px 0;margin-top:14px;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:14px;color:var(--cyan)}
 .case-link svg{transition:transform .3s var(--ease)}
 .case-card:hover .case-link svg{transform:translateX(4px)}
 
@@ -303,12 +362,12 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
 <header>
   <div class="wrap nav">
     <a href="#top" class="logo">
-      <span class="logo-mark"><svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 12L7 2l5 10" stroke="#04141a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9h7" stroke="#04141a" stroke-width="2" stroke-linecap="round"/></svg></span>
+      <img class="logo-mark" src="assets/brand/svg/northpoint-mark.svg" alt="" aria-hidden="true" />
       NorthPoint&nbsp;Digital
     </a>
     <nav class="nav-links">
       <a href="#services">Services</a>
-      <a href="#ai-search">AI Search</a>
+      <a href="#ai-search">AI Discovery</a>
       <a href="#proof">Results</a>
       <a href="#process">Process</a>
       <a href="#faq">FAQ</a>
@@ -327,11 +386,11 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
   <div class="hero-grid"></div>
   <div class="wrap hero-inner">
     <span class="pill reveal"><span class="dot"></span><b>2 live builds</b>&nbsp;tracked in GA4 — calls, quotes &amp; bookings</span>
-    <h1 class="reveal">Websites built to be <span class="grad">found, understood, and acted on.</span></h1>
+    <h1 class="reveal">Websites that turn <span class="grad">local searches into leads.</span></h1>
     <p class="lede reveal">
       NorthPoint Digital builds and improves websites for local service businesses. We structure your pages
-      for Google, local SEO, and AI search — then track real lead actions in GA4, so you can see what is
-      actually turning visitors into calls, quotes, and bookings.
+      for Google, local SEO, and AI-assisted discovery — then track real lead actions in GA4, so you can see
+      what is actually turning visitors into calls, quote requests, and bookings.
     </p>
     <div class="hero-cta reveal">
       <a href="#contact" class="btn btn-primary">Get a Free Site Audit
@@ -339,13 +398,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
       </a>
       <a href="#proof" class="btn btn-outline">See the Proof</a>
     </div>
-    <p class="hero-sub reveal">No jargon. No vanity metrics. No AI hype — just structure, clarity, and tracking.</p>
+    <p class="hero-sub reveal">No jargon. No vanity metrics. Just clear pages, practical SEO, and lead tracking.</p>
 
     <div class="statbar reveal">
       <div class="stat"><div class="n">2</div><div class="l">Live business builds, tracked end-to-end</div></div>
       <div class="stat"><div class="n">10</div><div class="l">Real lead actions wired into GA4</div></div>
-      <div class="stat"><div class="n">Google + AI</div><div class="l">Structured for how people search now</div></div>
-      <div class="stat"><div class="n">Same day</div><div class="l">Typical audit response time</div></div>
+      <div class="stat"><div class="n">Google + AI</div><div class="l">Structured for local SEO and assisted discovery</div></div>
+      <div class="stat"><div class="n">Free audit</div><div class="l">Clear next steps before any project starts</div></div>
     </div>
   </div>
 </section>
@@ -374,7 +433,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
       <div class="b-card reveal">
         <div class="b-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
         <div class="b-num">Service 02</div>
-        <h3>Local SEO &amp; AI Search Readiness</h3>
+        <h3>Local SEO &amp; AI-Assisted Discovery</h3>
         <p>Service-area, location, and FAQ pages structured around how customers search — and how Google and
            AI answer tools summarize a business. Clear services, clear locations, clear proof, all crawlable.</p>
       </div>
@@ -389,20 +448,20 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
   </div>
 </section>
 
-<!-- ═══ AI SEARCH ═══ -->
+<!-- ═══ AI-ASSISTED DISCOVERY ═══ -->
 <section class="alt" id="ai-search">
   <div class="wrap">
     <div class="ai-layout">
       <div class="ai-lede reveal">
-        <span class="eyebrow">Built for AI Search</span>
-        <h2>Search is changing fast. Your website should be <span>ready to be cited.</span></h2>
+        <span class="eyebrow">Built for AI-Assisted Discovery</span>
+        <h2>Search is changing fast. Your website should be <span>easy to understand.</span></h2>
         <p>At Google Search I/O 2026, Google confirmed AI Mode passed a billion monthly users, with queries
            doubling every quarter. More and more customers get their answer summarized by AI — and the businesses
            that get named are the ones whose information is clear, structured, and easy to trust.</p>
         <p>Google's own guidance is blunt: there is no "AI SEO" trick — no <code style="font-family:inherit;color:var(--cyan)">llms.txt</code>,
            no rewriting content for robots. What gets surfaced and cited is genuinely helpful, original, crawlable
            content with clear services, locations, FAQs, structured data, and a complete Google Business Profile.
-           That is exactly the foundation we build. We can't promise a placement, and we won't — we make sure the
+           That is exactly the foundation NorthPoint Digital builds. We can't promise a placement, and we won't — we make sure the
            information is there, clear, and machine-readable, then track the leads that actually come through.</p>
         <div class="ai-source">
           <a href="https://blog.google/products-and-platforms/products/search/search-io-2026/" target="_blank" rel="noopener">
@@ -428,6 +487,53 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
           <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Lead tracking, so you see the calls and quotes that still come through</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEARCH DIRECTION ═══ -->
+<section id="strategy">
+  <div class="wrap">
+    <div class="center sec-head reveal">
+      <span class="eyebrow" style="justify-content:center">Search Direction</span>
+      <h2>Local growth now has three layers: visibility, trust, and measurement.</h2>
+      <p>AI-assisted search does not erase SEO fundamentals. It makes clear service information, local proof,
+         technical structure, and real lead tracking more important because fewer weak pages earn attention.</p>
+    </div>
+    <div class="thesis-grid">
+      <article class="thesis-card reveal">
+        <div class="tag">Google visibility</div>
+        <h3>Be crawlable, clear, and locally relevant.</h3>
+        <p>Pages need descriptive titles, useful headings, service-area clarity, internal links, schema where
+           appropriate, and content that answers real customer questions without keyword stuffing.</p>
+      </article>
+      <article class="thesis-card reveal">
+        <div class="tag">AI visibility</div>
+        <h3>Be easy to summarize and trust.</h3>
+        <p>AI-assisted tools depend on understandable web pages. The work is not tricks; it is clear services,
+           direct answers, consistent business details, first-hand proof, reviews, and visible expertise.</p>
+      </article>
+      <article class="thesis-card reveal">
+        <div class="tag">Conversion visibility</div>
+        <h3>Measure the actions that create revenue.</h3>
+        <p>Traffic alone does not prove growth. NorthPoint Digital tracks calls, forms, quote requests, bookings,
+           and appointment actions in GA4 so owners can see which pages create real opportunities.</p>
+      </article>
+    </div>
+    <div class="standard-box reveal">
+      <div>
+        <h3>Every page should have a job.</h3>
+        <p>Client sites are built around intent, not broad blog publishing. A page should help a visitor understand,
+           trust, act, or follow up. If it does none of those things, it probably does not belong.</p>
+      </div>
+      <ul class="standard-list">
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Homepage: value proposition, audience, service category, CTA</li>
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Service pages: offer, process, benefits, FAQs</li>
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Location pages: service-area relevance and availability</li>
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Trust content: reviews, credentials, proof, case studies</li>
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Conversion content: calls, forms, bookings, quote paths</li>
+        <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Support content: FAQs and policies tied to real questions</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -489,7 +595,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
     </div>
     <div class="why-grid">
       <div class="why-card reveal"><div class="wn">01</div><h3>Built around the lead action</h3><p>Every priority page points visitors toward one clear next step: call, quote, book, or contact.</p></div>
-      <div class="why-card reveal"><div class="wn">02</div><h3>Structured for Google &amp; AI</h3><p>Services, locations, FAQs, schema, and proof organized so search engines and AI tools can understand the business.</p></div>
+      <div class="why-card reveal"><div class="wn">02</div><h3>Structured for Google &amp; AI</h3><p>Services, locations, FAQs, schema, and proof organized so search engines and AI-assisted tools can understand the business.</p></div>
       <div class="why-card reveal"><div class="wn">03</div><h3>Measured after launch</h3><p>Lead tracking installed and tested, so reports show real actions — not only traffic or bounce rate.</p></div>
       <div class="why-card reveal"><div class="wn">04</div><h3>Practical, not performative</h3><p>AI supports production and reporting behind the scenes. You're buying a clearer, better-measured website.</p></div>
     </div>
@@ -559,10 +665,10 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
       <h2>Questions, answered straight.</h2>
     </div>
     <div class="faq">
-      <div class="faq-item reveal"><button class="faq-q">Do you build new sites or improve existing ones?<span class="faq-pm"></span></button><div class="faq-a"><p>Both. Many businesses already have a site that just isn't converting or being found. I rebuild the pages that matter and add tracking — you don't always need to start from scratch.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you build new sites or improve existing ones?<span class="faq-pm"></span></button><div class="faq-a"><p>Both. Many businesses already have a site that just isn't converting or being found. NorthPoint Digital rebuilds the pages that matter and adds tracking — you don't always need to start from scratch.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q">What counts as a real lead?<span class="faq-pm"></span></button><div class="faq-a"><p>A real lead is an action with business intent: a phone tap, form submission, booking click, or quote request. Pageviews and scroll depth help diagnose behavior, but they are not leads.</p></div></div>
-      <div class="faq-item reveal"><button class="faq-q">Do you optimize for AI search too?<span class="faq-pm"></span></button><div class="faq-a"><p>Yes — but exactly how Google says to. Google's own AI optimization guide is clear that there's no special trick: no <code style="font-family:inherit">llms.txt</code> file, no rewriting content for robots. What gets cited in AI answers is genuinely helpful, original content with clear services, locations, FAQs, structured data, and a complete Google Business Profile. I build that foundation so your business is easy for Google and AI tools to understand and cite. I don't promise specific rankings or AI placements — no one credibly can — and I track the leads that come through either way.</p></div></div>
-      <div class="faq-item reveal"><button class="faq-q">Can you guarantee I'll rank #1 or appear in AI answers?<span class="faq-pm"></span></button><div class="faq-a"><p>No, and be cautious of anyone who does. Search placement depends on factors outside any agency's control. What I control is the quality and structure of your site: clear content, fast pages, correct schema, and verified tracking. That's the work that gives you the best chance of being found — and lets you measure what actually happens.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Do you optimize for AI-assisted discovery too?<span class="faq-pm"></span></button><div class="faq-a"><p>Yes — but exactly how Google says to. Google's own AI optimization guide is clear that there's no special trick: no <code style="font-family:inherit">llms.txt</code> file, no rewriting content for robots. What gets cited in AI answers is genuinely helpful, original content with clear services, locations, FAQs, structured data, and a complete Google Business Profile. NorthPoint Digital builds that foundation so your business is easier for Google and AI-assisted tools to understand. We don't promise specific rankings or AI placements — no one credibly can — and we track the leads that come through either way.</p></div></div>
+      <div class="faq-item reveal"><button class="faq-q">Can you guarantee I'll rank #1 or appear in AI answers?<span class="faq-pm"></span></button><div class="faq-a"><p>No, and be cautious of anyone who does. Search placement depends on factors outside any agency's control. What NorthPoint Digital controls is the quality and structure of your site: clear content, fast pages, correct schema, and verified tracking. That's the work that gives you the best chance of being found — and lets you measure what actually happens.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q">Is NorthPoint Digital an AI agency?<span class="faq-pm"></span></button><div class="faq-a"><p>No. NorthPoint Digital is a practical website, local SEO, and lead tracking service for local businesses. AI is used behind the scenes when it helps production, reporting, or operations move faster. What you're buying is a clearer website, stronger visibility, and real lead tracking.</p></div></div>
       <div class="faq-item reveal"><button class="faq-q">What types of businesses do you work with?<span class="faq-pm"></span></button><div class="faq-a"><p>Local, owner-operated service businesses: contractors, home services, pet services, cleaning, landscaping, and similar. If you rely on local customers calling, booking, or requesting quotes, this is built for you.</p></div></div>
     </div>
@@ -576,14 +682,12 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
       <div class="contact-left">
         <span class="eyebrow">Free Site Audit</span>
         <h2>Find out what your website is really doing.</h2>
-        <p>Send your website and I'll review the main conversion gaps, local SEO and AI search readiness, and
+        <p>Send your website and NorthPoint Digital will review the main conversion gaps, local SEO and AI-assisted discovery readiness, and
            whether your site is tracking real leads. You'll leave with clear next steps — even if we don't work together.</p>
-        <div class="contact-reassure"><b>Built for local service businesses.</b><br>No jargon. No vanity metrics. No AI hype.</div>
+        <div class="contact-reassure"><b>Built for local service businesses.</b><br>No jargon. No vanity metrics. Just useful next steps.</div>
       </div>
       <div class="contact-right">
-        <!-- To activate: create a free form at formspree.io and replace YOUR_FORM_ID.
-             Until then it falls back to a pre-filled email. -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="audit-form">
+        <form action="mailto:mannydearaujo@gmail.com" method="POST" id="audit-form">
           <div class="form-row">
             <div class="form-group"><label for="f-name">Your name</label><input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" /></div>
             <div class="form-group"><label for="f-biz">Business name</label><input type="text" id="f-biz" name="business" placeholder="Acme Plumbing" required /></div>
@@ -617,13 +721,13 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
   <div class="wrap">
     <div class="foot-top">
       <div class="foot-brand">
-        <a href="#top" class="logo"><span class="logo-mark"><svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 12L7 2l5 10" stroke="#04141a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 9h7" stroke="#04141a" stroke-width="2" stroke-linecap="round"/></svg></span>NorthPoint&nbsp;Digital</a>
-        <p>Websites, local SEO, AI search readiness, and lead tracking for local service businesses.</p>
+        <a href="#top" class="logo"><img class="logo-mark" src="assets/brand/svg/northpoint-mark.svg" alt="" aria-hidden="true" />NorthPoint&nbsp;Digital</a>
+        <p>Websites, local SEO, AI-assisted discovery readiness, and lead tracking for local service businesses.</p>
       </div>
       <div class="foot-col">
         <h4>Explore</h4>
         <a href="#services">Services</a>
-        <a href="#ai-search">AI Search</a>
+        <a href="#ai-search">AI Discovery</a>
         <a href="#proof">Results</a>
         <a href="#process">Process</a>
         <a href="#faq">FAQ</a>
@@ -631,7 +735,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:56px 0 36px
       <div class="foot-col">
         <h4>Get Started</h4>
         <a href="#contact">Free Site Audit</a>
-        <a href="mailto:mannydearaujo@gmail.com">Email NorthPoint</a>
+        <a href="mailto:mannydearaujo@gmail.com">Email NorthPoint Digital</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -653,7 +757,7 @@ document.querySelectorAll('.faq-q').forEach(function(q){
 });
 
 var form = document.getElementById('audit-form');
-if(form && form.action.indexOf('YOUR_FORM_ID') > -1){
+if(form){
   form.addEventListener('submit', function(e){
     e.preventDefault();
     var body='Name: '+document.getElementById('f-name').value+'%0ABusiness: '+document.getElementById('f-biz').value+'%0AWebsite: '+document.getElementById('f-url').value+'%0AGoal: '+document.getElementById('f-goal').value;
