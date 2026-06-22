@@ -157,6 +157,13 @@ for a static file. Do not make PDF the source of truth for reports unless reques
 For audits, use `agency-skills/ai-search-readiness-audit/assets/report-template.html`.
 For weekly reports, use `agency-skills/weekly-client-report-generator/assets/report-template.html`.
 
+Use `styles/northpoint-brand.css` as the shared visual source of truth for public pages and reusable
+deliverables. Landing pages, report templates, audit templates, and future client-facing assets should
+share the same tokens: charcoal grid background, translucent dashboard shells, gradient KPI cards,
+cyan meters/glows, 14px card radius, 22px dashboard radius, Inter Tight headings, and Inter body text.
+Self-contained HTML reports may inline these styles for portability, but their values should stay
+aligned with `styles/northpoint-brand.css`.
+
 ## Messaging Guardrails
 
 Use plain, practical language. The offer is local growth infrastructure:

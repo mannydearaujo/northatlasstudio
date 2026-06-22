@@ -21,10 +21,10 @@
 :root{
   --bg:#0d1017; --bg-2:#11151e; --card:#141a25; --card-2:#1a212e;
   --line:rgba(255,255,255,.08); --line-2:rgba(255,255,255,.14);
-  --text:#f0f4fa; --muted:#8a93a3; --muted-2:#525b6b;
-  --cyan:#06b6d4; --cyan-l:#38d6f0; --cyan-glow:rgba(6,182,212,.14);
+  --text:#f0f4fa; --muted:#8a98a8; --muted-2:#596475;
+  --cyan:#06b6d4; --cyan-l:#38d6f0; --cyan-glow:rgba(6,182,212,.18);
   --green:#34d399; --amber:#fbbf24; --red:#f87171;
-  --maxw:1180px; --r:16px; --r-sm:12px;
+  --maxw:1180px; --r:14px; --r-lg:22px; --r-sm:12px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{
@@ -65,7 +65,7 @@ body[data-band="risk"] .score-num,.c-risk{color:var(--red)}
 
 /* KPI dashboard shell */
 .dashboard{
-  margin-top:26px;padding:22px;border:1px solid var(--line-2);border-radius:22px;
+  margin-top:26px;padding:22px;border:1px solid var(--line-2);border-radius:var(--r-lg);
   background:rgba(16,23,34,.76);box-shadow:0 30px 90px rgba(0,0,0,.34),0 0 80px -42px var(--cyan);
 }
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}

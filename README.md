@@ -44,6 +44,10 @@ dashboard HTML style: compact score cards, strengths, weaknesses, corrections
 needed, real-lead metrics, and plain-English next steps. Export to PDF only when
 a client needs a static attachment or print-ready file.
 
+Use `styles/northpoint-brand.css` as the shared style source for the landing page
+and report/audit templates. Self-contained reports can inline the same tokens,
+but the visual system should stay uniform project-wide.
+
 ## Tracking Rule
 
 Track reusable operating infrastructure:
