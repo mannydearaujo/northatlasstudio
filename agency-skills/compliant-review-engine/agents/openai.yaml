@@ -1,0 +1,3 @@
+display_name: Compliant Review Engine
+short_description: Create review workflows without gating
+default_prompt: Create a compliant review workflow

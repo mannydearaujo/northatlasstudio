@@ -1,0 +1,3 @@
+display_name: Client Site Operating Manual
+short_description: Create AGENTS and CLAUDE project memory docs
+default_prompt: Create AGENTS.md and CLAUDE.md for this client site

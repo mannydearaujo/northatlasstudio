@@ -1,0 +1,3 @@
+display_name: Lead Tracking Installer
+short_description: Define and QA GA4 real-lead tracking
+default_prompt: Create a GA4 lead tracking plan for this site

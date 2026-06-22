@@ -24,3 +24,16 @@ NEXT-STEPS.md
 BUSINESS-BLUEPRINT.md
 audit-kpi-dashboard-examples.html
 scripts/
+!scripts/
+!scripts/production-sync.mjs
+!scripts/sync-agent-docs.mjs
+
+# Design exploration samples — not for deploy
+sample-*.html
+
+# Private client workspaces — keep local, never deploy or commit
+clients/
+
+# Keep shared agency skill library portable and trackable
+!agency-skills/
+!agency-skills/**

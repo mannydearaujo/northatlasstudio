@@ -1,0 +1,3 @@
+display_name: Schema And FAQ Sync Auditor
+short_description: Check schema, FAQ, metadata, and sitemap sync
+default_prompt: Audit this site for schema and FAQ sync issues
