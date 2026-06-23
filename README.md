@@ -13,18 +13,59 @@ Static single-file site (`index.html`). Deployed on Vercel.
 ## Develop
 Just open `index.html` in a browser — no build step.
 
+## PageSpeed Insights
+
+PageSpeed is available as a reusable agency command for any client or prospect.
+For the first setup only, store the Google key in a local env file:
+
+```bash
+cp .env.example .env
+```
+
+Then set `PAGESPEED_API_KEY` inside `.env`. The real `.env` file is ignored by
+git.
+
+Run a quick mobile and desktop check:
+
+```bash
+npm run pagespeed -- https://goldenpawspetgrooming.com --strategy=both
+```
+
+Run mobile and desktop, then save compact JSON for a client audit:
+
+```bash
+npm run pagespeed -- https://goldenpawspetgrooming.com --strategy=both --out=clients/client-slug/audit/pagespeed.json
+```
+
+Use the `lighthouse-technical-seo-fixer` skill to turn the output into a
+prioritized fix list. The PageSpeed Insights API runs Lighthouse under the hood,
+so the same scores and audit checks are available through one endpoint.
+
+Standard rule for future work: when PageSpeed, Lighthouse, Core Web Vitals,
+performance scores, or technical SEO speed checks are requested for a
+client/prospect, use this command. If the client has a workspace, save the JSON
+to `clients/client-slug/audit/pagespeed.json`; otherwise print the summary.
+
+Useful commands:
+
+```bash
+npm run pagespeed:goldenpaws
+npm run check:pagespeed-tool
+npm run check:production
+```
+
 ## Production Sync
 Run the production sync after changing homepage copy, metadata, schema, robots,
 sitemap, offers, or proof:
 
 ```bash
-node scripts/production-sync.mjs
+npm run sync:production
 ```
 
 To verify the business blueprint is still current without editing it:
 
 ```bash
-node scripts/production-sync.mjs --check
+npm run check:production
 ```
 
 This keeps `BUSINESS-BLUEPRINT.md` aligned with the production-facing site and

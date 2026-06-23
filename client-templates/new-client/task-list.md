@@ -23,11 +23,12 @@ Relevant workflow: `apify-local-lead-prospecting`
 ## Phase 3 - Website Audit
 
 - [ ] Status: Not started - Fetch homepage, service page, location/service-area page, FAQ/contact pages, sitemap, robots, and raw HTML.
+- [ ] Status: Not started - Run PageSpeed Insights for mobile and desktop, then save `audit/pagespeed.json`.
 - [ ] Status: Not started - Score AI/search readiness.
 - [ ] Status: Not started - Recommend GA4 real-lead and secondary events.
 - [ ] Status: Not started - Save audit deliverable in `reports/`.
 
-Relevant workflow: `ai-search-readiness-audit`
+Relevant workflows: `ai-search-readiness-audit`, `lighthouse-technical-seo-fixer`
 
 ## Phase 4 - GBP / Local Audit
 

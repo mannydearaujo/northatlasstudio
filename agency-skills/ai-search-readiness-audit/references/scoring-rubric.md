@@ -56,14 +56,23 @@ Look for:
 - **Crawlable & indexable** — not blocked by `robots.txt`; no stray `noindex`; a sitemap referenced.
 - **Server-rendered content** — the real content is in the HTML you fetch, not painted in by JS that a
   crawler may never run. (If the fetched HTML is an empty shell, that's a serious finding.)
-- **Page experience** — mobile-responsive (viewport meta, fluid layout), fast, no obvious bloat.
+- **Page experience** — mobile-responsive (viewport meta, fluid layout), fast, no obvious bloat. If
+  PageSpeed/Lighthouse data is available (see Step 3 of `SKILL.md`), use the real Performance score and
+  Core Web Vitals (especially mobile LCP) as the evidence here instead of guessing from a manual read —
+  a mobile LCP north of ~4s or a Performance score under ~80 is a real ding, not a polish note. Lighthouse
+  Accessibility findings (missing form labels/accessible names, contrast, heading order) are evidence
+  too, but route them into the Priority Fixes list rather than padding this category's writeup with raw
+  numbers.
 - **Canonicalization** — canonical tags present where needed; no obvious duplicate-content sprawl.
 - **Snippet eligibility** — title tags and meta descriptions present and distinct per page.
 
 Scoring guide:
-- **21–25**: Crawlable, server-rendered, mobile-friendly, clean titles/meta, canonical handled.
-- **14–20**: Mostly fine with one real gap (e.g., weak/missing meta, no sitemap, some JS dependence).
-- **7–13**: Multiple issues — heavy JS dependence, missing meta, mobile problems, indexation doubt.
+- **21–25**: Crawlable, server-rendered, mobile-friendly (strong PageSpeed/Lighthouse numbers if
+  available), clean titles/meta, canonical handled.
+- **14–20**: Mostly fine with one real gap (e.g., weak/missing meta, no sitemap, some JS dependence,
+  or a real PageSpeed gap like slow mobile LCP or duplicate canonical URLs).
+- **7–13**: Multiple issues — heavy JS dependence, missing meta, mobile problems, indexation doubt,
+  poor PageSpeed scores across the board.
 - **0–6**: Fundamentally hard to crawl/read — blocked, JS-only empty shell, or not reachable.
 
 > If the site cannot be fetched at all, this category is near 0 and the finding is **Critical** — lead

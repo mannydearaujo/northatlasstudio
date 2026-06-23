@@ -7,6 +7,14 @@ description: Interpret Lighthouse, PageSpeed, Core Web Vitals, accessibility, mo
 
 Prioritize fixes by lead impact, crawl impact, UX/accessibility impact, and polish. Do not chase perfect scores when no business value exists.
 
+Whenever Manny asks for PageSpeed, Lighthouse, Core Web Vitals, performance scores, or technical SEO speed checks, use this skill and the shared runner from the NorthPoint repo when API access is available:
+
+```bash
+npm run pagespeed -- https://example.com --strategy=both --out=clients/client-slug/audit/pagespeed.json
+```
+
+Use `.env` or `.env.local` for `PAGESPEED_API_KEY`; never hardcode, print, or commit client or agency API keys. If the client has a workspace, save output to `clients/client-slug/audit/pagespeed.json`. If there is no workspace yet, print a compact mobile and desktop summary and recommend creating the client workspace if the audit will continue. The API returns Lighthouse category scores, Core Web Vitals availability, and detailed audit findings. If no API key is available, use a local Lighthouse JSON export as the source material.
+
 ## Workflow
 
 1. Confirm the client/business context and source material.

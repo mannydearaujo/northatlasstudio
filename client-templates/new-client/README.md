@@ -23,3 +23,13 @@ Use it to keep intake, tasks, audit notes, reports, assets, and delivery status 
 - `assets/` - screenshots, logos, photos, testimonials, and proof.
 - `reports/` - weekly reports, audit deliverables, proposals, and PDF exports when needed.
 - `notes/` - call notes, decisions, risks, and deferred ideas.
+
+## PageSpeed
+
+When PageSpeed/Lighthouse is requested for this client, run from the agency repo root:
+
+```bash
+npm run pagespeed -- [URL] --strategy=both --out=clients/client-slug/audit/pagespeed.json
+```
+
+Keep the saved `audit/pagespeed.json` with the client workspace so future audits, launch QA, and retainer reports can compare against it.

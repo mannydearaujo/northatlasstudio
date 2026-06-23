@@ -3,23 +3,31 @@ name: ai-search-readiness-audit
 description: >-
   Run a NorthPoint Digital "AI Search Readiness Audit" on a prospect's website (and optionally their
   Google Business Profile): fetch the key pages, score them against Google's official AI-search/SEO
-  guidance, flag anti-patterns, and produce a branded, plain-English KPI dashboard HTML report with prioritized
-  fixes and GA4 lead-tracking recommendations. Use this whenever someone wants to audit, review,
-  score, or assess a local business website for AI search / SEO / "AI Overviews" / "AI Mode"
-  readiness, generate a "free site audit" or "site audit" deliverable, check if a site is structured
-  to be understood and cited by AI search tools, or evaluate a prospect's site before a sales pitch —
-  even if they don't say the words "AI search." This is the deliverable behind the agency's Free Site
-  Audit CTA. It is a DIAGNOSTIC/scoring tool — it evaluates an existing site; it does not write new
-  pages (for building pages, use alpha-seo-content instead).
+  guidance, flag anti-patterns, and produce a branded, detailed KPI dashboard HTML report — for
+  internal use, with prioritized fixes, GA4 lead-tracking recommendations, and a suggested
+  pricing/scope section. Use this whenever someone wants to audit, review, score, or assess a local
+  business website for AI search / SEO / "AI Overviews" / "AI Mode" readiness, generate a "free site
+  audit" or "site audit" deliverable, check if a site is structured to be understood and cited by AI
+  search tools, or evaluate a prospect's site before a sales pitch — even if they don't say the words
+  "AI search." This is the internal diagnostic behind the agency's Free Site Audit CTA; the
+  client-facing version of the findings is built separately with `offer-sheet-builder`. It is a
+  DIAGNOSTIC/scoring tool — it evaluates an existing site; it does not write new pages (for building
+  pages, use alpha-seo-content instead).
 ---
 
 # AI Search Readiness Audit
 
 This skill turns NorthPoint Digital's "Free Site Audit" CTA into a repeatable deliverable. It takes a
 prospect's website (and optionally their Google Business Profile), evaluates it against **Google's
-official AI-optimization and SEO guidance**, and produces a **branded KPI dashboard HTML report** the owner can
-actually read — prioritized fixes, severity, plain-English "what this means for you," and a
-GA4 lead-tracking recommendation tied to the business type.
+official AI-optimization and SEO guidance**, and produces a **branded KPI dashboard HTML report** for
+**Manny's internal use** — prioritized fixes, severity, plain-English "what this means for you," a
+GA4 lead-tracking recommendation tied to the business type, and a suggested pricing/scope section.
+
+**This report is internal, not client-facing.** It is never sent to the prospect or owner as-is — see
+the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`. When findings are ready to
+go to the client, hand off to `offer-sheet-builder` to produce the actual client-facing offer/fix-pack
+document, which presents only the chosen offer, price, and scope — no internal pricing exploration or
+audit minutiae.
 
 It is a **scorer/diagnostic**, not a page generator. When the audit recommends rebuilding or adding a
 page, that hand-off goes to the `alpha-seo-content` skill (the builder). Keep the division clean: this
@@ -70,37 +78,64 @@ If a site can't be fetched at all (blocked, down, or the raw HTML is an empty JS
 content), say so plainly and report what that means: if *you* can't read it, neither can an AI crawler —
 that's a Critical finding, not a reason to abandon the audit.
 
-### Step 3 — Score against the rubric
+### Step 3 — Pull PageSpeed/Lighthouse data
+Check whether PageSpeed/Lighthouse data already exists for this site in `clients/<slug>/audit/` (or
+ask Manny if he has a share link). If not, and the audit is real (not a quick pressure-test), run it
+per the root `CLAUDE.md` "PageSpeed And Lighthouse Workflow":
+
+```bash
+npm run pagespeed -- https://example.com --strategy=both --out=clients/client-slug/audit/pagespeed.json
+```
+
+Save the results (or a notes file summarizing them) under `clients/<slug>/audit/`. This data is
+**evidence for Category 2 (Technical Foundation) below — it is not a 5th score and not a separate
+report section.** Performance and mobile Core Web Vitals feed the rubric's "page experience" criterion;
+Accessibility findings feed the Priority Fixes list directly (e.g., a form control missing an
+accessible name). Don't run `lighthouse-technical-seo-fixer` as part of this skill — that's a separate
+skill for prioritizing the fixes once they're already in the audit; this step is just about getting the
+numbers into evidence. If no PageSpeed data is available and running it isn't practical, score Technical
+Foundation from the static signals only and say so rather than guessing at performance.
+
+### Step 4 — Score against the rubric
 Read **`references/scoring-rubric.md`** and score the site across the four categories Google names.
 Each is worth 25 points (100 total). The rubric tells you exactly what to look for, how to assign
 points, and how to map a score to a readiness band. Do not score from memory — the rubric is the
-source of truth and is built directly on Google's official guidance.
+source of truth and is built directly on Google's official guidance. Fold any PageSpeed/Lighthouse
+data from Step 3 into Category 2 here.
 
 For every gap, capture: **what you saw** (specific evidence — quote the page, name the missing element),
 **severity**, **the fix**, and **what it means for the owner** in plain English.
 
-### Step 4 — Flag anti-patterns
+### Step 5 — Flag anti-patterns
 The rubric's anti-pattern list (§ "What to flag against") covers things Google explicitly says NOT to
 do — `llms.txt`, content chunking, rewriting-for-AI, fake mentions/citations, keyword stuffing. If you
 find any, flag them as something to **stop/remove**, with the reason. Finding none is a good sign; say so.
 
-### Step 5 — GA4 lead-tracking recommendation
+### Step 6 — GA4 lead-tracking recommendation
 Read **`references/ga4-lead-events.md`**. Based on how this business converts (booking? quote form?
 phone? e-commerce?), recommend the specific **real-lead Key Events** to track and the **secondary
 intent** events that explain them. This is what ties readiness work back to measurable money. Keep the
 real-lead vs. secondary split honest — a form *open* is not a lead; a booking *click* is not a booking.
 
-### Step 6 — Generate the branded KPI dashboard report
+### Step 7 — Suggested pricing/scope (internal only)
+Based on the band and findings, recommend whether this looks like a **fix pack** (live site, Developing/
+Strong band, contained findings) or a **fuller rebuild/local-pages bundle** (At Risk/Foundational band,
+structural gaps). Suggest a rough price band and what would be in/out of scope, the way
+`offer-sheet-builder`'s price-band references do. This section is for Manny's own decision-making — it
+is not the client-facing offer itself, and it should read like internal notes, not a pitch.
+
+### Step 8 — Generate the branded KPI dashboard report
 Produce a **single self-contained HTML file** using `assets/report-template.html` as the shell. The
 template carries the approved NorthPoint KPI dashboard style from the branding package:
 charcoal grid background, cyan north-arrow mark, glowing dashboard cards, compact score KPIs, and
-owner-friendly panels for strengths, weaknesses, and corrections needed. Fill in every
+detailed panels for strengths, weaknesses, corrections needed, and suggested pricing. Fill in every
 `{{PLACEHOLDER}}`. Save as `ai-search-audit-[business-slug].html` and tell the user the file path plus
-a one-paragraph summary of the headline score and the top 3 fixes.
+a one-paragraph summary of the headline score, the top 3 fixes, and the suggested price band.
 
-Do **not** fall back to a plain text/markdown-style report for client-facing delivery unless the user
-specifically asks for a text draft. The HTML dashboard is the default format for all future NorthPoint
-audits.
+Do **not** fall back to a plain text/markdown-style report unless the user specifically asks for a text
+draft. The HTML dashboard is the default format for all future NorthPoint audits. Remember this file is
+internal — do not soften or omit findings to make them "client-safe"; that translation happens in
+`offer-sheet-builder`, not here.
 
 **Logo rule:** the header logo in `assets/report-template.html` is the filled cyan north-arrow/compass
 mark (inline SVG, same path data as `assets/brand/svg/northpoint-mark.svg`). Never replace it with a
@@ -125,14 +160,20 @@ Fill the template in this order — it leads with the result, then the detail, t
    on why it's the biggest local lever and an offer to include it.
 9. **Measure what matters (GA4)** — the recommended real-lead events for this business and why
    measurement is the only guarantee.
-10. **Footer CTA** — soft, honest next step (e.g., "Want NorthPoint to action the top fixes? Reply to
-   this report.") and the contact. Never a rankings promise.
+10. **Suggested pricing/scope (internal)** — fix-pack vs. rebuild/bundle call, rough price band, and
+    in/out-of-scope notes for Manny's own decision-making. Never copy this section into a client-facing
+    document verbatim.
+11. **Footer note** — internal reminder of next step (e.g., "package via offer-sheet-builder once
+    scope is decided"), not a client-facing CTA.
 
 ## Tone
 
-Plain English, owner-facing. Assume a smart business owner who is **not** technical. Translate every
-technical finding into a consequence they care about — calls, quotes, trust, being found. Confident but
-never hype. Short sentences. No jargon without a plain-language gloss in the same breath.
+Findings and "what this means for you" framing should still be written plain-English and owner-translatable
+— that's what makes them easy to repackage for the client later — but remember the audience for *this*
+document is Manny. Translate every technical finding into a consequence the owner would care about
+(calls, quotes, trust, being found), but the pricing/scope section and any internal notes should read as
+internal shorthand, not a pitch. Confident but never hype. Short sentences. No jargon without a
+plain-language gloss in the same breath.
 
 ## What good looks like
 
@@ -141,4 +182,5 @@ never hype. Short sentences. No jargon without a plain-language gloss in the sam
 - The report is **honest** — names strengths, never promises rankings, and points to measurement as the
   guarantee.
 - It's **branded and self-contained** — one HTML file that looks like it came from NorthPoint Digital.
-- It ends pointing at action: the top fixes, GA4 tracking, and a low-pressure way to engage.
+- It ends pointing at action for Manny: the top fixes, GA4 tracking, and a suggested price band —
+  not a client-facing CTA. The client-facing version is a separate `offer-sheet-builder` deliverable.
