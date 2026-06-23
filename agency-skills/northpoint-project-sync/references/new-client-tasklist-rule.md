@@ -1,6 +1,6 @@
 # New Client Task-List Rule
 
-Whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, starts a paid AI Search Readiness Audit, or begins any NorthPoint service delivery, create a practical phase-by-phase task list for him to follow.
+Whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any NorthPoint service delivery, create a practical phase-by-phase task list for him to follow.
 
 The task list should keep him on track across the whole service lifecycle:
 
@@ -9,7 +9,7 @@ The task list should keep him on track across the whole service lifecycle:
 3. **Prospect qualification** - use `apify-local-lead-prospecting` when the lead came from scraped data; note likely opportunity and evidence.
 4. **Website audit** - use `ai-search-readiness-audit`; gather homepage, service, location, FAQ, contact, sitemap, robots, and schema findings.
 5. **GBP/local audit** - use `google-business-profile-optimizer`; request screenshots/intake when profile data is incomplete.
-6. **Findings and offer match** - summarize top fixes, business impact, and whether to recommend free audit follow-up, paid audit, rebuild, local pages, tracking setup, or retainer.
+6. **Findings and offer match** - summarize top fixes, business impact, and whether to recommend rebuild, local pages, tracking setup, or retainer (the audit itself stays free, never a separate line item).
 7. **Proposal/next step** - use `offer-sheet-builder`; include price band, deliverables, proof, no-ranking-guarantee language, and next action.
 8. **Client onboarding** - use `client-site-operating-manual`, `client-voice-pack-builder`, and `lead-tracking-installer`; collect logins, assets, photos, testimonials, services, areas, and tracking access.
 9. **Build/fix delivery** - use `local-service-site-builder`, `city-service-cluster-builder`, `schema-and-faq-sync-auditor`, and `lighthouse-technical-seo-fixer` as needed.

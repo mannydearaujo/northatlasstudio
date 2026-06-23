@@ -41,7 +41,7 @@ Relevant workflows: `google-business-profile-optimizer`, `gbp-posting-calendar`
 ## Phase 5 - Findings And Offer Match
 
 - [ ] Status: Not started - Summarize top fixes and business impact.
-- [ ] Status: Not started - Match to offer: free audit follow-up, paid audit, rebuild, local pages, tracking setup, or retainer.
+- [ ] Status: Not started - Match to offer: rebuild, local pages, tracking setup, or retainer (audit itself stays free).
 - [ ] Status: Not started - Draft next-step offer.
 
 Relevant workflow: `offer-sheet-builder`

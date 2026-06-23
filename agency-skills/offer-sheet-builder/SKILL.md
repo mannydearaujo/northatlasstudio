@@ -1,6 +1,6 @@
 ---
 name: offer-sheet-builder
-description: Create NorthPoint Digital one-page offer sheets, audit follow-up offers, rebuild proposals, and retainer pitch summaries. Use when packaging Free Site Audit, paid AI Search Readiness Audit, Conversion Website Build/Rebuild, Local SEO plus AI Search Pages, Growth Retainer, pricing bands, deliverables, proof, and no-guarantee language.
+description: Create NorthPoint Digital one-page offer sheets, audit follow-up offers, rebuild proposals, and retainer pitch summaries. Use when packaging the Free Site Audit follow-up, Conversion Website Build/Rebuild, Local SEO plus AI Search Pages, Growth Retainer, pricing bands, deliverables, proof, and no-guarantee language.
 ---
 
 # Offer Sheet Builder

@@ -317,7 +317,7 @@ Keep the shared `agency-skills/` source authoritative, then mirror skills into C
 
 Future agency sessions should apply the relevant NorthPoint skill automatically:
 
-- New prospect, audit form, paid audit, or client start: use `northpoint-project-sync` and create a practical phase-by-phase task list.
+- New prospect, audit form, or client start: use `northpoint-project-sync` and create a practical phase-by-phase task list.
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
 - Existing website audit or Free Site Audit deliverable: use `ai-search-readiness-audit`.
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.
@@ -331,4 +331,4 @@ Outreach and scraping guardrail: Apify, Google Maps, and GBP-style scraped data 
 
 Skill validation rule: when editing or validating agency skills, run the official `quick_validate.py` validator. If it fails with `ModuleNotFoundError: No module named 'yaml'`, install PyYAML into a temporary local validation folder and run the validator with `PYTHONPATH=/private/tmp/northpoint-skill-validator-python`. This temporary folder is only a validator helper, not part of the skill library or client delivery system.
 
-New client task-list rule: whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, starts a paid AI Search Readiness Audit, or begins any NorthPoint service delivery, create a phase-by-phase task list for him to follow. The task list should keep him on track from intake through audit, findings, proposal, onboarding, build/fixes, tracking, launch, reporting, and retainer follow-up. Include owner asks, files/assets needed, decisions pending, due-next actions, and what skill/workflow to use at each phase. Keep the list practical, non-technical when possible, and update it as phases are completed.
+New client task-list rule: whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any NorthPoint service delivery, create a phase-by-phase task list for him to follow. The task list should keep him on track from intake through audit, findings, proposal, onboarding, build/fixes, tracking, launch, reporting, and retainer follow-up. Include owner asks, files/assets needed, decisions pending, due-next actions, and what skill/workflow to use at each phase. Keep the list practical, non-technical when possible, and update it as phases are completed.
