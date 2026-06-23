@@ -4,6 +4,9 @@
 # OS
 .DS_Store
 
+# Dependencies
+node_modules/
+
 # Logs
 *.log
 npm-debug.log*
@@ -26,6 +29,7 @@ audit-kpi-dashboard-examples.html
 scripts/
 !scripts/
 !scripts/production-sync.mjs
+!scripts/pagespeed-insights.mjs
 !scripts/sync-agent-docs.mjs
 
 # Design exploration samples — not for deploy

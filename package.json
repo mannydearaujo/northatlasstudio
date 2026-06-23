@@ -1,0 +1,22 @@
+{
+  "name": "northpoint-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "NorthPoint Digital static site and agency workflow tools.",
+  "scripts": {
+    "pagespeed": "node scripts/pagespeed-insights.mjs",
+    "pagespeed:goldenpaws": "node scripts/pagespeed-insights.mjs https://goldenpawspetgrooming.com --strategy=both",
+    "check:pagespeed-tool": "node --check scripts/pagespeed-insights.mjs",
+    "lighthouse": "lighthouse",
+    "sync:agents": "node scripts/sync-agent-docs.mjs",
+    "sync:production": "node scripts/production-sync.mjs",
+    "check:production": "node scripts/production-sync.mjs --check"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "lighthouse": "^13.4.0"
+  }
+}

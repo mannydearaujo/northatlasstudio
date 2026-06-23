@@ -139,10 +139,26 @@ Use the approved NorthPoint Digital brand system:
 
 ## Report And Audit Format
 
-Future NorthPoint client-facing audits and reports should use the approved KPI dashboard styling from
+Future NorthPoint audits and reports should use the approved KPI dashboard styling from
 the branding package by default: charcoal grid background, cyan north-arrow mark, glowing dashboard
 cards, compact KPI scores, and owner-friendly panels for strengths, weaknesses, corrections needed,
 real leads, and next actions.
+
+### Internal vs client-facing deliverable rule
+
+Every audited site produces two distinct documents — do not collapse them into one:
+
+- **Audit dashboard (`ai-search-audit-*.html`)** — internal, for Manny only. Goes in full detail:
+  every finding, evidence, severity, and a **suggested pricing/scope section** so Manny can decide
+  what to charge. This file is never sent to the prospect or client as-is.
+- **Fix/offer pack (offer sheet, fix-pack offer, proposal)** — client-facing only. Built with
+  `offer-sheet-builder` from the audit's findings, but presents only the chosen offer, price, and
+  scope. It must not surface internal pricing exploration, margin notes, or audit minutiae the
+  client doesn't need to see.
+
+When in doubt about whether something belongs in a deliverable: if it helps Manny price/scope the
+work, it goes in the audit dashboard. If it's part of the pitch the client actually sees, it goes in
+the offer pack.
 
 Default delivery format is **HTML** because it preserves the interactive/dashboard feel, works well in
 the browser, can be hosted or shared as a file, and can still be printed or exported to PDF when needed.
@@ -193,6 +209,8 @@ Best access workflow for new clients:
 4. Do not claim historical GA4/Search Console performance when access or data is unavailable.
 5. Use Microsoft Clarity, CallRail/WhatConverts, Formspree/HubSpot forms, Looker Studio, and external SEO tools as add-ons or temporary visibility, not as replacements for honest lead tracking.
 
+No website/CMS access fallback: if the client cannot get into the existing site's CMS or host (old developer/agency unresponsive, lost login), check whether they at least control the domain registrar/DNS first. If yes, treat it as a rebuild: build the new/edited site on a new host, recover the old copy from a live crawl or the Wayback Machine to avoid losing existing SEO content, then cut over by repointing DNS/nameservers when ready — no CMS login required. If they do not control the domain either, access recovery (registrar support with proof of business ownership, WHOIS lookup for the actual registrant, or contacting the old developer/agency directly) has to happen before any edit or rebuild can go live. Default to the rebuild path rather than waiting indefinitely on CMS access recovery, consistent with the Audit → Rebuild → Track → Report process.
+
 Real leads are the headline KPI and should be marked as GA4 Key Events:
 
 - phone taps;
@@ -213,6 +231,32 @@ Diagnostic events are for QA only:
 - widget load;
 - component visibility;
 - page-load events.
+
+## PageSpeed And Lighthouse Workflow
+
+Whenever Manny asks for PageSpeed, Lighthouse, Core Web Vitals, performance scores, or technical SEO speed checks for any client/prospect, use the shared PageSpeed Insights runner in this folder. Do not ask him to set it up again unless `.env` is missing `PAGESPEED_API_KEY`.
+
+For a client/prospect with a workspace, save mobile and desktop results here:
+
+```bash
+npm run pagespeed -- https://example.com --strategy=both --out=clients/client-slug/audit/pagespeed.json
+```
+
+For a quick one-off check without a client workspace, run:
+
+```bash
+npm run pagespeed -- https://example.com --strategy=both
+```
+
+Store the API key only in `.env` or `.env.local` as `PAGESPEED_API_KEY`; never hardcode, print, or commit it. Keep `.env.example` as the tracked placeholder. If a PageSpeed request is part of an audit, launch QA, rebuild, or retainer check, save the JSON under the private `clients/` workspace and use `lighthouse-technical-seo-fixer` to prioritize fixes by lead impact, crawl impact, UX/accessibility impact, and polish. PageSpeed Insights runs Lighthouse through Google's API, so it can supply Performance, Accessibility, Best Practices, SEO, field data availability, and detailed audit findings from one endpoint. Use `npm run check:pagespeed-tool` after editing the runner.
+
+`lighthouse` is also installed as a local devDependency (no global/sudo install needed), shared by both Claude and Codex since both run shell commands inside this repo. Use it directly when a local/offline Lighthouse run is needed without the PageSpeed API (e.g. no API key, or auditing a non-public/staging URL):
+
+```bash
+npm run lighthouse -- https://example.com --output=json --output-path=clients/client-slug/audit/lighthouse.json --chrome-flags="--headless"
+```
+
+Prefer the `pagespeed` npm script (Google's API) as the default workflow described above; use the local `lighthouse` CLI as a fallback or for ad hoc checks.
 
 ## Client Website Standards
 
