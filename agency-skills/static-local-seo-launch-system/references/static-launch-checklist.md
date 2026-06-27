@@ -2,6 +2,17 @@
 
 Check domain, canonical, sitemap, robots, title/meta, OG/Twitter, favicon, schema, forms, phone/email/SMS links, GA4/GTM, Search Console, mobile layout, 404 behavior, SSL, and GBP URL alignment.
 
+## Duplicate URL Check (run before every launch and after a host/CMS migration)
+
+Some static hosts (confirmed on GitHub Pages) serve a `name.html` file at both `/name.html` and `/name` — identical content, both HTTP 200, no redirect between them. If the canonical tag, sitemap, and internal links don't all agree on one form, Google ends up indexing one URL and sitting on the other as "Discovered – currently not indexed," which silently caps how many pages can ever get indexed.
+
+1. Pick 2–3 representative pages and `curl -sI` both the extensionless and `.html` form. If both return 200, the host has this behavior.
+2. Confirm `canonical` tags, `sitemap.xml`, and internal links all use the same single form (the canonical one).
+3. If the host can't redirect the non-canonical form (no `_redirects`/`vercel.json`-equivalent), add `Disallow: /*.html$` (or the inverse, matching whichever form is non-canonical) to `robots.txt` so it never gets crawled in the first place.
+4. In Google Search Console → Pages report, check for "Alternate page with proper canonical tag" or "Duplicate, Google chose different canonical than user" — either is a sign this is already happening on a live site and needs the fix above plus URL removal requests for the wrong indexed form.
+
+See `local-service-site-builder/references/site-architecture.md` for the build-time rule and `clients/alphagutterco/client-operating-manual.md` (2026-06-26) for a worked example.
+
 ## Sitemap And Indexing Rule
 
 Whenever a page is created or substantially revamped — new service/location page, homepage rebuild, or major content/structure change — do all of the following before calling the page launch-ready:
