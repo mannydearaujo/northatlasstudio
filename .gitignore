@@ -17,6 +17,9 @@ npm-debug.log*
 
 # Generated audit reports — keep local, never deploy
 ai-search-audit-*.html
+copy-rewrites-*.md
+domain-cutover-checklist.md
+launch-qa-*.md
 
 # Internal strategy docs — keep local, never deploy
 GA4-lead-logic.md
@@ -37,6 +40,9 @@ sample-*.html
 
 # Private client workspaces — keep local, never deploy or commit
 clients/
+
+# Client site repos living alongside the agency repo (own git remotes)
+alpha-gutter/
 
 # Keep shared agency skill library portable and trackable
 !agency-skills/

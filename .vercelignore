@@ -13,6 +13,9 @@ weekly-report-template.md
 
 # Generated/internal deliverables
 ai-search-audit-*.html
+copy-rewrites-*.md
+domain-cutover-checklist.md
+launch-qa-*.md
 audit-kpi-dashboard-examples.html
 sample-*.html
 clients/
