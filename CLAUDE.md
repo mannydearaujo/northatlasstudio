@@ -131,6 +131,7 @@ That script checks:
 - Deployment: Vercel project `northpoint_digital`, auto-deployed from `main`.
 - Contact form currently uses a `mailto:` fallback to `mannydearaujo@gmail.com`.
 - Future upgrade: branded email such as `hello@northpointdigital.com` and a real Formspree or CRM-backed form endpoint.
+- Header includes an English/Portuguese language switcher for English-speaking and Brazilian Portuguese-speaking local business owners. This is a usability/sales layer, not a full Portuguese SEO route yet.
 
 Current homepage structure:
 
