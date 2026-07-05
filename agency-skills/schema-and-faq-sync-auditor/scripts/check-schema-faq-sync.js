@@ -7,7 +7,7 @@ let failed = false;
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   const visible = stripTags(html);
-  const h1s = [...html.matchAll(/<h1/gi)].length;
+  const h1s = [...html.matchAll(/<h1\b/gi)].length;
   if (h1s !== 1) { console.log(`${file}: expected one H1, found ${h1s}`); failed = true; }
   if (!/<title>[\s\S]*?<\/title>/i.test(html)) { console.log(`${file}: missing title`); failed = true; }
   if (!/rel=["']canonical["']/i.test(html)) { console.log(`${file}: missing canonical`); failed = true; }
