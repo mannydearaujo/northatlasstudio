@@ -1,6 +1,6 @@
-# NorthPoint Client Workspace Template
+# North Atlas Client Workspace Template
 
-Use this template when a new prospect or client enters the NorthPoint workflow.
+Use this template when a new prospect or client enters the North Atlas workflow.
 
 Recommended local path:
 

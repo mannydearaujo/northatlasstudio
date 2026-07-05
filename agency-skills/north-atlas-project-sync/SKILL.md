@@ -1,11 +1,11 @@
 ---
-name: northpoint-project-sync
-description: Maintain NorthPoint Digital project documentation and production sync rules. Use when changing the agency site, offers, proof, positioning, project structure, tooling roadmap, skill library, CLAUDE.md, AGENTS.md, BUSINESS-BLUEPRINT.md, NEXT-STEPS.md, ai-search-reference.md, GA4-lead-logic.md, or production-facing copy. Trigger after ANY change to agency skills or production-facing agency files.
+name: north-atlas-project-sync
+description: Maintain North Atlas Studio project documentation and production sync rules. Use when changing the agency site, offers, proof, positioning, project structure, tooling roadmap, skill library, CLAUDE.md, AGENTS.md, BUSINESS-BLUEPRINT.md, NEXT-STEPS.md, ai-search-reference.md, GA4-lead-logic.md, or production-facing copy. Trigger after ANY change to agency skills or production-facing agency files.
 metadata:
   updated: "2026-07-04"
 ---
 
-# NorthPoint Project Sync
+# North Atlas Project Sync
 
 Keep the agency's documentation truthful after changes: source-of-truth order respected, AGENTS.md generated from CLAUDE.md, BUSINESS-BLUEPRINT.md synced from production-facing files, skills validated and mirrored.
 
@@ -32,9 +32,9 @@ Read `references/skill-validation-rule.md` before validating or mirroring agency
 
 ## Logo Rule
 
-NorthPoint Digital's primary mark is the filled cyan north-arrow/compass mark
-(`assets/brand/svg/northpoint-mark.svg`, documented in `docs/brand/BRAND-GUIDE.md`). Never a
-hollow/cutout mark, never a cyan square tile with a letter. When syncing or auditing project docs,
-check that every NorthPoint-branded surface — `index.html` (nav, footer), `og-image.png`, and any
-skill-generated deliverable (audit reports, case studies, offer sheets, weekly reports) — uses this
-mark, not a placeholder.
+North Atlas Studio's primary mark is the compass ring + globe grid + location pin with Atlas Blue
+north arrow (`assets/brand/atlas/atlas-mark-white.svg` for dark surfaces and
+`assets/brand/atlas/atlas-mark-navy.svg` for light surfaces, documented in `docs/brand/BRAND-GUIDE.md`).
+When syncing or auditing project docs, check that every North Atlas-branded surface — `index.html`
+(nav, footer), `og-image.png`, and any skill-generated deliverable (audit reports, case studies,
+offer sheets, weekly reports) — uses the Atlas mark, not retired pre-rename assets.

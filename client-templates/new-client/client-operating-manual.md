@@ -43,7 +43,7 @@ Use this file as project memory for future AI sessions. If the client has a dedi
 - Tracking install date:
 - Access notes:
 
-Plain-English GTM note: Google Tag Manager is a tag control panel for the website. It is where NorthPoint can install and test tracking events, like phone taps and form submissions, without editing site code for every change. GA4 is where the event data gets reported.
+Plain-English GTM note: Google Tag Manager is a tag control panel for the website. It is where North Atlas can install and test tracking events, like phone taps and form submissions, without editing site code for every change. GA4 is where the event data gets reported.
 
 ## Brand And Design
 

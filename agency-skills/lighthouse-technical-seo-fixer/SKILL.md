@@ -1,6 +1,6 @@
 ---
 name: lighthouse-technical-seo-fixer
-description: Interpret Lighthouse, PageSpeed, Core Web Vitals, accessibility, mobile, and technical SEO findings for NorthPoint Digital client sites. Use when prioritizing performance fixes, accessibility improvements, crawlability issues, image optimization, render blocking resources, semantic HTML, and local-site launch quality. Trigger on "pagespeed", "lighthouse", "core web vitals", "site is slow", or performance scores.
+description: Interpret Lighthouse, PageSpeed, Core Web Vitals, accessibility, mobile, and technical SEO findings for North Atlas Studio client sites. Use when prioritizing performance fixes, accessibility improvements, crawlability issues, image optimization, render blocking resources, semantic HTML, and local-site launch quality. Trigger on "pagespeed", "lighthouse", "core web vitals", "site is slow", or performance scores.
 metadata:
   updated: "2026-07-04"
 ---
@@ -11,7 +11,7 @@ Turn Lighthouse/PageSpeed output into a prioritized fix list ranked by business 
 
 ## Workflow
 
-1. **Get the data.** Use the shared runner from the NorthPoint repo when API access is available:
+1. **Get the data.** Use the shared runner from the North Atlas repo when API access is available:
    ```bash
    npm run pagespeed -- https://example.com --strategy=both --out=clients/client-slug/audit/pagespeed.json
    ```

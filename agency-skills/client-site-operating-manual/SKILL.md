@@ -1,6 +1,6 @@
 ---
 name: client-site-operating-manual
-description: Create or update client website operating manuals such as AGENTS.md, CLAUDE.md, and optional BUSINESS-BLUEPRINT.md for NorthPoint Digital projects. Use when starting a new client build, documenting deployment rules, project structure, design system, content guardrails, tracking conventions, proof rules, history, deferred work, or keeping Codex and Claude guidance aligned. Also trigger at the END of significant work sessions to update the manual's current-state section.
+description: Create or update client website operating manuals such as AGENTS.md, CLAUDE.md, and optional BUSINESS-BLUEPRINT.md for North Atlas Studio projects. Use when starting a new client build, documenting deployment rules, project structure, design system, content guardrails, tracking conventions, proof rules, history, deferred work, or keeping Codex and Claude guidance aligned. Also trigger at the END of significant work sessions to update the manual's current-state section.
 metadata:
   updated: "2026-07-04"
 ---

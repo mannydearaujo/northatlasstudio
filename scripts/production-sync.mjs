@@ -50,7 +50,7 @@ const requiredCopy = [
 
 const stalePatterns = [
   { label: "old brand name", pattern: /\bNorthline\b/gi },
-  { label: "old brand name", pattern: /\bNorthPoint\b(?!-project-sync)/gi },
+  { label: "old brand name", pattern: /\bNorthPoint\b/gi },
   { label: "old positioning", pattern: /\bLocal Growth Agency\b/gi },
   { label: "placeholder proof metric", pattern: /\[\+X%\]/gi },
   { label: "placeholder form endpoint", pattern: /\bYOUR_FORM_ID\b/gi },

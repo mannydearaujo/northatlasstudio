@@ -1,13 +1,13 @@
 ---
 name: website-design-standards
-description: Apply NorthPoint Digital's conversion-first design standards to local service business websites — layout, visual hierarchy, typography, spacing, color/contrast, mobile patterns, form UX, trust-block placement, and WCAG 2.1 AA accessibility baseline. Use when designing or reviewing any client site's look and usability, running a pre-launch design QA, or answering "does this page look professional / why does this feel off / is this mobile-friendly". Trigger on "design review", "design QA", "make it look better", "check the layout", or before any client build ships.
+description: Apply North Atlas Studio's conversion-first design standards to local service business websites — layout, visual hierarchy, typography, spacing, color/contrast, mobile patterns, form UX, trust-block placement, and WCAG 2.1 AA accessibility baseline. Use when designing or reviewing any client site's look and usability, running a pre-launch design QA, or answering "does this page look professional / why does this feel off / is this mobile-friendly". Trigger on "design review", "design QA", "make it look better", "check the layout", or before any client build ships.
 metadata:
   updated: "2026-07-04"
 ---
 
 # Website Design Standards
 
-The design quality bar for every NorthPoint build: a local service site must look trustworthy in 3 seconds, read effortlessly, and make the conversion action unmissable — on a phone, first. Two modes: **design guidance** (while building) and **design QA** (scored review before launch).
+The design quality bar for every North Atlas build: a local service site must look trustworthy in 3 seconds, read effortlessly, and make the conversion action unmissable — on a phone, first. Two modes: **design guidance** (while building) and **design QA** (scored review before launch).
 
 ## Workflow
 
@@ -25,7 +25,7 @@ The design quality bar for every NorthPoint build: a local service site must loo
 
 ## Guardrails
 
-Design serves conversion and trust, not novelty — no trends that cost clarity (thin gray text, low-contrast "aesthetic" palettes, hero carousels, scroll-jacking). Real photos of the real business beat stock every time; say so when stock creeps in. Never approve a page that fails contrast or tap-target minimums on conversion elements. Brand consistency: on NorthPoint-branded deliverables the logo rule applies (filled cyan north-arrow mark, per `docs/brand/BRAND-GUIDE.md`).
+Design serves conversion and trust, not novelty — no trends that cost clarity (thin gray text, low-contrast "aesthetic" palettes, hero carousels, scroll-jacking). Real photos of the real business beat stock every time; say so when stock creeps in. Never approve a page that fails contrast or tap-target minimums on conversion elements. Brand consistency: on North Atlas-branded deliverables the logo rule applies (Atlas compass/location mark, per `docs/brand/BRAND-GUIDE.md`).
 
 ## After this skill
 

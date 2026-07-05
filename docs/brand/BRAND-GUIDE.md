@@ -26,8 +26,8 @@ Usage rules (per pack page 2): keep clear space equal to the "N" height, minimum
 24px icon digital, don't stretch, recolor, rotate, add effects, crowd, alter the icon, or place on
 busy backgrounds. Approved backgrounds: White, Atlas Navy, Atlas Blue.
 
-Legacy assets in `assets/brand/svg/` and `assets/brand/png/` are retired — never reference them in
-new work.
+Old pre-rename assets in `assets/brand/svg/` and `assets/brand/png/` are retired and removed —
+never reference them in new work.
 
 ## Colors
 | Token | Hex | Use |
@@ -39,7 +39,7 @@ new work.
 | White | `#FFFFFF` | Text on navy/blue, light backgrounds |
 
 Site-derived tones (cards, lines, muted text) live as tokens in `styles/atlas-brand.css` (the
-`--npd-*` var names are kept for backwards compatibility). Text on Atlas Blue is always white —
+`--nas-*` var names are kept for backwards compatibility). Text on Atlas Blue is always white —
 navy-on-blue fails WCAG contrast.
 
 ## Typography

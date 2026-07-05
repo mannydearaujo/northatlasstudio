@@ -1,13 +1,13 @@
 ---
 name: lead-tracking-installer
-description: Plan, install, or audit GA4/GTM lead tracking for NorthPoint Digital client sites. Use when defining real-lead events, secondary-intent events, diagnostic events, phone taps, quote forms, booking clicks, SMS/email taps, widget interactions, Key Events, Realtime QA, or weekly reporting event conventions. Trigger on "GA4", "tracking", "are we counting calls", or "install analytics".
+description: Plan, install, or audit GA4/GTM lead tracking for North Atlas Studio client sites. Use when defining real-lead events, secondary-intent events, diagnostic events, phone taps, quote forms, booking clicks, SMS/email taps, widget interactions, Key Events, Realtime QA, or weekly reporting event conventions. Trigger on "GA4", "tracking", "are we counting calls", or "install analytics".
 metadata:
   updated: "2026-07-04"
 ---
 
 # Lead Tracking Installer
 
-Define honest lead measurement for a local service business. NorthPoint guarantees measurement, not rankings.
+Define honest lead measurement for a local service business. North Atlas guarantees measurement, not rankings.
 
 ## Workflow
 

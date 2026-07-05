@@ -2,116 +2,116 @@
    Source of truth: North_Atlas_Studio_Brand_Pack (2026-07).
    Palette: Atlas Navy #0B1D3A · Atlas Blue #2563EB · Slate #475569 · Stone #E2E8F0 · White.
    Typography: Sora (headlines) · Inter (body).
-   Var names keep the legacy --npd-* prefix so existing pages keep working. */
+   Var names keep the legacy --nas-* prefix so existing pages keep working. */
 :root {
-  --npd-bg: #081428;
-  --npd-bg-site: #0B1D3A;
-  --npd-bg-2: #0E2347;
-  --npd-bg-3: #122A54;
-  --npd-panel: #0E2140;
-  --npd-card: #10254A;
-  --npd-card-2: #16305C;
-  --npd-steel: #1E3A66;
-  --npd-cyan: #2563EB;
-  --npd-cyan-neon: #3B82F6;
-  --npd-cyan-light: #5B8CFF;
-  --npd-cyan-dark: #1D4FC4;
-  --npd-slate: #475569;
-  --npd-stone: #E2E8F0;
-  --npd-text: #F4F7FC;
-  --npd-muted: #A9B7CE;
-  --npd-muted-2: #6C7E9C;
-  --npd-line: rgba(255,255,255,.09);
-  --npd-line-2: rgba(255,255,255,.16);
-  --npd-glow: rgba(37,99,235,.24);
-  --npd-glow-soft: rgba(37,99,235,.16);
-  --npd-green: #34D399;
-  --npd-amber: #FBBF24;
-  --npd-red: #F87171;
-  --npd-maxw: 1180px;
-  --npd-radius: 14px;
-  --npd-radius-lg: 22px;
-  --npd-radius-sm: 12px;
-  --npd-font-heading: 'Sora', 'Inter Tight', Inter, system-ui, sans-serif;
-  --npd-font-body: Inter, system-ui, sans-serif;
-  --npd-ease: cubic-bezier(.2,.7,.2,1);
-  --npd-grid:
+  --nas-bg: #081428;
+  --nas-bg-site: #0B1D3A;
+  --nas-bg-2: #0E2347;
+  --nas-bg-3: #122A54;
+  --nas-panel: #0E2140;
+  --nas-card: #10254A;
+  --nas-card-2: #16305C;
+  --nas-steel: #1E3A66;
+  --nas-cyan: #2563EB;
+  --nas-cyan-neon: #3B82F6;
+  --nas-cyan-light: #5B8CFF;
+  --nas-cyan-dark: #1D4FC4;
+  --nas-slate: #475569;
+  --nas-stone: #E2E8F0;
+  --nas-text: #F4F7FC;
+  --nas-muted: #A9B7CE;
+  --nas-muted-2: #6C7E9C;
+  --nas-line: rgba(255,255,255,.09);
+  --nas-line-2: rgba(255,255,255,.16);
+  --nas-glow: rgba(37,99,235,.24);
+  --nas-glow-soft: rgba(37,99,235,.16);
+  --nas-green: #34D399;
+  --nas-amber: #FBBF24;
+  --nas-red: #F87171;
+  --nas-maxw: 1180px;
+  --nas-radius: 14px;
+  --nas-radius-lg: 22px;
+  --nas-radius-sm: 12px;
+  --nas-font-heading: 'Sora', 'Inter Tight', Inter, system-ui, sans-serif;
+  --nas-font-body: Inter, system-ui, sans-serif;
+  --nas-ease: cubic-bezier(.2,.7,.2,1);
+  --nas-grid:
     radial-gradient(circle at 78% 0%, rgba(37,99,235,.16), transparent 32%),
     radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
-    var(--npd-bg-site);
+    var(--nas-bg-site);
 }
 
-.npd-page-bg {
-  background: var(--npd-grid);
+.nas-page-bg {
+  background: var(--nas-grid);
   background-size: auto, 26px 26px;
 }
 
-.npd-logo-mark {
+.nas-logo-mark {
   width: 32px;
   height: 32px;
   display: block;
   filter: drop-shadow(0 0 12px rgba(37,99,235,.3));
 }
 
-.npd-dashboard-shell {
-  border: 1px solid var(--npd-line-2);
-  border-radius: var(--npd-radius-lg);
+.nas-dashboard-shell {
+  border: 1px solid var(--nas-line-2);
+  border-radius: var(--nas-radius-lg);
   background: rgba(14,33,64,.78);
-  box-shadow: 0 30px 90px rgba(0,0,0,.34), 0 0 80px -42px var(--npd-cyan);
+  box-shadow: 0 30px 90px rgba(0,0,0,.34), 0 0 80px -42px var(--nas-cyan);
 }
 
-.npd-card {
+.nas-card {
   background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
-  border: 1px solid var(--npd-line);
-  border-radius: var(--npd-radius);
-  color: var(--npd-text);
+  border: 1px solid var(--nas-line);
+  border-radius: var(--nas-radius);
+  color: var(--nas-text);
 }
 
-.npd-card-solid {
-  background: var(--npd-card);
-  border: 1px solid var(--npd-line);
-  border-radius: var(--npd-radius);
-  color: var(--npd-text);
+.nas-card-solid {
+  background: var(--nas-card);
+  border: 1px solid var(--nas-line);
+  border-radius: var(--nas-radius);
+  color: var(--nas-text);
 }
 
-.npd-kpi-card {
+.nas-kpi-card {
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
-  border: 1px solid var(--npd-line);
-  border-radius: var(--npd-radius);
+  border: 1px solid var(--nas-line);
+  border-radius: var(--nas-radius);
 }
 
-.npd-kpi-card::after {
+.nas-kpi-card::after {
   content: "";
   position: absolute;
   inset: auto 16px 16px 16px;
   height: 44px;
-  background: linear-gradient(90deg, transparent, var(--npd-glow), transparent);
+  background: linear-gradient(90deg, transparent, var(--nas-glow), transparent);
   opacity: .45;
   filter: blur(18px);
   pointer-events: none;
 }
 
-.npd-meter {
+.nas-meter {
   height: 5px;
   border-radius: 999px;
   background: rgba(255,255,255,.08);
   overflow: hidden;
 }
 
-.npd-meter > i {
+.nas-meter > i {
   display: block;
   height: 100%;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--npd-cyan), var(--npd-cyan-light));
+  background: linear-gradient(90deg, var(--nas-cyan), var(--nas-cyan-light));
 }
 
-.npd-primary-button {
-  background: var(--npd-cyan);
+.nas-primary-button {
+  background: var(--nas-cyan);
   color: #FFFFFF;
-  border: 1px solid var(--npd-cyan);
+  border: 1px solid var(--nas-cyan);
   border-radius: 999px;
-  font-family: var(--npd-font-heading);
+  font-family: var(--nas-font-heading);
   font-weight: 700;
 }

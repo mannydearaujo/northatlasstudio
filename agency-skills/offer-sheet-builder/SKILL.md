@@ -1,6 +1,6 @@
 ---
 name: offer-sheet-builder
-description: Create NorthPoint Digital one-page offer sheets, audit follow-up offers, rebuild proposals, and retainer pitch summaries. Use when packaging the Free Site Audit follow-up, Conversion Website Build/Rebuild, Local SEO plus AI Search Pages, Growth Retainer, pricing bands, deliverables, proof, and no-guarantee language. Trigger on "offer sheet", "proposal", "pitch", "what do I send them after the audit", or pricing a specific prospect.
+description: Create North Atlas Studio one-page offer sheets, audit follow-up offers, rebuild proposals, and retainer pitch summaries. Use when packaging the Free Site Audit follow-up, Conversion Website Build/Rebuild, Local SEO plus AI Search Pages, Growth Retainer, pricing bands, deliverables, proof, and no-guarantee language. Trigger on "offer sheet", "proposal", "pitch", "what do I send them after the audit", or pricing a specific prospect.
 metadata:
   updated: "2026-07-04"
 ---
@@ -27,7 +27,7 @@ Turn audit findings into the one-page pitch a prospect actually reads: the probl
 
 Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citation, or guaranteed lead volume — the no-guarantee block from the offer stack is mandatory on every sheet. Keep it client-safe: no internal pricing strategy, margin reasoning, or audit minutiae. One page means one page.
 
-**Logo rule:** any offer sheet, proposal, or pitch summary that carries NorthPoint Digital's own branding must use the filled cyan north-arrow/compass mark from `assets/brand/svg/northpoint-mark.svg` — never a hollow/cutout mark or a cyan square tile with a letter. See `docs/brand/BRAND-GUIDE.md`.
+**Logo rule:** any offer sheet, proposal, or pitch summary that carries North Atlas Studio's own branding must use the Atlas compass/location mark from `assets/brand/atlas/` — never retired pre-rename assets. See `docs/brand/BRAND-GUIDE.md`.
 
 ## After this skill
 

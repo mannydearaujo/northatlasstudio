@@ -1,6 +1,6 @@
 ---
 name: city-service-cluster-builder
-description: Plan service-area, town, city plus service, or localized service page clusters for local SEO and AI-search readiness. Use when applying the zipper strategy, creating unique location/service briefs, researching keyword clusters, requiring verifiable local detail, avoiding doorway pages, syncing FAQs/schema, and building internal-link plans for NorthPoint Digital clients. Trigger on "town pages", "location pages", "service area pages", or planning which cities get pages.
+description: Plan service-area, town, city plus service, or localized service page clusters for local SEO and AI-search readiness. Use when applying the zipper strategy, creating unique location/service briefs, researching keyword clusters, requiring verifiable local detail, avoiding doorway pages, syncing FAQs/schema, and building internal-link plans for North Atlas Studio clients. Trigger on "town pages", "location pages", "service area pages", or planning which cities get pages.
 metadata:
   updated: "2026-07-04"
 ---

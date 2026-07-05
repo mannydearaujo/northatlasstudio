@@ -21,7 +21,7 @@ Use the most specific LocalBusiness subtype that truly fits:
 ## Review & rating policy (the part everyone gets wrong)
 - Google IGNORES (and can penalize) LocalBusiness `aggregateRating`/`review` markup that is **self-serving**: ratings collected on Google/Yelp cannot be marked up on your own site.
 - Allowed ONLY when reviews are collected and displayed **on the site itself** (first-party, e.g., a real testimonials system with visible individual reviews). Then: `aggregateRating` must match visible math; individual `Review` markup mirrors visible reviews verbatim.
-- Practical default for NorthPoint clients: **skip rating markup**, show real Google review quotes as visible content (no markup), link the GBP via `sameAs`/`hasMap` and let Google connect the entity to its own review data.
+- Practical default for North Atlas clients: **skip rating markup**, show real Google review quotes as visible content (no markup), link the GBP via `sameAs`/`hasMap` and let Google connect the entity to its own review data.
 
 ## Entity linking for AI search
 - Stable `@id` convention: `https://domain.com/#business` referenced by every page's graph.

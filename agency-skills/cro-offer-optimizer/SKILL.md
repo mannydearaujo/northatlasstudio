@@ -1,6 +1,6 @@
 ---
 name: cro-offer-optimizer
-description: Run conversion rate optimization on local service business websites — friction audits of quote/booking/call paths, CTA placement and copy, form field reduction, trust-signal and objection-handling analysis, and a GA4-based measurement plan using NorthPoint's real-lead event conventions. Use when a site gets traffic but few leads, before/after a rebuild to lift conversion, on retainer optimization cycles, or to design the offer presentation on key pages. Trigger on "not getting leads", "conversion", "CRO", "improve the quote form", or "traffic but no calls".
+description: Run conversion rate optimization on local service business websites — friction audits of quote/booking/call paths, CTA placement and copy, form field reduction, trust-signal and objection-handling analysis, and a GA4-based measurement plan using North Atlas's real-lead event conventions. Use when a site gets traffic but few leads, before/after a rebuild to lift conversion, on retainer optimization cycles, or to design the offer presentation on key pages. Trigger on "not getting leads", "conversion", "CRO", "improve the quote form", or "traffic but no calls".
 metadata:
   updated: "2026-07-04"
 ---

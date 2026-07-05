@@ -1,8 +1,8 @@
-# NorthPoint Digital — GA4 Lead Logic & Measurement Spec
+# North Atlas Studio — GA4 Lead Logic & Measurement Spec
 
 _Last reviewed: 2026-06-22_
 
-This is NorthPoint Digital's single source of truth for what counts as a **real lead** vs. a **support/intent metric** across all client sites. Apply it consistently so reports are comparable client-to-client.
+This is North Atlas Studio's single source of truth for what counts as a **real lead** vs. a **support/intent metric** across all client sites. Apply it consistently so reports are comparable client-to-client.
 
 ---
 

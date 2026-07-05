@@ -1,6 +1,6 @@
 ---
 name: local-service-site-builder
-description: Plan or build NorthPoint Digital local service business websites and rebuilds. Use for homepage, services, service-area pages, trust/proof blocks, FAQs, quote/booking/contact paths, semantic HTML, static/SSG crawlable architecture, local SEO foundations, schema requirements, and conversion-first client website delivery. Trigger on "build the site", "rebuild their website", "plan the new site", or any Conversion Website Build/Rebuild engagement.
+description: Plan or build North Atlas Studio local service business websites and rebuilds. Use for homepage, services, service-area pages, trust/proof blocks, FAQs, quote/booking/contact paths, semantic HTML, static/SSG crawlable architecture, local SEO foundations, schema requirements, and conversion-first client website delivery. Trigger on "build the site", "rebuild their website", "plan the new site", or any Conversion Website Build/Rebuild engagement.
 metadata:
   updated: "2026-07-04"
 ---

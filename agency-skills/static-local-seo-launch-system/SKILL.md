@@ -1,6 +1,6 @@
 ---
 name: static-local-seo-launch-system
-description: Run final launch QA for NorthPoint Digital static or SSG local business websites. Use before publishing or after domain changes to check canonical URLs, sitemap, robots, schema, metadata, favicons, social previews, forms, CTAs, tracking, mobile layout, Search Console readiness, GBP website alignment, and deployment visibility. Trigger on "launch QA", "ready to publish?", "pre-launch check", or after any new page cluster ships.
+description: Run final launch QA for North Atlas Studio static or SSG local business websites. Use before publishing or after domain changes to check canonical URLs, sitemap, robots, schema, metadata, favicons, social previews, forms, CTAs, tracking, mobile layout, Search Console readiness, GBP website alignment, and deployment visibility. Trigger on "launch QA", "ready to publish?", "pre-launch check", or after any new page cluster ships.
 metadata:
   updated: "2026-07-04"
 ---

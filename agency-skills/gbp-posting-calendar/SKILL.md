@@ -1,6 +1,6 @@
 ---
 name: gbp-posting-calendar
-description: Create Google Business Profile post calendars and drafts for NorthPoint Digital retainers. Use when planning weekly GBP activity, turning services/photos/reviews/FAQs/blogs into posts, creating update/offer/event/service/FAQ posts, selecting CTAs, or batching a month of GBP content. Trigger on "GBP posts", "Google posts", "posting calendar", or any retainer content-cadence planning.
+description: Create Google Business Profile post calendars and drafts for North Atlas Studio retainers. Use when planning weekly GBP activity, turning services/photos/reviews/FAQs/blogs into posts, creating update/offer/event/service/FAQ posts, selecting CTAs, or batching a month of GBP content. Trigger on "GBP posts", "Google posts", "posting calendar", or any retainer content-cadence planning.
 metadata:
   updated: "2026-07-04"
 ---

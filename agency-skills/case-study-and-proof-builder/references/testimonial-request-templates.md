@@ -10,7 +10,7 @@ Subject: Quick favor — 2 sentences about the [project]
 
 > Hi [name],
 >
-> I'm building out case studies for NorthPoint and the work we did together is one I'd like to feature. Could you share 2–3 honest sentences on: what was frustrating before, and what's different now?
+> I'm building out case studies for North Atlas and the work we did together is one I'd like to feature. Could you share 2–3 honest sentences on: what was frustrating before, and what's different now?
 >
 > I'd love to include your name and [business name], but anonymous works too if you prefer. And if anything about the project didn't land right, I'd genuinely rather hear that directly.
 >

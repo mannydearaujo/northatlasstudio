@@ -1,7 +1,7 @@
 ---
 name: ai-search-readiness-audit
 description: >-
-  Run a NorthPoint Digital "AI Search Readiness Audit" on a prospect's website (and optionally their
+  Run a North Atlas Studio "AI Search Readiness Audit" on a prospect's website (and optionally their
   Google Business Profile): fetch the key pages, score them against Google's official AI-search/SEO
   guidance, flag anti-patterns, and produce a branded, detailed KPI dashboard HTML report — for
   internal use, with prioritized fixes, GA4 lead-tracking recommendations, and a suggested
@@ -18,7 +18,7 @@ metadata:
 
 # AI Search Readiness Audit
 
-This skill turns NorthPoint Digital's "Free Site Audit" CTA into a repeatable deliverable. It takes a
+This skill turns North Atlas Studio's "Free Site Audit" CTA into a repeatable deliverable. It takes a
 prospect's website (and optionally their Google Business Profile), evaluates it against **Google's
 official AI-optimization and SEO guidance**, and produces a **branded KPI dashboard HTML report** for
 **Manny's internal use** — prioritized fixes, severity, plain-English "what this means for you," a
@@ -40,7 +40,7 @@ skill **diagnoses**, those **produce**.
 **Never promise rankings or AI placements.** Google's own guidance is explicit that there is no special
 "AI SEO" lever and no guaranteed citation. Frame everything as **readiness, structure, clarity, and
 visibility** — "easier for Google and AI tools to understand and cite," not "will rank #1" or "will get
-you into AI Overviews." The only thing NorthPoint guarantees is **measurement**: GA4 real-lead tracking
+you into AI Overviews." The only thing North Atlas guarantees is **measurement**: GA4 real-lead tracking
 so the owner sees the actual calls, quotes, and bookings. This honesty is the brand. A report that
 over-promises is worse than no report.
 
@@ -128,19 +128,19 @@ is not the client-facing offer itself, and it should read like internal notes, n
 
 ### Step 8 — Generate the branded KPI dashboard report
 Produce a **single self-contained HTML file** using `assets/report-template.html` as the shell. The
-template carries the approved NorthPoint KPI dashboard style from the branding package:
-charcoal grid background, cyan north-arrow mark, glowing dashboard cards, compact score KPIs, and
+template carries the approved North Atlas KPI dashboard style from the branding package:
+charcoal/navy dashboard background, Atlas compass mark, glowing dashboard cards, compact score KPIs, and
 detailed panels for strengths, weaknesses, corrections needed, and suggested pricing. Fill in every
 `{{PLACEHOLDER}}`. Save as `ai-search-audit-[business-slug].html` and tell the user the file path plus
 a one-paragraph summary of the headline score, the top 3 fixes, and the suggested price band.
 
 Do **not** fall back to a plain text/markdown-style report unless the user specifically asks for a text
-draft. The HTML dashboard is the default format for all future NorthPoint audits. Remember this file is
+draft. The HTML dashboard is the default format for all future North Atlas audits. Remember this file is
 internal — do not soften or omit findings to make them "client-safe"; that translation happens in
 `offer-sheet-builder`, not here.
 
-**Logo rule:** the header logo in `assets/report-template.html` is the filled cyan north-arrow/compass
-mark (inline SVG, same path data as `assets/brand/svg/northpoint-mark.svg`). Never replace it with a
+**Logo rule:** the header logo in `assets/report-template.html` is the Atlas compass/location
+mark from `assets/brand/atlas/`. Never replace it with a
 square/rounded-tile badge or a single-letter placeholder — see `docs/brand/BRAND-GUIDE.md`. If you
 copy this template elsewhere, copy the SVG mark with it.
 
@@ -148,7 +148,7 @@ copy this template elsewhere, copy the SVG mark with it.
 
 Fill the template in this order — it leads with the result, then the detail, then the path forward:
 
-1. **Header** — NorthPoint mark, "AI Search Readiness Audit," business name, site URL, date.
+1. **Header** — North Atlas mark, "AI Search Readiness Audit," business name, site URL, date.
 2. **Dashboard headline** — overall score `/100`, readiness band, and a 2–3 sentence plain-English verdict.
 3. **KPI scorecards** — the four categories, each with its score `/25`, progress meter, and one-line read.
 4. **Dashboard insight panels** — detailed strengths, detailed weaknesses, and corrections needed.
@@ -183,6 +183,6 @@ plain-language gloss in the same breath.
 - The score is **defensible**: someone could re-read the rubric and the evidence and arrive near it.
 - The report is **honest** — names strengths, never promises rankings, and points to measurement as the
   guarantee.
-- It's **branded and self-contained** — one HTML file that looks like it came from NorthPoint Digital.
+- It's **branded and self-contained** — one HTML file that looks like it came from North Atlas Studio.
 - It ends pointing at action for Manny: the top fixes, GA4 tracking, and a suggested price band —
   not a client-facing CTA. The client-facing version is a separate `offer-sheet-builder` deliverable.

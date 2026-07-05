@@ -1,6 +1,6 @@
 ---
 name: localized-blog-opportunity-finder
-description: Find and prioritize localized blog/content opportunities for NorthPoint Digital clients. Use when planning next-of-kin content, service-adjacent local guides, seasonal support content, internal link opportunities, blog briefs, FAQ expansion, social/GBP repurposing, and retainer content that supports real customer intent. Trigger on "what should we blog about", "content ideas", "blog calendar", or planning retainer content.
+description: Find and prioritize localized blog/content opportunities for North Atlas Studio clients. Use when planning next-of-kin content, service-adjacent local guides, seasonal support content, internal link opportunities, blog briefs, FAQ expansion, social/GBP repurposing, and retainer content that supports real customer intent. Trigger on "what should we blog about", "content ideas", "blog calendar", or planning retainer content.
 metadata:
   updated: "2026-07-04"
 ---

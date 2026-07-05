@@ -1,19 +1,19 @@
 ---
 name: apify-local-lead-prospecting
-description: Normalize and qualify local business lead lists from Apify, Google Maps, Google Business Profile-style exports, scraped directories, or CSV/JSON prospect datasets. Use when building NorthPoint Digital prospect lists, scoring local businesses for outreach, finding weak websites or GBP gaps, preparing a CSV plus outreach brief, or drafting personalized outreach that requires human approval before sending. Trigger on "find prospects", "build a lead list", "who should I pitch", or any outreach-cohort work.
+description: Normalize and qualify local business lead lists from Apify, Google Maps, Google Business Profile-style exports, scraped directories, or CSV/JSON prospect datasets. Use when building North Atlas Studio prospect lists, scoring local businesses for outreach, finding weak websites or GBP gaps, preparing a CSV plus outreach brief, or drafting personalized outreach that requires human approval before sending. Trigger on "find prospects", "build a lead list", "who should I pitch", or any outreach-cohort work.
 metadata:
   updated: "2026-07-04"
 ---
 
 # Apify Local Lead Prospecting
 
-Turn Apify, Google Maps, GBP-style, or scraped local-business exports into a clean prospect list for NorthPoint Digital outreach. This skill is for research, scoring, CSV cleanup, and outreach drafting. It does not send messages.
+Turn Apify, Google Maps, GBP-style, or scraped local-business exports into a clean prospect list for North Atlas Studio outreach. This skill is for research, scoring, CSV cleanup, and outreach drafting. It does not send messages.
 
 ## Workflow
 
 1. Confirm the source file, target niche, city/radius, and whether a suppression list exists.
 2. Read `references/apify-input-schema.md` to map inconsistent export fields into the standard prospect schema.
-3. Read `references/prospect-scoring-rubric.md` and score each lead for likely NorthPoint fit.
+3. Read `references/prospect-scoring-rubric.md` and score each lead for likely North Atlas fit.
 4. Read `references/outreach-compliance.md` before drafting any outreach.
 5. Produce `prospects.csv` plus a short outreach brief with the strongest reason to contact each business.
 6. If asked for copy, use `references/outreach-draft-templates.md` and keep every draft specific, honest, and manually approved.

@@ -1,6 +1,6 @@
 ---
 name: human-copy-editor
-description: Audit or rewrite copy so it reads like a real business owner wrote it, not AI. Use on any NorthPoint Digital client copy (web pages, blogs, GBP posts, outreach emails, offer sheets, case studies) before it ships — to detect AI-tells, banned phrases, rhythm problems, and vague filler, and to rewrite in the client's real voice. Trigger on "sounds like AI", "make this sound human", "humanize this", "review the copy", "does this pass", or as the standard pre-publish pass after seo-content-writer or any content generation.
+description: Audit or rewrite copy so it reads like a real business owner wrote it, not AI. Use on any North Atlas Studio client copy (web pages, blogs, GBP posts, outreach emails, offer sheets, case studies) before it ships — to detect AI-tells, banned phrases, rhythm problems, and vague filler, and to rewrite in the client's real voice. Trigger on "sounds like AI", "make this sound human", "humanize this", "review the copy", "does this pass", or as the standard pre-publish pass after seo-content-writer or any content generation.
 metadata:
   updated: "2026-07-04"
 ---

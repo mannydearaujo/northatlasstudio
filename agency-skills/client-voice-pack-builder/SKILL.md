@@ -1,6 +1,6 @@
 ---
 name: client-voice-pack-builder
-description: Create reusable client voice reference files for NorthPoint Digital website copy, GBP posts, blogs, outreach, reports, and case studies. Use when onboarding a client, extracting tone from existing copy/reviews/social/email, defining vocabulary, banned phrases, proof points, offer language, owner voice, or preventing generic AI-sounding content. Also use when copy "doesn't sound like the client" or a new client needs a voice pack before any writing starts.
+description: Create reusable client voice reference files for North Atlas Studio website copy, GBP posts, blogs, outreach, reports, and case studies. Use when onboarding a client, extracting tone from existing copy/reviews/social/email, defining vocabulary, banned phrases, proof points, offer language, owner voice, or preventing generic AI-sounding content. Also use when copy "doesn't sound like the client" or a new client needs a voice pack before any writing starts.
 metadata:
   updated: "2026-07-04"
 ---

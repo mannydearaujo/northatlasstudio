@@ -15,7 +15,7 @@ Cadence: [n]/week · Primary CTA: [Call/Book/Quote] · Voice pack: clients/[slug
 ## Owner notes
 - Photos needed from you this month: [list]
 - Offer post on [date] needs your confirmation of terms + end date by [date].
-- Publishing: [manual by owner / manual by NorthPoint / automated via confirmed workflow]
+- Publishing: [manual by owner / manual by North Atlas / automated via confirmed workflow]
 
 ## Repurposing map
 - [Post date] derived from blog: [url] · [Post date] derived from review dated [date]

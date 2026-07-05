@@ -130,9 +130,9 @@ That script checks:
 
 ## Current Site
 
-- Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
+- Brand: North Atlas Studio (renamed from North Atlas Studio on 2026-07-05; "North Atlas" is now a stale pattern the production sync flags).
 - Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; GitHub Pages serves the site).
-- WARNING: `https://northpoint-digital.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
+- WARNING: `https://northatlasstudio.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
 - Deployment: GitHub Pages from the `main` branch repository root. The repo root includes `CNAME` set to `www.northatlasstudio.com` and `.nojekyll` to keep GitHub Pages from running Jekyll processing.
 - GA4 property installed: measurement ID `G-N7Q7ZZ4E64`; `generate_lead` fires on audit-form success.
@@ -163,7 +163,7 @@ Use the approved North Atlas Studio brand system:
 - Brand source of truth: `North_Atlas_Studio_Brand_Pack/` boards (identity system, logo usage, applications). Brand words: Strategic · Data-Driven · Local-First · Future-Ready.
 - Feel: premium, modern, strategic digital studio — clear, measured, direct, practical.
 - Public landing page visual direction: match the Digital & Social Applications board — dark Atlas Navy hero, white feature strip, compact uppercase nav, bright Atlas Blue CTA, atlas/map/pin growth graphic, and clean white content sections. Do not bring back the older grid-line website background on the public page.
-- Logo: compass ring + globe grid + location pin with Atlas Blue north arrow. Vector recreations live in `assets/brand/atlas/` (`atlas-mark-white.svg` for dark backgrounds, `atlas-mark-navy.svg` for light, `favicon.svg`/`favicon-512.png` navy app-icon tile). Legacy NorthPoint assets in `assets/brand/svg|png` are retired — do not reference them.
+- Logo: compass ring + globe grid + location pin with Atlas Blue north arrow. Vector recreations live in `assets/brand/atlas/` (`atlas-mark-white.svg` for dark backgrounds, `atlas-mark-navy.svg` for light, `favicon.svg`/`favicon-512.png` navy app-icon tile). Old pre-rename assets in `assets/brand/svg|png` are retired and removed — do not reference them.
 - Logo usage per the pack: keep clear space (height of the "N"), don't stretch, recolor, rotate, add effects, or place on busy backgrounds.
 - This rule applies everywhere the North Atlas Studio mark appears: `index.html` (nav + footer), favicon/apple-touch-icon, `og-image.png`, and any skill-generated deliverable (audit reports, case studies, offer sheets, weekly reports). Never a placeholder square-tile-with-letter badge.
 - Main colors: Atlas Navy `#0B1D3A`, Atlas Blue `#2563EB`, Slate `#475569`, Stone `#E2E8F0`, White `#FFFFFF`. Site derives darker navy card tones from Atlas Navy (see `styles/atlas-brand.css` tokens). Text on Atlas Blue buttons is always white (navy-on-blue fails contrast).
@@ -174,7 +174,7 @@ Use the approved North Atlas Studio brand system:
 ## Report And Audit Format
 
 Future North Atlas audits and reports should use the approved KPI dashboard styling from
-the branding package by default: charcoal grid background, cyan north-arrow mark, glowing dashboard
+the branding package by default: charcoal/navy dashboard background, Atlas compass mark, glowing dashboard
 cards, compact KPI scores, and owner-friendly panels for strengths, weaknesses, corrections needed,
 real leads, and next actions.
 
@@ -346,7 +346,7 @@ Keep the shared `agency-skills/` source authoritative, then mirror skills into C
 
 Future agency sessions should apply the relevant North Atlas skill automatically:
 
-- New prospect, audit form, or client start: use `northpoint-project-sync` and create a practical phase-by-phase task list.
+- New prospect, audit form, or client start: use `north-atlas-project-sync` and create a practical phase-by-phase task list.
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
 - Existing website audit or Free Site Audit deliverable: use `ai-search-readiness-audit`.
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.
@@ -363,6 +363,6 @@ Future agency sessions should apply the relevant North Atlas skill automatically
 
 Outreach and scraping guardrail: Apify, Google Maps, and GBP-style scraped data may be used for prospect research and personalized outreach drafting, but do not send bulk outreach without human approval, opt-out handling, and compliance review. Email outreach must follow CAN-SPAM basics; SMS/call automation is out of scope unless a compliant consent workflow is explicitly added.
 
-Skill validation rule: when editing or validating agency skills, run the official `quick_validate.py` validator. If it fails with `ModuleNotFoundError: No module named 'yaml'`, install PyYAML into a temporary local validation folder and run the validator with `PYTHONPATH=/private/tmp/northpoint-skill-validator-python`. This temporary folder is only a validator helper, not part of the skill library or client delivery system.
+Skill validation rule: when editing or validating agency skills, run the official `quick_validate.py` validator. If it fails with `ModuleNotFoundError: No module named 'yaml'`, install PyYAML into a temporary local validation folder and run the validator with `PYTHONPATH=/private/tmp/north-atlas-skill-validator-python`. This temporary folder is only a validator helper, not part of the skill library or client delivery system.
 
 New client task-list rule: whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any North Atlas service delivery, create a phase-by-phase task list for him to follow. The task list should keep him on track from intake through audit, findings, proposal, onboarding, build/fixes, tracking, launch, reporting, and retainer follow-up. Include owner asks, files/assets needed, decisions pending, due-next actions, and what skill/workflow to use at each phase. Keep the list practical, non-technical when possible, and update it as phases are completed.

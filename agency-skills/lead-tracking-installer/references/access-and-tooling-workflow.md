@@ -1,6 +1,6 @@
 # Access And Tooling Workflow
 
-Use this before setting up GA4, GTM, Search Console, dashboards, or key events for a NorthPoint client.
+Use this before setting up GA4, GTM, Search Console, dashboards, or key events for a North Atlas client.
 
 ## Plain-English GTM Explanation
 
@@ -8,13 +8,13 @@ Google Tag Manager, or GTM, is a tag control panel for a website.
 
 Instead of hard-coding every analytics script and tracking event directly into the site, you install one GTM container snippet. Then you can manage tracking tags, click triggers, form-submit triggers, GA4 events, pixels, and testing from GTM.
 
-For NorthPoint, GTM is useful because it lets us add and adjust lead tracking without editing site code every time. It is not a reporting dashboard. GA4 is where event data is reported; GTM is usually how events are installed and tested.
+For North Atlas, GTM is useful because it lets us add and adjust lead tracking without editing site code every time. It is not a reporting dashboard. GA4 is where event data is reported; GTM is usually how events are installed and tested.
 
 ## Best Access Workflow
 
 1. Ask the client to add access first.
    - GA4: ask for property-level access with Editor or Administrator when setup changes are needed. Viewer is enough only for read-only reporting.
-   - GTM: ask for container access with Publish rights only when NorthPoint is responsible for launch; otherwise request Edit access and have the client approve/publish.
+   - GTM: ask for container access with Publish rights only when North Atlas is responsible for launch; otherwise request Edit access and have the client approve/publish.
    - Search Console: ask to be added as a user/owner, or have the client verify ownership.
    - Website/CMS/hosting: ask for the minimum access needed to install tags, verify Search Console, and QA forms.
 

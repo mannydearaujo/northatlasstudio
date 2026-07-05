@@ -1,6 +1,6 @@
 # New Client Task-List Rule
 
-Whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any NorthPoint service delivery, create a practical phase-by-phase task list for him to follow.
+Whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any North Atlas service delivery, create a practical phase-by-phase task list for him to follow.
 
 The task list should keep him on track across the whole service lifecycle:
 
@@ -22,7 +22,7 @@ Each task list should include:
 - Checklist items with status: `Not started`, `In progress`, `Waiting on Manny/client`, `Done`.
 - Owner/client asks.
 - Files, screenshots, exports, or logins needed.
-- The relevant NorthPoint skill/workflow for each phase.
+- The relevant North Atlas skill/workflow for each phase.
 - The next 3 actions Manny should take.
 
 Tone: practical, plain English, and supportive. Do not bury Manny in technical details unless he asks. Keep the list usable as a working checklist during delivery, not just a strategy document.

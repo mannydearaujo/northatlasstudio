@@ -1,6 +1,6 @@
 ---
 name: case-study-and-proof-builder
-description: Create NorthPoint Digital case studies, proof blocks, testimonial requests, and sales proof from verified client work. Use when packaging Golden Paws, AlphaGutterCo, or future client results with real screenshots, GA4 events, before/after evidence, live URLs, structural improvements, and no fake performance claims. Also use when someone says "build a case study", "package the proof", "write up the results", or "I need something to show prospects".
+description: Create North Atlas Studio case studies, proof blocks, testimonial requests, and sales proof from verified client work. Use when packaging Golden Paws, AlphaGutterCo, or future client results with real screenshots, GA4 events, before/after evidence, live URLs, structural improvements, and no fake performance claims. Also use when someone says "build a case study", "package the proof", "write up the results", or "I need something to show prospects".
 metadata:
   updated: "2026-07-04"
 ---
@@ -27,7 +27,7 @@ Turn verified client work into sales assets: full case studies, short proof bloc
 
 ## Output
 
-- Full case study: `case-study-[client-slug].html` (self-contained, NorthPoint-branded) or `.md` if it's feeding another page build.
+- Full case study: `case-study-[client-slug].html` (self-contained, North Atlas-branded) or `.md` if it's feeding another page build.
 - Proof block + stat line + social version: appended as a "Derivatives" section or separate `proof-blocks-[client-slug].md`.
 - Save to the client workspace (`clients/[client-slug]/proof/`) when one exists.
 
@@ -35,9 +35,9 @@ Turn verified client work into sales assets: full case studies, short proof bloc
 
 Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citation, or guaranteed lead volume. Use verified facts and plain-English owner-facing recommendations. No invented lifts, revenue figures, or paraphrased "testimonials" the client never said. If the honest result is modest, write the modest version — a true "went from no tracking to 40 tracked calls a month" beats a fake "300% growth."
 
-**Logo rule:** any case study or proof asset that carries NorthPoint Digital's own branding (cover page, header, footer credit) must use the filled cyan north-arrow/compass mark from `assets/brand/svg/northpoint-mark.svg` — never a hollow/cutout mark or a cyan square tile with a letter. See `docs/brand/BRAND-GUIDE.md`.
+**Logo rule:** any case study or proof asset that carries North Atlas Studio's own branding (cover page, header, footer credit) must use the Atlas compass/location mark from `assets/brand/atlas/` — never retired pre-rename assets. See `docs/brand/BRAND-GUIDE.md`.
 
 ## After this skill
 
-- Feed the proof block into `offer-sheet-builder` (proof section) and the agency site via `northpoint-project-sync`.
+- Feed the proof block into `offer-sheet-builder` (proof section) and the agency site via `north-atlas-project-sync`.
 - New GA4 evidence worth capturing? Note it in the client workspace so `weekly-client-report-generator` and future case studies can reuse it.

@@ -10,7 +10,7 @@ Next phase: Website audit
 - [ ] Status: Not started - Capture business name, website, GBP/Maps link, contact info, niche, city/service area, source, and fit reason.
 - [ ] Status: Not started - Note owner/client asks and missing files.
 
-Relevant workflow: `northpoint-project-sync`
+Relevant workflow: `north-atlas-project-sync`
 
 ## Phase 2 - Prospect Qualification
 

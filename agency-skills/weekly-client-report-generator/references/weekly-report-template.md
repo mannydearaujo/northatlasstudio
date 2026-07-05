@@ -4,10 +4,10 @@
 Use this markdown structure as the content map or a text-only fallback.
 
 **Week of:** [Mon DD] – [Sun DD, YYYY]
-**Prepared by:** NorthPoint Digital · **Sent:** [date]
+**Prepared by:** North Atlas Studio · **Sent:** [date]
 **Comparison:** vs. prior 7 days
 
-> Plain-English rule: lead with the result the owner cares about (leads + phone calls), then show the trend, then one thing NorthPoint Digital did and one thing planned next. Keep it to one screen.
+> Plain-English rule: lead with the result the owner cares about (leads + phone calls), then show the trend, then one thing North Atlas Studio did and one thing planned next. Keep it to one screen.
 
 ---
 
@@ -43,11 +43,11 @@ Use this markdown structure as the content map or a text-only fallback.
 
 ---
 
-## 4. What NorthPoint Digital Did This Week
+## 4. What North Atlas Studio Did This Week
 - [change / fix / content shipped]
 - [change / fix / content shipped]
 
-## 5. What NorthPoint Digital Is Doing Next Week
+## 5. What North Atlas Studio Is Doing Next Week
 - [planned change tied to a number above]
 - [planned change]
 

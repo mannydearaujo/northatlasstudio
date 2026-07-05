@@ -1,6 +1,6 @@
 # GA4 Lead-Tracking Recommendation
 
-Readiness work only matters if it produces **leads the owner can see**. This is the piece NorthPoint
+Readiness work only matters if it produces **leads the owner can see**. This is the piece North Atlas
 actually guarantees — not rankings, but **measurement**. Use this to recommend what to track on the
 audited site, matched to how that specific business converts.
 
