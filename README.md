@@ -1,10 +1,10 @@
-# NorthPoint Digital
+# North Atlas Studio
 
-Conversion-focused landing page for NorthPoint Digital, a practical website,
+Conversion-focused landing page for North Atlas Studio, a practical website,
 local SEO, AI-assisted discovery readiness, and lead tracking agency for local
 service businesses.
 
-The homepage positions NorthPoint Digital around websites that turn local
+The homepage positions North Atlas Studio around websites that turn local
 searches into calls, quote requests, and bookings, measured with GA4 lead
 tracking.
 
@@ -74,18 +74,18 @@ flags old naming, placeholder proof metrics, missing positioning language,
 
 ## Agency Skills
 
-Reusable NorthPoint workflows live in `agency-skills/`. Keep that folder as the
+Reusable North Atlas workflows live in `agency-skills/`. Keep that folder as the
 source of truth, then mirror changed skills into both `~/.codex/skills/` and
 `~/.claude/skills/`. Future agency work should use the relevant skill for
 prospecting, audits, GBP optimization, client builds, tracking, reporting,
 launch QA, proof, and retainers.
 
-Client-facing audits and weekly reports should default to the NorthPoint KPI
+Client-facing audits and weekly reports should default to the North Atlas KPI
 dashboard HTML style: compact score cards, strengths, weaknesses, corrections
 needed, real-lead metrics, and plain-English next steps. Export to PDF only when
 a client needs a static attachment or print-ready file.
 
-Use `styles/northpoint-brand.css` as the shared style source for the landing page
+Use `styles/atlas-brand.css` as the shared style source for the landing page
 and report/audit templates. Self-contained reports can inline the same tokens,
 but the visual system should stay uniform project-wide.
 

@@ -1,23 +1,30 @@
+/* North Atlas Studio — brand tokens & reusable classes.
+   Source of truth: North_Atlas_Studio_Brand_Pack (2026-07).
+   Palette: Atlas Navy #0B1D3A · Atlas Blue #2563EB · Slate #475569 · Stone #E2E8F0 · White.
+   Typography: Sora (headlines) · Inter (body).
+   Var names keep the legacy --npd-* prefix so existing pages keep working. */
 :root {
-  --npd-bg: #0A0F1A;
-  --npd-bg-site: #0D1017;
-  --npd-bg-2: #11151E;
-  --npd-bg-3: #161D2A;
-  --npd-panel: #101722;
-  --npd-card: #141A25;
-  --npd-card-2: #1A212E;
-  --npd-steel: #1D2736;
-  --npd-cyan: #06B6D4;
-  --npd-cyan-neon: #00D2FF;
-  --npd-cyan-light: #38D6F0;
-  --npd-cyan-dark: #0596B0;
-  --npd-text: #F0F4FA;
-  --npd-muted: #8A98A8;
-  --npd-muted-2: #596475;
-  --npd-line: rgba(255,255,255,.08);
-  --npd-line-2: rgba(255,255,255,.14);
-  --npd-glow: rgba(6,182,212,.18);
-  --npd-glow-soft: rgba(6,182,212,.14);
+  --npd-bg: #081428;
+  --npd-bg-site: #0B1D3A;
+  --npd-bg-2: #0E2347;
+  --npd-bg-3: #122A54;
+  --npd-panel: #0E2140;
+  --npd-card: #10254A;
+  --npd-card-2: #16305C;
+  --npd-steel: #1E3A66;
+  --npd-cyan: #2563EB;
+  --npd-cyan-neon: #3B82F6;
+  --npd-cyan-light: #5B8CFF;
+  --npd-cyan-dark: #1D4FC4;
+  --npd-slate: #475569;
+  --npd-stone: #E2E8F0;
+  --npd-text: #F4F7FC;
+  --npd-muted: #A9B7CE;
+  --npd-muted-2: #6C7E9C;
+  --npd-line: rgba(255,255,255,.09);
+  --npd-line-2: rgba(255,255,255,.16);
+  --npd-glow: rgba(37,99,235,.24);
+  --npd-glow-soft: rgba(37,99,235,.16);
   --npd-green: #34D399;
   --npd-amber: #FBBF24;
   --npd-red: #F87171;
@@ -25,37 +32,36 @@
   --npd-radius: 14px;
   --npd-radius-lg: 22px;
   --npd-radius-sm: 12px;
-  --npd-font-heading: 'Inter Tight', 'Space Grotesk', Inter, system-ui, sans-serif;
+  --npd-font-heading: 'Sora', 'Inter Tight', Inter, system-ui, sans-serif;
   --npd-font-body: Inter, system-ui, sans-serif;
   --npd-ease: cubic-bezier(.2,.7,.2,1);
   --npd-grid:
-    radial-gradient(circle at 78% 0%, rgba(6,182,212,.13), transparent 30%),
-    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+    radial-gradient(circle at 78% 0%, rgba(37,99,235,.16), transparent 32%),
+    radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
     var(--npd-bg-site);
 }
 
 .npd-page-bg {
   background: var(--npd-grid);
-  background-size: auto, 54px 54px, 54px 54px;
+  background-size: auto, 26px 26px;
 }
 
 .npd-logo-mark {
   width: 32px;
   height: 32px;
   display: block;
-  filter: drop-shadow(0 0 12px rgba(6,182,212,.28));
+  filter: drop-shadow(0 0 12px rgba(37,99,235,.3));
 }
 
 .npd-dashboard-shell {
   border: 1px solid var(--npd-line-2);
   border-radius: var(--npd-radius-lg);
-  background: rgba(16,23,34,.76);
+  background: rgba(14,33,64,.78);
   box-shadow: 0 30px 90px rgba(0,0,0,.34), 0 0 80px -42px var(--npd-cyan);
 }
 
 .npd-card {
-  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
   border: 1px solid var(--npd-line);
   border-radius: var(--npd-radius);
   color: var(--npd-text);
@@ -71,7 +77,7 @@
 .npd-kpi-card {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.015));
+  background: linear-gradient(180deg, rgba(255,255,255,.045), rgba(255,255,255,.02));
   border: 1px solid var(--npd-line);
   border-radius: var(--npd-radius);
 }
@@ -90,7 +96,7 @@
 .npd-meter {
   height: 5px;
   border-radius: 999px;
-  background: rgba(255,255,255,.07);
+  background: rgba(255,255,255,.08);
   overflow: hidden;
 }
 
@@ -103,7 +109,7 @@
 
 .npd-primary-button {
   background: var(--npd-cyan);
-  color: #04141a;
+  color: #FFFFFF;
   border: 1px solid var(--npd-cyan);
   border-radius: 999px;
   font-family: var(--npd-font-heading);

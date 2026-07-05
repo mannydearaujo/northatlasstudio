@@ -26,3 +26,6 @@ CLAUDE.md
 agency-skills/
 client-templates/
 scripts/
+
+# Brand source boards — tracked in git, not needed on the deployed site
+North_Atlas_Studio_Brand_Pack/

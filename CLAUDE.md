@@ -1,8 +1,8 @@
-# NorthPoint Digital - Agent Operating Guide
+# North Atlas Studio - Agent Operating Guide
 
-Last reviewed: 2026-06-22
+Last reviewed: 2026-07-05
 
-This file is the shared project memory for AI assistants working on NorthPoint Digital. `AGENTS.md` is generated from this file; after editing this file, run `node scripts/sync-agent-docs.mjs`.
+This file is the shared project memory for AI assistants working on North Atlas Studio. `AGENTS.md` is generated from this file; after editing this file, run `node scripts/sync-agent-docs.mjs`.
 
 ## Sync Rule
 
@@ -44,7 +44,7 @@ guessing and producing work that has to be redone:
 - A required business fact is missing or unverified: business name, URL, services, target audience,
   geographic focus, pricing, CMS/platform, or which tool/integration is actually in use.
 - A request could reasonably map to more than one file, skill, or client workspace (for example, which
-  client under `clients/`, which skill in `agency-skills/`, or whether a change is NorthPoint's own
+  client under `clients/`, which skill in `agency-skills/`, or whether a change is North Atlas's own
   site vs. a client's).
 - The task would touch a gitignored strategy file (`BUSINESS-BLUEPRINT.md`, `90-day-rollout-plan.md`,
   etc.) in a way that changes positioning, pricing, or claims — confirm before committing to wording.
@@ -61,13 +61,13 @@ work; reserve questions for points that would otherwise force a guess that's exp
 
 ## Project Snapshot
 
-NorthPoint Digital is a practical website, local SEO, AI-assisted discovery readiness, and lead tracking agency for local service businesses.
+North Atlas Studio is a practical website, local SEO, AI-assisted discovery readiness, and lead tracking agency for local service businesses.
 
 Core promise: websites that turn local searches into leads.
 
 Positioning to preserve:
 
-> NorthPoint Digital builds and improves websites for local service businesses, structures them for Google, local SEO, and AI-assisted discovery, then tracks real lead actions in GA4 so owners can see what is actually generating calls, quotes, and bookings.
+> North Atlas Studio builds and improves websites for local service businesses, structures them for Google, local SEO, and AI-assisted discovery, then tracks real lead actions in GA4 so owners can see what is actually generating calls, quotes, and bookings.
 
 The business is not a generic marketing shop, vague AI agency, ranking-guarantee SEO service, vanity-metric reporting service, or design-only studio. Never promise a #1 ranking, guaranteed Google placement, local pack placement, AI Overview inclusion, AI Mode citation, or guaranteed AI answer placement.
 
@@ -93,7 +93,7 @@ When production-facing strategy changes, update `BUSINESS-BLUEPRINT.md` in the s
 - `og-image.png` - social preview image.
 - `assets/brand/` - approved SVG, PNG, and mockup brand assets.
 - `client-templates/` - tracked reusable private-client workspace templates.
-- `styles/northpoint-brand.css` - reusable brand tokens and classes.
+- `styles/atlas-brand.css` - reusable brand tokens and classes.
 - `docs/brand/` - brand export notes and brand guide.
 - `scripts/production-sync.mjs` - keeps the blueprint aligned with production-facing files and validates guardrails.
 - `scripts/sync-agent-docs.mjs` - regenerates `AGENTS.md` from `CLAUDE.md`.
@@ -125,13 +125,15 @@ That script checks:
 
 ## Current Site
 
-- Brand: NorthPoint Digital.
-- Live/canonical URL: `https://northpointdigital-mdev1.vercel.app/` (Vercel team `mdev1`, project `northpoint_digital`).
-- WARNING: `https://northpoint-digital.vercel.app/` (hyphenated) is a stale copy owned by a DIFFERENT Vercel account/project — this team has no project with that alias. Do not reference it; the old account/project should be found and deleted.
-- Repository: `github.com/mannydearaujo/northpoint_digital` (private).
-- Deployment: Vercel project `northpoint_digital`, auto-deployed from `main`.
+- Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
+- Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; Vercel serves the site — fallback alias `https://northpointdigital-mdev1.vercel.app/`, team `mdev1`).
+- WARNING: `https://northpoint-digital.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
+- Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
+- Deployment: Vercel project `northpoint_digital` on team `mdev1`, auto-deployed from `main`.
+- GA4 property installed: measurement ID `G-N7Q7ZZ4E64`; `generate_lead` fires on audit-form success.
+- Google Search Console verification file `google43697d4e4131ee21.html` is tracked at the repo root and must keep deploying.
 - Contact form posts to Formspree endpoint `https://formspree.io/f/xbdvwyka` with inline success/error states; footer keeps a `mailto:` fallback link.
-- Future upgrade: branded email such as `hello@northpointdigital.com` (or the post-rename equivalent).
+- Future upgrade: branded email such as `hello@northatlasstudio.com`.
 - Header includes an English/Portuguese language switcher for English-speaking and Brazilian Portuguese-speaking local business owners. This is a usability/sales layer, not a full Portuguese SEO route yet.
 
 Current homepage structure:
@@ -151,20 +153,21 @@ Current homepage structure:
 
 ## Brand Rules
 
-Use the approved NorthPoint Digital brand system:
+Use the approved North Atlas Studio brand system:
 
-- Brand idea: Data. Discovery. Direction.
-- Feel: serious local-growth technology partner, clear, measured, direct, premium but practical.
-- Logo: filled cyan north-arrow / compass mark (`assets/brand/svg/northpoint-mark.svg`, documented in `docs/brand/BRAND-GUIDE.md`).
-- Avoid hollow or cutout primary marks and avoid a cyan square tile behind the primary nav logo.
-- This rule applies everywhere the NorthPoint Digital mark appears: `index.html` (nav + footer), favicon/apple-touch-icon, `og-image.png`, and any skill-generated deliverable (audit reports, case studies, offer sheets, weekly reports). Never a placeholder square-tile-with-letter badge.
-- Main colors: Deep Navy `#0A0F1A`, Carbon Site BG `#0D1017`, Card `#141A25`, Steel Blue `#1D2736`, Neon Cyan `#00D2FF`, Site Cyan `#06B6D4`, Text `#F0F4FA`, Muted `#8A98A8`.
-- Typography: Inter Tight for headings, Inter for body.
+- Brand source of truth: `North_Atlas_Studio_Brand_Pack/` boards (identity system, logo usage, applications). Brand words: Strategic · Data-Driven · Local-First · Future-Ready.
+- Feel: premium, modern, strategic digital studio — clear, measured, direct, practical.
+- Logo: compass ring + globe grid + location pin with Atlas Blue north arrow. Vector recreations live in `assets/brand/atlas/` (`atlas-mark-white.svg` for dark backgrounds, `atlas-mark-navy.svg` for light, `favicon.svg`/`favicon-512.png` navy app-icon tile). Legacy NorthPoint assets in `assets/brand/svg|png` are retired — do not reference them.
+- Logo usage per the pack: keep clear space (height of the "N"), don't stretch, recolor, rotate, add effects, or place on busy backgrounds.
+- This rule applies everywhere the North Atlas Studio mark appears: `index.html` (nav + footer), favicon/apple-touch-icon, `og-image.png`, and any skill-generated deliverable (audit reports, case studies, offer sheets, weekly reports). Never a placeholder square-tile-with-letter badge.
+- Main colors: Atlas Navy `#0B1D3A`, Atlas Blue `#2563EB`, Slate `#475569`, Stone `#E2E8F0`, White `#FFFFFF`. Site derives darker navy card tones from Atlas Navy (see `styles/atlas-brand.css` tokens). Text on Atlas Blue buttons is always white (navy-on-blue fails contrast).
+- Typography: Sora SemiBold for headings, Inter for body.
+- IMPORTANT: the brand pack application boards contain TEMPLATE placeholders ("Alex Mercer", "123 Atlas Way, Providence, RI", "401 555" numbers, `northatlasstudio.com` emails). Never copy those into real deliverables — the founder is Manny de Araujo and the service area is Eastern Massachusetts. The production sync flags these placeholder strings.
 - Avoid making the visual direction look like crypto, gaming, or abstract AI hype.
 
 ## Report And Audit Format
 
-Future NorthPoint audits and reports should use the approved KPI dashboard styling from
+Future North Atlas audits and reports should use the approved KPI dashboard styling from
 the branding package by default: charcoal grid background, cyan north-arrow mark, glowing dashboard
 cards, compact KPI scores, and owner-friendly panels for strengths, weaknesses, corrections needed,
 real leads, and next actions.
@@ -193,12 +196,12 @@ for a static file. Do not make PDF the source of truth for reports unless reques
 For audits, use `agency-skills/ai-search-readiness-audit/assets/report-template.html`.
 For weekly reports, use `agency-skills/weekly-client-report-generator/assets/report-template.html`.
 
-Use `styles/northpoint-brand.css` as the shared visual source of truth for public pages and reusable
+Use `styles/atlas-brand.css` as the shared visual source of truth for public pages and reusable
 deliverables. Landing pages, report templates, audit templates, and future client-facing assets should
 share the same tokens: charcoal grid background, translucent dashboard shells, gradient KPI cards,
 cyan meters/glows, 14px card radius, 22px dashboard radius, Inter Tight headings, and Inter body text.
 Self-contained HTML reports may inline these styles for portability, but their values should stay
-aligned with `styles/northpoint-brand.css`.
+aligned with `styles/atlas-brand.css`.
 
 ## Messaging Guardrails
 
@@ -222,9 +225,9 @@ Needed stronger proof:
 
 ## Measurement Rules
 
-NorthPoint Digital reports real business-intent actions. Reporting should not inflate results.
+North Atlas Studio reports real business-intent actions. Reporting should not inflate results.
 
-Assume Manny may not know Google Tag Manager yet. Explain GTM plainly when tracking work comes up: GTM is a tag control panel installed on a website so NorthPoint can manage GA4 events, click/form tracking, pixels, and testing without editing website code for every change. GTM installs and tests tracking; GA4 reports the data.
+Assume Manny may not know Google Tag Manager yet. Explain GTM plainly when tracking work comes up: GTM is a tag control panel installed on a website so North Atlas can manage GA4 events, click/form tracking, pixels, and testing without editing website code for every change. GTM installs and tests tracking; GA4 reports the data.
 
 Best access workflow for new clients:
 
@@ -326,7 +329,7 @@ From the 90-day plan, Phase 1 priorities remain:
 
 ## Agency Skill Library
 
-NorthPoint Digital now maintains a shared, platform-neutral skill library at `agency-skills/`. This is the source of truth for reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, reporting, review workflows, launch QA, and proof packaging.
+North Atlas Studio now maintains a shared, platform-neutral skill library at `agency-skills/`. This is the source of truth for reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, reporting, review workflows, launch QA, and proof packaging.
 
 Install/sync targets:
 
@@ -335,7 +338,7 @@ Install/sync targets:
 
 Keep the shared `agency-skills/` source authoritative, then mirror skills into Codex and Claude when they change. The existing `ai-search-readiness-audit` skill was ported into the shared library and Codex; do not rebuild it from scratch.
 
-Future agency sessions should apply the relevant NorthPoint skill automatically:
+Future agency sessions should apply the relevant North Atlas skill automatically:
 
 - New prospect, audit form, or client start: use `northpoint-project-sync` and create a practical phase-by-phase task list.
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
@@ -356,4 +359,4 @@ Outreach and scraping guardrail: Apify, Google Maps, and GBP-style scraped data 
 
 Skill validation rule: when editing or validating agency skills, run the official `quick_validate.py` validator. If it fails with `ModuleNotFoundError: No module named 'yaml'`, install PyYAML into a temporary local validation folder and run the validator with `PYTHONPATH=/private/tmp/northpoint-skill-validator-python`. This temporary folder is only a validator helper, not part of the skill library or client delivery system.
 
-New client task-list rule: whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any NorthPoint service delivery, create a phase-by-phase task list for him to follow. The task list should keep him on track from intake through audit, findings, proposal, onboarding, build/fixes, tracking, launch, reporting, and retainer follow-up. Include owner asks, files/assets needed, decisions pending, due-next actions, and what skill/workflow to use at each phase. Keep the list practical, non-technical when possible, and update it as phases are completed.
+New client task-list rule: whenever Manny brings in a new prospect/client, submits an audit form, starts a Free Site Audit, or begins any North Atlas service delivery, create a phase-by-phase task list for him to follow. The task list should keep him on track from intake through audit, findings, proposal, onboarding, build/fixes, tracking, launch, reporting, and retainer follow-up. Include owner asks, files/assets needed, decisions pending, due-next actions, and what skill/workflow to use at each phase. Keep the list practical, non-technical when possible, and update it as phases are completed.

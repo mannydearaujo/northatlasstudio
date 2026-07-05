@@ -47,3 +47,6 @@ alpha-gutter/
 # Keep shared agency skill library portable and trackable
 !agency-skills/
 !agency-skills/**
+
+# Brand pack archive — folder is tracked, zip is redundant
+North_Atlas_Studio_Brand_Pack.zip

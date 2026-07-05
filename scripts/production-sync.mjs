@@ -36,7 +36,7 @@ const sourceFiles = [
 ];
 
 const requiredCopy = [
-  "NorthPoint Digital",
+  "North Atlas Studio",
   "local service businesses",
   "local SEO",
   "AI-assisted discovery",
@@ -50,9 +50,11 @@ const requiredCopy = [
 
 const stalePatterns = [
   { label: "old brand name", pattern: /\bNorthline\b/gi },
+  { label: "old brand name", pattern: /\bNorthPoint\b(?!-project-sync)/gi },
   { label: "old positioning", pattern: /\bLocal Growth Agency\b/gi },
   { label: "placeholder proof metric", pattern: /\[\+X%\]/gi },
   { label: "placeholder form endpoint", pattern: /\bYOUR_FORM_ID\b/gi },
+  { label: "brand-pack template placeholder", pattern: /\bAlex Mercer\b|\b123 Atlas Way\b|\b401 555\b/gi },
 ];
 
 function read(filePath) {
