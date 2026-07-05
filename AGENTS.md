@@ -131,11 +131,12 @@ That script checks:
 ## Current Site
 
 - Brand: NorthPoint Digital.
-- Live/canonical URL: `https://northpoint-digital.vercel.app/`.
+- Live/canonical URL: `https://northpointdigital-mdev1.vercel.app/` (Vercel team `mdev1`, project `northpoint_digital`).
+- WARNING: `https://northpoint-digital.vercel.app/` (hyphenated) is a stale copy owned by a DIFFERENT Vercel account/project — this team has no project with that alias. Do not reference it; the old account/project should be found and deleted.
 - Repository: `github.com/mannydearaujo/northpoint_digital` (private).
 - Deployment: Vercel project `northpoint_digital`, auto-deployed from `main`.
-- Contact form currently uses a `mailto:` fallback to `mannydearaujo@gmail.com`.
-- Future upgrade: branded email such as `hello@northpointdigital.com` and a real Formspree or CRM-backed form endpoint.
+- Contact form posts to Formspree endpoint `https://formspree.io/f/xbdvwyka` with inline success/error states; footer keeps a `mailto:` fallback link.
+- Future upgrade: branded email such as `hello@northpointdigital.com` (or the post-rename equivalent).
 - Header includes an English/Portuguese language switcher for English-speaking and Brazilian Portuguese-speaking local business owners. This is a usability/sales layer, not a full Portuguese SEO route yet.
 
 Current homepage structure:

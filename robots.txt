@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://northpoint-digital.vercel.app/sitemap.xml
+Sitemap: https://northpointdigital-mdev1.vercel.app/sitemap.xml
