@@ -1,0 +1,3 @@
+display_name: CRO & Offer Optimizer
+short_description: Conversion friction audits and offer optimization
+default_prompt: Run a CRO friction audit on this site

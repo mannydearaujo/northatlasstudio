@@ -1,0 +1,3 @@
+display_name: Advanced Schema Architect
+short_description: Design complete JSON-LD structured data and entity linking
+default_prompt: Design the schema layer for this site

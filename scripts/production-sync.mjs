@@ -222,6 +222,23 @@ function jsonLd(html) {
   return JSON.parse(match[1]);
 }
 
+function schemaNodes(schema) {
+  const roots = Array.isArray(schema) ? schema : [schema];
+  return roots.flatMap((node) => {
+    if (node && Array.isArray(node["@graph"])) return node["@graph"];
+    return node ? [node] : [];
+  });
+}
+
+function nodeTypes(node) {
+  return Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]].filter(Boolean);
+}
+
+function findSchemaNode(schema, preferredTypes) {
+  const preferred = new Set(preferredTypes);
+  return schemaNodes(schema).find((node) => nodeTypes(node).some((type) => preferred.has(type))) || null;
+}
+
 function sectionIds(html) {
   return [...html.matchAll(/<section\b[^>]*>/gi)]
     .map((match, index) => tagAttributes(match[0]).id || `section-${index + 1}`)
@@ -273,6 +290,7 @@ function buildSnapshot() {
   const robots = read(paths.robots);
   const sitemap = read(paths.sitemap);
   const schema = jsonLd(html);
+  const businessSchema = findSchemaNode(schema, ["ProfessionalService", "LocalBusiness", "Organization"]);
 
   const snapshot = {
     title: title(html),
@@ -285,11 +303,11 @@ function buildSnapshot() {
     twitterTitle: metaContent(html, "name", "twitter:title"),
     twitterDescription: metaContent(html, "name", "twitter:description"),
     twitterImage: metaContent(html, "name", "twitter:image"),
-    schemaType: schema?.["@type"] || "",
-    schemaName: schema?.name || "",
-    schemaUrl: schema?.url || "",
-    schemaImage: schema?.image || "",
-    serviceCatalog: schema?.hasOfferCatalog?.itemListElement
+    schemaType: nodeTypes(businessSchema).join(", "),
+    schemaName: businessSchema?.name || "",
+    schemaUrl: businessSchema?.url || "",
+    schemaImage: businessSchema?.image || "",
+    serviceCatalog: businessSchema?.hasOfferCatalog?.itemListElement
       ?.map((item) => item.itemOffered?.name || item.name)
       .filter(Boolean)
       .join(", ") || "",

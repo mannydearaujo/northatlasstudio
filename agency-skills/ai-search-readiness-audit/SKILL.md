@@ -7,12 +7,13 @@ description: >-
   internal use, with prioritized fixes, GA4 lead-tracking recommendations, and a suggested
   pricing/scope section. Use this whenever someone wants to audit, review, score, or assess a local
   business website for AI search / SEO / "AI Overviews" / "AI Mode" readiness, generate a "free site
-  audit" or "site audit" deliverable, check if a site is structured to be understood and cited by AI
-  search tools, or evaluate a prospect's site before a sales pitch — even if they don't say the words
-  "AI search." This is the internal diagnostic behind the agency's Free Site Audit CTA; the
-  client-facing version of the findings is built separately with `offer-sheet-builder`. It is a
-  DIAGNOSTIC/scoring tool — it evaluates an existing site; it does not write new pages (for building
-  pages, use alpha-seo-content instead).
+  audit" or "site audit" deliverable, or evaluate a prospect's site before a sales pitch — even if
+  they don't say the words "AI search." It is the internal diagnostic behind the Free Site Audit CTA; the
+  client-facing version is built separately with `offer-sheet-builder`. It DIAGNOSES an existing
+  site; it does not write pages (builders: alpha-seo-content for Alpha Gutter, seo-content-writer
+  otherwise).
+metadata:
+  updated: "2026-07-04"
 ---
 
 # AI Search Readiness Audit
@@ -30,8 +31,9 @@ document, which presents only the chosen offer, price, and scope — no internal
 audit minutiae.
 
 It is a **scorer/diagnostic**, not a page generator. When the audit recommends rebuilding or adding a
-page, that hand-off goes to the `alpha-seo-content` skill (the builder). Keep the division clean: this
-skill **diagnoses**, that one **produces**.
+page, that hand-off goes to a builder skill — `alpha-seo-content` for Alpha Gutter, otherwise
+`local-service-site-builder` (site plan) + `seo-content-writer` (copy). Keep the division clean: this
+skill **diagnoses**, those **produce**.
 
 ## The one rule that governs every word of output
 

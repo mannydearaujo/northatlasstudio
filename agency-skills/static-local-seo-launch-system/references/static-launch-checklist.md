@@ -2,16 +2,17 @@
 
 Check domain, canonical, sitemap, robots, title/meta, OG/Twitter, favicon, schema, forms, phone/email/SMS links, GA4/GTM, Search Console, mobile layout, 404 behavior, SSL, and GBP URL alignment.
 
-## Duplicate URL Check (run before every launch and after a host/CMS migration)
+## Duplicate URL And Clean URL Rule
 
-Some static hosts (confirmed on GitHub Pages) serve a `name.html` file at both `/name.html` and `/name` — identical content, both HTTP 200, no redirect between them. If the canonical tag, sitemap, and internal links don't all agree on one form, Google ends up indexing one URL and sitting on the other as "Discovered – currently not indexed," which silently caps how many pages can ever get indexed.
+Before launch, on any rebuild, or after a host/CMS migration, confirm the live host serves only the canonical URL form for each page.
 
-1. Pick 2–3 representative pages and `curl -sI` both the extensionless and `.html` form. If both return 200, the host has this behavior.
-2. Confirm `canonical` tags, `sitemap.xml`, and internal links all use the same single form (the canonical one).
-3. If the host can't redirect the non-canonical form (no `_redirects`/`vercel.json`-equivalent), add `Disallow: /*.html$` (or the inverse, matching whichever form is non-canonical) to `robots.txt` so it never gets crawled in the first place.
-4. In Google Search Console → Pages report, check for "Alternate page with proper canonical tag" or "Duplicate, Google chose different canonical than user" — either is a sign this is already happening on a live site and needs the fix above plus URL removal requests for the wrong indexed form.
+1. Pick 2-3 representative pages and request both the canonical clean URL and likely alternate forms such as `.html`, trailing-slash, and non-trailing-slash versions.
+2. Confirm non-canonical forms either redirect to the canonical URL or are consistently blocked/handled by the host. Do not leave duplicate 200 responses for the same page.
+3. Confirm canonical tags, `sitemap.xml`, and internal links all use the same canonical form.
+4. If the host cannot redirect the non-canonical form, block the non-canonical pattern in `robots.txt` only after confirming it will not block the canonical URL.
+5. In Google Search Console, check for duplicate canonical warnings after launch, especially "Alternate page with proper canonical tag" or "Duplicate, Google chose different canonical than user."
 
-See `local-service-site-builder/references/site-architecture.md` for the build-time rule and `clients/alphagutterco/client-operating-manual.md` (2026-06-26) for a worked example.
+For Vercel static sites with `cleanUrls: true`, use extensionless URLs in canonicals, internal links, and `sitemap.xml`.
 
 ## Sitemap And Indexing Rule
 

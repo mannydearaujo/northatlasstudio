@@ -1,6 +1,8 @@
 ---
 name: google-business-profile-optimizer
-description: Audit, set up, or optimize Google Business Profile data for local service businesses using screenshots, owner intake, Apify/Maps exports, or provided profile details. Use when reviewing GBP categories, services, service areas, reviews, replies, photos, posts, Q&A, hours, website alignment, NAP consistency, local activity plans, or recurring GBP retainer work.
+description: Audit, set up, or optimize Google Business Profile data for local service businesses using screenshots, owner intake, Apify/Maps exports, or provided profile details. Use when reviewing GBP categories, services, service areas, reviews, replies, photos, posts, Q&A, hours, website alignment, NAP consistency, local activity plans, or recurring GBP retainer work. Trigger on "Google Business Profile", "GBP audit", "Google Maps listing", or "why aren't we showing up locally".
+metadata:
+  updated: "2026-07-04"
 ---
 
 # Google Business Profile Optimizer
@@ -32,3 +34,7 @@ Turn GBP screenshots, owner intake, or Apify/Maps-style data into a practical lo
 - If profile data is unavailable, mark it unknown and request screenshots rather than guessing.
 
 Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citation, or guaranteed lead volume. Use verified facts and plain-English owner-facing recommendations.
+
+## After this skill
+
+- Ongoing posting cadence → `gbp-posting-calendar`. Review operations → `compliant-review-engine`. Website/GBP URL and NAP alignment issues → the site build skills + `static-local-seo-launch-system`.

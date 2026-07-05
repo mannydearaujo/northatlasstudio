@@ -1,6 +1,8 @@
 ---
 name: apify-local-lead-prospecting
-description: Normalize and qualify local business lead lists from Apify, Google Maps, Google Business Profile-style exports, scraped directories, or CSV/JSON prospect datasets. Use when building NorthPoint Digital prospect lists, scoring local businesses for outreach, finding weak websites or GBP gaps, preparing a CSV plus outreach brief, or drafting personalized outreach that requires human approval before sending.
+description: Normalize and qualify local business lead lists from Apify, Google Maps, Google Business Profile-style exports, scraped directories, or CSV/JSON prospect datasets. Use when building NorthPoint Digital prospect lists, scoring local businesses for outreach, finding weak websites or GBP gaps, preparing a CSV plus outreach brief, or drafting personalized outreach that requires human approval before sending. Trigger on "find prospects", "build a lead list", "who should I pitch", or any outreach-cohort work.
+metadata:
+  updated: "2026-07-04"
 ---
 
 # Apify Local Lead Prospecting
@@ -33,3 +35,8 @@ Turn Apify, Google Maps, GBP-style, or scraped local-business exports into a cle
 - Keep opt-outs and suppression lists respected across every generated batch.
 
 Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citation, or guaranteed lead volume. Use verified facts and plain-English owner-facing recommendations.
+
+## After this skill
+
+- Top-scored prospects → `ai-search-readiness-audit` (run the real diagnostic before claiming findings in outreach) → `offer-sheet-builder` for the follow-up.
+- Log each cohort (niche, geo, date, count) so replies/meetings/closes are trackable per NEXT-STEPS.md.

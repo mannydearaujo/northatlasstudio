@@ -36,6 +36,29 @@ Keep internal strategy and deliverable artifacts local/gitignored:
 - generated `ai-search-audit-*.html` reports
 - design/sample/internal dashboard files
 
+## Clarifying Questions Rule
+
+Ask Manny a clarifying question before proceeding whenever any of the following is true, rather than
+guessing and producing work that has to be redone:
+
+- A required business fact is missing or unverified: business name, URL, services, target audience,
+  geographic focus, pricing, CMS/platform, or which tool/integration is actually in use.
+- A request could reasonably map to more than one file, skill, or client workspace (for example, which
+  client under `clients/`, which skill in `agency-skills/`, or whether a change is NorthPoint's own
+  site vs. a client's).
+- The task would touch a gitignored strategy file (`BUSINESS-BLUEPRINT.md`, `90-day-rollout-plan.md`,
+  etc.) in a way that changes positioning, pricing, or claims — confirm before committing to wording.
+- A local/verifiable detail (route, distance, landmark, claim, metric) cannot be confirmed from
+  provided material — ask rather than inventing it, per the no-fake-data guardrails already in this
+  file and in `agency-skills/seo-content-writer` and `city-service-cluster-builder`.
+- The action is hard to reverse or affects shared/production state (deploy, push, delete, overwrite a
+  client workspace) and intent isn't fully explicit.
+
+Do not ask when the request is unambiguous, the answer is already established in this file, a skill's
+`SKILL.md`/`references/`, or prior context in the same session, or when a reasonable default clearly
+matches how this agency already operates. Default to moving forward on small, reversible, in-scope
+work; reserve questions for points that would otherwise force a guess that's expensive to undo.
+
 ## Project Snapshot
 
 NorthPoint Digital is a practical website, local SEO, AI-assisted discovery readiness, and lead tracking agency for local service businesses.
@@ -318,9 +341,14 @@ Future agency sessions should apply the relevant NorthPoint skill automatically:
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.
 - New client site/rebuild: use `client-site-operating-manual`, `client-voice-pack-builder`, `local-service-site-builder`, and `lead-tracking-installer`.
 - Location/service page clusters: use `city-service-cluster-builder` and verify local detail before publishing.
+- Writing, rewriting, or optimizing an SEO page or blog post (not just planning or auditing one): use `seo-content-writer` — it hands off to `city-service-cluster-builder`/`localized-blog-opportunity-finder` for planning first and to `schema-and-faq-sync-auditor` afterward. Use `alpha-seo-content` instead when the client is Alpha Seamless Gutter specifically.
 - Launch QA: use `static-local-seo-launch-system`, `schema-and-faq-sync-auditor`, and `lighthouse-technical-seo-fixer`.
 - Retainers: use `weekly-client-report-generator`, `gbp-posting-calendar`, `compliant-review-engine`, and `localized-blog-opportunity-finder`.
 - Proof, case studies, and proposals: use `case-study-and-proof-builder` and `offer-sheet-builder`.
+- Any client-facing copy before it ships (pages, blogs, GBP posts, outreach, offer sheets, case studies): run `human-copy-editor` as the standard pre-publish pass after `seo-content-writer` or any content generation.
+- Design review/QA of any client site's look, layout, mobile patterns, or accessibility: use `website-design-standards` before a build ships.
+- Traffic-but-no-leads, CTA/form friction, or conversion optimization work: use `cro-offer-optimizer`.
+- Complete JSON-LD design beyond basic LocalBusiness/FAQPage (Service, Offer, Organization, reviews, entity linking): use `advanced-schema-architect`; keep `schema-and-faq-sync-auditor` for auditing what already exists.
 
 Outreach and scraping guardrail: Apify, Google Maps, and GBP-style scraped data may be used for prospect research and personalized outreach drafting, but do not send bulk outreach without human approval, opt-out handling, and compliance review. Email outreach must follow CAN-SPAM basics; SMS/call automation is out of scope unless a compliant consent workflow is explicitly added.
 

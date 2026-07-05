@@ -1,0 +1,3 @@
+display_name: Human Copy Editor
+short_description: Audit and rewrite copy to sound human, not AI
+default_prompt: Audit this copy for AI-tells and rewrite it in the client voice
