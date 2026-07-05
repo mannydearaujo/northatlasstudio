@@ -8,7 +8,10 @@ The homepage positions North Atlas Studio around websites that turn local
 searches into calls, quote requests, and bookings, measured with GA4 lead
 tracking.
 
-Static single-file site (`index.html`). Deployed on Vercel.
+Static single-file site (`index.html`). Deployed with GitHub Pages.
+The landing page follows the brand pack's Digital & Social Applications layout:
+dark Atlas Navy hero, white feature strip, Atlas Blue CTA, and clean white
+sections without the older grid-line background.
 
 ## Develop
 Just open `index.html` in a browser — no build step.
@@ -126,4 +129,12 @@ create a clean new setup, record the install date, and report only from that
 point forward.
 
 ## Deploy
-Pushes to `main` auto-deploy via the Vercel Git integration.
+Pushes to `main` publish through GitHub Pages from the repository root.
+The custom domain is set by the root `CNAME` file:
+
+```text
+www.northatlasstudio.com
+```
+
+Namecheap DNS should point the apex domain to GitHub Pages `A` records and
+`www` to Manny's GitHub Pages default domain, `mannydearaujo.github.io`.

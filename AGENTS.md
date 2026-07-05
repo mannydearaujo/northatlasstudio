@@ -131,10 +131,10 @@ That script checks:
 ## Current Site
 
 - Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
-- Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; Vercel serves the site — fallback alias `https://northpointdigital-mdev1.vercel.app/`, team `mdev1`).
+- Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; GitHub Pages serves the site).
 - WARNING: `https://northpoint-digital.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
-- Deployment: Vercel project `northpoint_digital` on team `mdev1`, auto-deployed from `main`.
+- Deployment: GitHub Pages from the `main` branch repository root. The repo root includes `CNAME` set to `www.northatlasstudio.com` and `.nojekyll` to keep GitHub Pages from running Jekyll processing.
 - GA4 property installed: measurement ID `G-N7Q7ZZ4E64`; `generate_lead` fires on audit-form success.
 - Google Search Console verification file `google43697d4e4131ee21.html` is tracked at the repo root and must keep deploying.
 - Contact form posts to Formspree endpoint `https://formspree.io/f/xbdvwyka` with inline success/error states; footer keeps a `mailto:` fallback link.
@@ -162,6 +162,7 @@ Use the approved North Atlas Studio brand system:
 
 - Brand source of truth: `North_Atlas_Studio_Brand_Pack/` boards (identity system, logo usage, applications). Brand words: Strategic · Data-Driven · Local-First · Future-Ready.
 - Feel: premium, modern, strategic digital studio — clear, measured, direct, practical.
+- Public landing page visual direction: match the Digital & Social Applications board — dark Atlas Navy hero, white feature strip, compact uppercase nav, bright Atlas Blue CTA, atlas/map/pin growth graphic, and clean white content sections. Do not bring back the older grid-line website background on the public page.
 - Logo: compass ring + globe grid + location pin with Atlas Blue north arrow. Vector recreations live in `assets/brand/atlas/` (`atlas-mark-white.svg` for dark backgrounds, `atlas-mark-navy.svg` for light, `favicon.svg`/`favicon-512.png` navy app-icon tile). Legacy NorthPoint assets in `assets/brand/svg|png` are retired — do not reference them.
 - Logo usage per the pack: keep clear space (height of the "N"), don't stretch, recolor, rotate, add effects, or place on busy backgrounds.
 - This rule applies everywhere the North Atlas Studio mark appears: `index.html` (nav + footer), favicon/apple-touch-icon, `og-image.png`, and any skill-generated deliverable (audit reports, case studies, offer sheets, weekly reports). Never a placeholder square-tile-with-letter badge.

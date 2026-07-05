@@ -1,9 +1,9 @@
 {
-  "name": "northpoint-digital",
+  "name": "north-atlas-studio",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "NorthPoint Digital static site and agency workflow tools.",
+  "description": "North Atlas Studio static site and agency workflow tools.",
   "scripts": {
     "pagespeed": "node scripts/pagespeed-insights.mjs",
     "pagespeed:goldenpaws": "node scripts/pagespeed-insights.mjs https://goldenpawspetgrooming.com --strategy=both",
