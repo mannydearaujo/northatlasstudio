@@ -43,20 +43,9 @@ gtag('config', 'G-N7Q7ZZ4E64');
       "name": "North Atlas Studio",
       "url": "https://www.northatlasstudio.com/",
       "description": "Website builds, local SEO, AI-assisted discovery readiness, conversion paths, and GA4 lead tracking for local service businesses.",
-      "email": "mannydearaujo@gmail.com",
       "image": "https://www.northatlasstudio.com/og-image.png",
       "logo": "https://www.northatlasstudio.com/assets/brand/atlas/favicon-512.png",
       "slogan": "Websites that turn local searches into leads.",
-      "sameAs": [
-        "https://github.com/mannydearaujo/northatlasstudio"
-      ],
-      "founder": {
-        "@type": "Person",
-        "@id": "https://www.northatlasstudio.com/#founder",
-        "name": "Manny de Araujo",
-        "jobTitle": "Founder",
-        "worksFor": { "@id": "https://www.northatlasstudio.com/#business" }
-      },
       "areaServed": [
         { "@type": "AdministrativeArea", "name": "Greater Boston, Massachusetts" },
         { "@type": "AdministrativeArea", "name": "MetroWest, Massachusetts" },
@@ -263,19 +252,40 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,20,40,.84);backdrop-fi
 .nav-links a:hover{color:var(--text);background:var(--card-2)}
 .nav-right{display:flex;align-items:center;gap:12px}
 .nav .btn{padding:10px 18px;font-size:14px}
+.menu-toggle{display:none;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.06);color:#fff;cursor:pointer}
+.menu-toggle-box{position:relative;width:20px;height:14px;display:block}
+.menu-toggle-line{position:absolute;left:0;width:20px;height:2px;border-radius:999px;background:currentColor;transition:transform .2s var(--ease),opacity .2s var(--ease),top .2s var(--ease)}
+.menu-toggle-line:nth-child(1){top:0}
+.menu-toggle-line:nth-child(2){top:6px}
+.menu-toggle-line:nth-child(3){top:12px}
+.nav.is-open .menu-toggle-line:nth-child(1){top:6px;transform:rotate(45deg)}
+.nav.is-open .menu-toggle-line:nth-child(2){opacity:0}
+.nav.is-open .menu-toggle-line:nth-child(3){top:6px;transform:rotate(-45deg)}
 .lang-switch{display:inline-flex;align-items:center;gap:3px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px}
 .lang-btn{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 10px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-family:var(--nas-font-heading);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,color .2s}
 .lang-btn:hover,.lang-btn.active{background:var(--cyan);color:#FFFFFF}
 .lang-btn .flag{font-size:14px;line-height:1}
-@media(max-width:880px){.nav-links{display:none}}
+@media(max-width:880px){
+  .nav{height:auto;min-height:70px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;padding:12px 0;gap:12px}
+  .logo{min-width:0}
+  .menu-toggle{display:inline-flex}
+  .nav-links,.nav-right{grid-column:1/-1;display:none;width:100%}
+  .nav.is-open .nav-links,.nav.is-open .nav-right{display:flex}
+  .nav-links{align-items:stretch;flex-direction:column;gap:0;padding:8px 0 0;border-top:1px solid var(--line);background:transparent;border-radius:0}
+  .nav-links a{padding:13px 0;border-bottom:1px solid var(--line);border-radius:0}
+  .nav-links a:hover{background:transparent;color:#fff}
+  .nav-right{justify-content:space-between}
+}
 @media(max-width:620px){
   .nav-right{gap:8px}
-  .nav .btn{display:none}
+  .nav .btn{width:100%;justify-content:center}
+  .nav-right{align-items:stretch;flex-direction:column}
+  .lang-switch{align-self:flex-start}
   .lang-btn{padding:6px 8px;font-size:12px}
 }
 @media(max-width:360px){
   .wrap{padding-left:18px;padding-right:18px}
-  .nav{height:66px}
+  .nav{min-height:66px}
   .logo{font-size:16px;gap:8px}
   .logo-mark{width:28px;height:28px}
   .nav .btn{padding:9px 12px;font-size:13px}
@@ -614,12 +624,19 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
 
 <!-- ═══ NAV ═══ -->
 <header>
-  <div class="wrap nav">
+  <div class="wrap nav" data-mobile-nav>
     <a href="#top" class="logo">
       <img class="logo-mark" src="assets/brand/atlas/atlas-mark-white.svg" alt="" aria-hidden="true" />
       North&nbsp;Atlas&nbsp;Studio
     </a>
-    <nav class="nav-links">
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
+      <span class="menu-toggle-box" aria-hidden="true">
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+        <span class="menu-toggle-line"></span>
+      </span>
+    </button>
+    <nav class="nav-links" id="site-menu">
       <a href="services/">Services</a>
       <a href="services/local-seo-ai-search-readiness/">AI Discovery</a>
       <a href="#proof">Results</a>
@@ -1066,7 +1083,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       <div class="foot-col">
         <h4>Get Started</h4>
         <a href="contact/">Free Site Audit</a>
-        <a href="mailto:mannydearaujo@gmail.com">Email North Atlas Studio</a>
+        <a href="contact/">Contact North Atlas Studio</a>
       </div>
     </div>
     <div class="foot-bottom">
@@ -1089,11 +1106,11 @@ var metaDescriptions = {
 var formMessages = {
   en: {
     success: 'Request received. You’ll hear back the same business day in most cases.',
-    error: 'Something went wrong sending the form. Please email mannydearaujo@gmail.com instead.'
+    error: 'Something went wrong sending the form. Please try again in a moment.'
   },
   pt: {
     success: 'Pedido recebido. Na maioria dos casos, você recebe uma resposta no mesmo dia útil.',
-    error: 'Algo deu errado ao enviar o formulário. Envie um email para mannydearaujo@gmail.com.'
+    error: 'Algo deu errado ao enviar o formulário. Tente novamente em alguns instantes.'
   }
 };
 var i18n = {
@@ -1410,5 +1427,6 @@ var io = new IntersectionObserver(function(entries){
 }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.reveal').forEach(function(el,i){ el.style.transitionDelay=(i%5*0.05)+'s'; io.observe(el); });
 </script>
+<script src="assets/site-nav.js" defer></script>
 </body>
 </html>
