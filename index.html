@@ -15,6 +15,9 @@ gtag('config', 'G-N7Q7ZZ4E64');
 <title>North Atlas Studio — Websites, Local SEO & Lead Tracking for Local Service Businesses</title>
 <meta name="description" content="North Atlas Studio builds local service business websites for Google, local SEO, AI-assisted discovery, and GA4 lead tracking — turning searches into calls, quote requests, and bookings." />
 <link rel="canonical" href="https://www.northatlasstudio.com/" />
+<link rel="alternate" hreflang="en-US" href="https://www.northatlasstudio.com/" />
+<link rel="alternate" hreflang="pt-BR" href="https://www.northatlasstudio.com/pt/" />
+<link rel="alternate" hreflang="x-default" href="https://www.northatlasstudio.com/" />
 <link rel="icon" href="assets/brand/atlas/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="assets/brand/atlas/favicon-512.png" />
 
@@ -617,18 +620,18 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       North&nbsp;Atlas&nbsp;Studio
     </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#ai-search">AI Discovery</a>
+      <a href="services/">Services</a>
+      <a href="services/local-seo-ai-search-readiness/">AI Discovery</a>
       <a href="#proof">Results</a>
       <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
+      <a href="faq/">FAQ</a>
     </nav>
     <div class="nav-right">
       <div class="lang-switch" aria-label="Language selector">
         <button class="lang-btn active" type="button" data-lang="en" aria-pressed="true"><span class="flag" aria-hidden="true">🇺🇸</span><span>EN</span></button>
-        <button class="lang-btn" type="button" data-lang="pt" aria-pressed="false"><span class="flag" aria-hidden="true">🇧🇷</span><span>PT</span></button>
+        <button class="lang-btn" type="button" data-lang="pt" data-url="pt/" aria-pressed="false"><span class="flag" aria-hidden="true">🇧🇷</span><span>PT</span></button>
       </div>
-      <a href="#contact" class="btn btn-primary">Get a Free Audit</a>
+      <a href="contact/" class="btn btn-primary">Get a Free Audit</a>
     </div>
   </div>
 </header>
@@ -648,7 +651,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
         what is actually turning visitors into calls, quote requests, and bookings.
       </p>
       <div class="hero-cta reveal">
-        <a href="#contact" class="btn btn-primary">Get a Free Site Audit
+        <a href="contact/" class="btn btn-primary">Get a Free Site Audit
           <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#proof" class="btn btn-outline">See the Proof</a>
@@ -1053,15 +1056,16 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       </div>
       <div class="foot-col">
         <h4>Explore</h4>
-        <a href="#services">Services</a>
-        <a href="#ai-search">AI Discovery</a>
+        <a href="services/">Services</a>
+        <a href="services/local-seo-ai-search-readiness/">AI Discovery</a>
+        <a href="service-area/eastern-massachusetts/">Service Area</a>
         <a href="#proof">Results</a>
         <a href="#process">Process</a>
-        <a href="#faq">FAQ</a>
+        <a href="faq/">FAQ</a>
       </div>
       <div class="foot-col">
         <h4>Get Started</h4>
-        <a href="#contact">Free Site Audit</a>
+        <a href="contact/">Free Site Audit</a>
         <a href="mailto:mannydearaujo@gmail.com">Email North Atlas Studio</a>
       </div>
     </div>
@@ -1347,6 +1351,8 @@ function applyLanguage(lang){
 
 document.querySelectorAll('.lang-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
+    var url = btn.getAttribute('data-url');
+    if(url){ window.location.href = url; return; }
     applyLanguage(btn.getAttribute('data-lang'));
   });
 });
