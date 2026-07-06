@@ -108,7 +108,7 @@ gtag('config', 'G-N7Q7ZZ4E64');
       "description": "North Atlas Studio builds local service business websites for Google, local SEO, AI-assisted discovery, and GA4 lead tracking — turning searches into calls, quote requests, and bookings.",
       "isPartOf": { "@id": "https://www.northatlasstudio.com/#website" },
       "about": { "@id": "https://www.northatlasstudio.com/#business" },
-      "dateModified": "2026-07-05"
+      "dateModified": "2026-07-06"
     },
     {
       "@type": "FAQPage",
@@ -353,7 +353,7 @@ section{padding:clamp(76px,9vw,116px) 0}
 .ai-panel{background:rgba(14,33,64,.78);border:1px solid var(--line-2);border-radius:var(--r-lg);padding:30px;position:relative;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.24),0 0 80px -48px var(--cyan)}
 .ai-panel::before{content:"";position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,var(--cyan-glow),transparent 70%);pointer-events:none}
 .ai-stat{position:relative;z-index:1}
-.ai-stat .big{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(38px,5vw,54px);letter-spacing:-.04em;line-height:1;background:linear-gradient(95deg,var(--cyan),var(--cyan-l));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.ai-stat .big{font-family:var(--nas-font-heading);font-weight:700;font-size:clamp(38px,5vw,54px);letter-spacing:-.04em;line-height:1;background:linear-gradient(95deg,var(--cyan),var(--cyan-l));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .ai-stat .cap{font-size:14px;color:var(--muted);margin-top:10px;line-height:1.55;max-width:34ch}
 .ai-divider{height:1px;background:var(--line);margin:24px 0;position:relative;z-index:1}
 .ai-points{list-style:none;display:flex;flex-direction:column;gap:14px;position:relative;z-index:1}
@@ -383,11 +383,11 @@ section{padding:clamp(76px,9vw,116px) 0}
 .proof-card{border:1px solid var(--line);border-radius:var(--r);padding:30px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.015));transition:border-color .35s var(--ease),transform .35s var(--ease),box-shadow .35s}
 .proof-card:hover{border-color:var(--cyan);transform:translateY(-3px);box-shadow:0 22px 60px rgba(0,0,0,.2),0 0 50px -36px var(--cyan)}
 .pc-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.pc-name{font-family:'Inter Tight',sans-serif;font-weight:600;font-size:20px}
+.pc-name{font-family:var(--nas-font-heading);font-weight:600;font-size:20px}
 .pc-sub{font-size:14px;color:var(--muted);margin-top:5px}
 .pc-badge{flex:0 0 auto;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(37,99,235,.32);padding:5px 11px;border-radius:999px;background:var(--cyan-glow)}
 .pc-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:24px 0;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.s-num{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(22px,3vw,28px)}
+.s-num{font-family:var(--nas-font-heading);font-weight:700;font-size:clamp(22px,3vw,28px)}
 .s-lab{font-size:12.5px;color:var(--muted);margin-top:4px}
 .pc-list{list-style:none;display:flex;flex-direction:column;gap:10px}
 .pc-list li{display:flex;gap:10px;font-size:14.5px;color:#c2cbd9;line-height:1.55}
@@ -1095,288 +1095,17 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
 
 <script>
 var currentLang = 'en';
-var pageTitle = {
-  en: 'North Atlas Studio — Websites, Local SEO & Lead Tracking for Local Service Businesses',
-  pt: 'North Atlas Studio — Sites, SEO Local e Rastreamento de Leads para Empresas de Serviços Locais'
-};
-var metaDescriptions = {
-  en: 'North Atlas Studio builds local service business websites for Google, local SEO, AI-assisted discovery, and GA4 lead tracking — turning searches into calls, quote requests, and bookings.',
-  pt: 'O North Atlas Studio cria sites para empresas locais de serviços, preparados para Google, SEO local, descoberta assistida por IA e rastreamento de leads no GA4.'
-};
 var formMessages = {
-  en: {
-    success: 'Request received. You’ll hear back the same business day in most cases.',
-    error: 'Something went wrong sending the form. Please try again in a moment.'
-  },
-  pt: {
-    success: 'Pedido recebido. Na maioria dos casos, você recebe uma resposta no mesmo dia útil.',
-    error: 'Algo deu errado ao enviar o formulário. Tente novamente em alguns instantes.'
-  }
+  success: 'Request received. You\u2019ll hear back the same business day in most cases.',
+  error: 'Something went wrong sending the form. Please try again in a moment.'
 };
-var i18n = {
-  pt: {
-    'Services': 'Serviços',
-    'AI Discovery': 'Descoberta por IA',
-    'Results': 'Resultados',
-    'Process': 'Processo',
-    'FAQ': 'Perguntas',
-    'Get a Free Audit': 'Auditoria grátis',
-    'Web Design': 'Web Design',
-    'Local SEO': 'SEO Local',
-    'Tracking': 'Rastreamento',
-    'AI Search Readiness': 'Preparação para busca com IA',
-    'Websites that turn': 'Sites que transformam',
-    'local searches into leads.': 'buscas locais em leads.',
-    'North Atlas Studio builds and improves websites for local service businesses. We structure your pages for Google, local SEO, and AI-assisted discovery — then track real lead actions in GA4, so you can see what is actually turning visitors into calls, quote requests, and bookings.': 'O North Atlas Studio cria e melhora sites para empresas locais de serviços. Estruturamos suas páginas para Google, SEO local e descoberta assistida por IA — depois rastreamos ações reais de lead no GA4, para você ver o que transforma visitantes em ligações, pedidos de orçamento e agendamentos.',
-    'Get a Free Site Audit': 'Solicitar auditoria grátis',
-    'See the Proof': 'Ver provas',
-    "No jargon. No vanity metrics. You'll always know what changed on your site and what it produced.": 'Sem jargão. Sem métricas de vaidade. Você sempre sabe o que mudou no site e o que isso gerou.',
-    'Get found by ready customers.': 'Seja encontrado por clientes prontos para agir.',
-    'Performance': 'Performance',
-    'Fast, secure, and built to convert.': 'Rápido, seguro e feito para converter.',
-    'See what works. Prove what matters.': 'Veja o que funciona. Prove o que importa.',
-    'AI Search Ready': 'Pronto para busca com IA',
-    'Structured for today. Optimized for tomorrow.': 'Estruturado para hoje. Otimizado para amanhã.',
-    'What We Do': 'O que fazemos',
-    'Three services that make a local website easier to find, trust, and measure.': 'Três serviços para tornar um site local mais fácil de encontrar, confiar e medir.',
-    'Service 01': 'Serviço 01',
-    'Conversion Website Builds': 'Sites focados em conversão',
-    'New websites and rebuilds for service businesses that need visitors to call, book, or request a quote. Every page gets one job and one obvious next step. Fewer dead ends. A layout that points at the phone number or the quote form instead of making people hunt for it.': 'Sites novos e reconstruções para empresas de serviços que precisam que visitantes liguem, agendem ou peçam orçamento. Cada página recebe uma função e um próximo passo óbvio. Menos caminhos sem saída. Um layout que aponta para o telefone ou formulário em vez de fazer o cliente procurar.',
-    'Built around one clear lead action per page': 'Construído em torno de uma ação principal por página',
-    'Fast, mobile-first, and easy to scan': 'Rápido, mobile-first e fácil de entender',
-    'Phone-first CTAs for high-intent visitors': 'Chamadas para ação voltadas a ligações de clientes prontos para agir',
-    'Service 02': 'Serviço 02',
-    'Local SEO & AI-Assisted Discovery': 'SEO Local e Descoberta Assistida por IA',
-    'Service-area, location, and FAQ pages structured around how customers search, and how Google and AI answer tools summarize a business. Every service, every town, every proof point on a page that Google and AI tools can actually crawl and quote.': 'Páginas de serviços, áreas atendidas e perguntas frequentes estruturadas com base em como os clientes pesquisam — e em como o Google e ferramentas de IA resumem uma empresa. Cada serviço, cidade e prova fica em uma página que o Google e ferramentas de IA conseguem rastrear e citar.',
-    'Service 03': 'Serviço 03',
-    'Lead Tracking & Reporting': 'Rastreamento e Relatórios de Leads',
-    'GA4 setup for the actions that matter: calls, forms, bookings, texts, and emails. You get a simple weekly view of which pages and channels made the phone ring, and which only produced visits.': 'Configuração do GA4 para as ações que importam: ligações, formulários, agendamentos, mensagens e emails. Você recebe uma visão semanal simples de quais páginas e canais fizeram o telefone tocar e quais apenas trouxeram visitas.',
-    'Built for AI-Assisted Discovery': 'Preparado para descoberta assistida por IA',
-    'Search is changing fast. Your website should be': 'A busca está mudando rápido. Seu site precisa ser',
-    'easy to understand.': 'fácil de entender.',
-    'At Google Search I/O 2026, Google confirmed AI Mode passed a billion monthly users, with queries doubling every quarter. More and more customers get their answer summarized by AI — and the businesses that get named are the ones whose information a machine can read, verify, and repeat without guessing.': 'No Google Search I/O 2026, o Google confirmou que o AI Mode passou de um bilhão de usuários mensais, com consultas dobrando a cada trimestre. Cada vez mais clientes recebem respostas resumidas por IA — e as empresas mencionadas são aquelas cujas informações uma máquina consegue ler, verificar e repetir sem adivinhar.',
-    'Google\'s own guidance is blunt: there is no "AI SEO" trick — no': 'A própria orientação do Google é direta: não existe truque de "SEO para IA" — sem',
-    'llms.txt': 'llms.txt',
-    'no rewriting content for robots. What gets surfaced and cited is genuinely helpful, original, crawlable content with clear services, locations, FAQs, structured data, and a complete Google Business Profile.': 'sem reescrever conteúdo para robôs. O que aparece e é citado é conteúdo realmente útil, original e rastreável, com serviços, locais, perguntas frequentes, dados estruturados e um Perfil da Empresa no Google completo.',
-    ", no rewriting content for robots. What gets surfaced and cited is genuinely helpful, original, crawlable content with clear services, locations, FAQs, structured data, and a complete Google Business Profile. That is exactly the foundation North Atlas Studio builds. We can't promise a placement, and we won't. What we do is make sure the information is there, correct, and machine-readable, then track the leads that actually come through.": ', sem reescrever conteúdo para robôs. O que aparece e é citado é conteúdo realmente útil, original e rastreável, com serviços, locais, perguntas frequentes, dados estruturados e um Perfil da Empresa no Google completo. É exatamente essa base que o North Atlas Studio constrói. Não prometemos posição, e nem vamos prometer. Nosso trabalho é garantir que as informações estejam presentes, corretas e legíveis por máquinas, depois rastrear os leads que realmente chegam.',
-    "That is exactly the foundation North Atlas Studio builds. We can't promise a placement, and we won't. We make sure the information is there, clear, and machine-readable, then track the leads that actually come through.": 'É exatamente essa base que o North Atlas Studio constrói. Não prometemos posição, e nem vamos prometer. Garantimos que a informação esteja presente, clara e legível por máquinas, depois rastreamos os leads que realmente chegam.',
-    'Google Search I/O 2026 — AI Mode update': 'Google Search I/O 2026 — atualização do AI Mode',
-    'Google Search Central — AI optimization guide': 'Google Search Central — guia de otimização para IA',
-    'monthly users on Google\'s AI Mode — with search queries doubling every quarter (Google I/O 2026).': 'usuários mensais no AI Mode do Google — com consultas dobrando a cada trimestre (Google I/O 2026).',
-    'Original, helpful content — the thing AI tools actually cite': 'Conteúdo original e útil — aquilo que ferramentas de IA realmente citam',
-    'Clear service & location pages plus structured data machines can read': 'Páginas claras de serviços e locais, com dados estruturados legíveis por máquinas',
-    'A complete Google Business Profile feeding local results': 'Um Perfil da Empresa no Google completo alimentando resultados locais',
-    'Lead tracking, so you see the calls and quotes that still come through': 'Rastreamento de leads para ver as ligações e orçamentos que chegam',
-    'Search Direction': 'Direção da Busca',
-    'Local growth now has three layers: visibility, trust, and measurement.': 'O crescimento local agora tem três camadas: visibilidade, confiança e medição.',
-    'AI-assisted search does not erase SEO fundamentals. It makes clear service information, local proof, technical structure, and real lead tracking more important because fewer weak pages earn attention.': 'A busca assistida por IA não apaga os fundamentos de SEO. Ela torna informações claras de serviço, provas locais, estrutura técnica e rastreamento real de leads ainda mais importantes, porque páginas fracas recebem menos atenção.',
-    'Google visibility': 'Visibilidade no Google',
-    'Be crawlable and locally specific.': 'Seja rastreável e localmente específico.',
-    'Pages need descriptive titles, useful headings, service-area clarity, internal links, schema where appropriate, and content that answers real customer questions without keyword stuffing.': 'As páginas precisam de títulos descritivos, cabeçalhos úteis, clareza sobre área atendida, links internos, schema quando apropriado e conteúdo que responda perguntas reais sem excesso de palavras-chave.',
-    'AI visibility': 'Visibilidade em IA',
-    'Be easy to summarize and trust.': 'Seja fácil de resumir e confiar.',
-    'AI-assisted tools depend on understandable web pages. The work is not tricks. It is direct answers, consistent business details, first-hand proof, real reviews, and visible expertise.': 'Ferramentas assistidas por IA dependem de páginas compreensíveis. O trabalho não é truque. São respostas diretas, dados consistentes da empresa, prova real, avaliações verdadeiras e expertise visível.',
-    'Conversion visibility': 'Visibilidade de conversão',
-    'Measure the actions that create revenue.': 'Meça as ações que geram receita.',
-    'Traffic alone does not prove growth. North Atlas Studio tracks calls, forms, quote requests, bookings, and appointment actions in GA4 so owners can see which pages create real opportunities.': 'Tráfego sozinho não prova crescimento. O North Atlas Studio rastreia ligações, formulários, pedidos de orçamento, agendamentos e ações no GA4 para que o dono veja quais páginas geram oportunidades reais.',
-    'Every page should have a job.': 'Cada página deve ter uma função.',
-    'Client sites are built around intent, not broad blog publishing. A page should help a visitor understand, trust, act, or follow up. If it does none of those things, it probably does not belong.': 'Sites de clientes são criados em torno da intenção, não de blogs genéricos. Uma página deve ajudar o visitante a entender, confiar, agir ou dar continuidade. Se não faz isso, provavelmente não deveria existir.',
-    'Homepage: value proposition, audience, service category, CTA': 'Página inicial: proposta de valor, público, categoria de serviço e CTA',
-    'Service pages: offer, process, benefits, FAQs': 'Páginas de serviço: oferta, processo, benefícios e perguntas frequentes',
-    'Location pages: service-area relevance and availability': 'Páginas de local: relevância geográfica e disponibilidade',
-    'Trust content: reviews, credentials, proof, case studies': 'Conteúdo de confiança: avaliações, credenciais, provas e estudos de caso',
-    'Conversion content: calls, forms, bookings, quote paths': 'Conteúdo de conversão: ligações, formulários, agendamentos e pedidos de orçamento',
-    'Support content: FAQs and policies tied to real questions': 'Conteúdo de suporte: perguntas frequentes e políticas ligadas a dúvidas reais',
-    'Real Builds': 'Projetos reais',
-    'Proof from live businesses, not theory.': 'Prova de empresas reais, não teoria.',
-    'These were not mockups or strategy decks. They were built, launched, improved, and connected to lead tracking, so each owner can open GA4 and watch the phone taps and booked jobs land. The same structure also makes each business easier for search engines and AI tools to understand.': 'Não foram mockups nem apresentações estratégicas. Foram sites construídos, lançados, melhorados e conectados ao rastreamento de leads, para cada dono abrir o GA4 e ver cliques de telefone e agendamentos chegando. A mesma estrutura também torna cada empresa mais fácil de entender para mecanismos de busca e ferramentas de IA.',
-    'Golden Paws Pet Grooming': 'Golden Paws Pet Grooming',
-    'Pet grooming · booking-driven': 'Pet grooming · focado em agendamentos',
-    'Live': 'Ativo',
-    'Lead actions tracked in GA4': 'Ações de lead rastreadas no GA4',
-    'Booking path improved & measured': 'Caminho de agendamento melhorado e medido',
-    'Rebuilt the homepage and booking path around clearer appointment actions': 'Reconstrução da página inicial e do caminho de agendamento em torno de ações mais claras',
-    'Added tracking for booking clicks, phone taps, SMS taps, and booking widget activity': 'Adicionamos rastreamento para cliques de agendamento, telefone, SMS e atividade no widget de reserva',
-    'Clearer service and area structure so Google and AI tools understand what it does and where': 'Estrutura mais clara de serviços e área atendida para Google e ferramentas de IA entenderem o que faz e onde atende',
-    'AlphaGutterCo': 'AlphaGutterCo',
-    'Home services · quote-driven': 'Serviços residenciais · focado em orçamentos',
-    'Town pages strengthened & measured': 'Páginas de cidades fortalecidas e medidas',
-    'Improved homepage messaging around fast quote and call actions': 'Mensagem da página inicial melhorada em torno de orçamento rápido e ligações',
-    'Added tracked quote submissions, quote clicks, phone taps, SMS taps, and email clicks': 'Adicionamos rastreamento de envios de orçamento, cliques de orçamento, telefone, SMS e email',
-    'Strengthened service-area and town pages so local search has clearer information to work from': 'Fortalecemos páginas de área atendida e cidades para a busca local ter informações melhores',
-    'Why This Works': 'Por que isso funciona',
-    "Most local websites don't fail because they look bad.": 'A maioria dos sites locais não falha porque parece ruim.',
-    "They fail because visitors leave without acting, and the owner never finds out how close they came. Someone reads a little, doesn't spot a next step, and calls the competitor whose number was easier to find. We fix the structure, the CTA path, and the measurement layer at the same time.": 'Eles falham porque visitantes saem sem agir, e o dono nunca descobre quão perto estavam de virar lead. A pessoa lê um pouco, não encontra o próximo passo e liga para o concorrente cujo número era mais fácil de achar. Corrigimos a estrutura, o caminho do CTA e a medição ao mesmo tempo.',
-    'Built around the lead action': 'Construído em torno da ação de lead',
-    'Every priority page points visitors toward one clear next step: call, quote, book, or contact.': 'Cada página importante leva o visitante a um próximo passo claro: ligar, pedir orçamento, agendar ou entrar em contato.',
-    'Structured for Google & AI': 'Estruturado para Google e IA',
-    'Services, locations, FAQs, schema, and proof organized so search engines and AI-assisted tools can understand the business.': 'Serviços, locais, perguntas frequentes, schema e provas organizados para mecanismos de busca e ferramentas assistidas por IA entenderem a empresa.',
-    'Measured after launch': 'Medido após o lançamento',
-    'Lead tracking installed and tested, so reports show real actions, not only traffic or bounce rate.': 'Rastreamento de leads instalado e testado, para relatórios mostrarem ações reais, não apenas tráfego ou taxa de rejeição.',
-    'Practical, not performative': 'Prático, não performático',
-    "AI supports production and reporting behind the scenes. You're buying a clearer, better-measured website.": 'A IA apoia produção e relatórios nos bastidores. Você está comprando um site mais claro e melhor medido.',
-    'A company built for this market.': 'Uma empresa criada para este mercado.',
-    'North Atlas Studio focuses on local service businesses where the website has to do more than look polished. It has to explain the offer quickly, support Google and AI-assisted discovery, and make calls, quote requests, and bookings easy to track. The same operating approach is already live in Golden Paws Pet Grooming and AlphaGutterCo.': 'O North Atlas Studio é focado em empresas locais de serviços, onde o site precisa fazer mais do que parecer bonito. Ele precisa explicar a oferta rapidamente, apoiar Google e descoberta assistida por IA, e tornar ligações, pedidos de orçamento e agendamentos fáceis de rastrear. A mesma abordagem já está ativa na Golden Paws Pet Grooming e na AlphaGutterCo.',
-    'How It Works': 'Como funciona',
-    'A simple path from unclear performance to measurable leads.': 'Um caminho simples de desempenho confuso para leads mensuráveis.',
-    'Audit': 'Auditoria',
-    'Review the site, search visibility, conversion paths, AI search readiness, and tracking to find the highest-impact gaps.': 'Revisamos o site, visibilidade em busca, caminhos de conversão, preparação para IA e rastreamento para encontrar as lacunas de maior impacto.',
-    'Rebuild': 'Reconstrução',
-    'Improve the pages that matter most: homepage, service pages, location pages, FAQs, and contact paths.': 'Melhoramos as páginas que mais importam: inicial, serviços, locais, perguntas frequentes e caminhos de contato.',
-    'Track': 'Rastreamento',
-    'Set up and verify GA4 events for calls, forms, bookings, texts, and other lead actions before launch.': 'Configuramos e verificamos eventos no GA4 para ligações, formulários, agendamentos, mensagens e outras ações antes do lançamento.',
-    'Report': 'Relatório',
-    'A branded KPI dashboard shows real leads, funnel health, completed work, and next steps, so decisions are based on evidence.': 'Um painel de KPIs com a marca mostra leads reais, saúde do funil, trabalho concluído e próximos passos, para decisões baseadas em evidência.',
-    'KPI Dashboard Reports': 'Relatórios em painel de KPI',
-    'Audit findings and weekly results in one owner-friendly view.': 'Achados da auditoria e resultados semanais em uma visão simples para o dono.',
-    'Every future audit and weekly report uses the North Atlas dashboard format: KPI cards first, then strengths, weaknesses, corrections needed, and the next action tied to real lead tracking.': 'Toda auditoria e relatório semanal usa o formato de painel do North Atlas: cartões de KPI primeiro, depois pontos fortes, pontos fracos, correções necessárias e a próxima ação ligada ao rastreamento real de leads.',
-    'HTML dashboard as the source of truth, with PDF export available when needed': 'Painel HTML como fonte da verdade, com exportação em PDF quando necessário',
-    'Real leads stay separate from supporting activity, so reports do not inflate results': 'Leads reais ficam separados de atividades de apoio, para o relatório não inflar resultados',
-    'Strengths, weaknesses, and corrections are written in plain English for the owner': 'Pontos fortes, fracos e correções são escritos em linguagem simples para o dono',
-    'Site Audit Dashboard': 'Painel de Auditoria do Site',
-    'AI readiness · Local SEO · Lead tracking': 'Preparação para IA · SEO local · Rastreamento de leads',
-    'Content': 'Conteúdo',
-    'Specific proof and service clarity.': 'Provas específicas e clareza de serviço.',
-    'Technical': 'Técnico',
-    'Crawlable pages, schema, sitemap.': 'Páginas rastreáveis, schema e sitemap.',
-    'Structure': 'Estrutura',
-    'Clear headings and FAQs.': 'Cabeçalhos claros e perguntas frequentes.',
-    'Local Data': 'Dados locais',
-    'GBP, reviews, and local signals.': 'Perfil do Google, avaliações e sinais locais.',
-    'Strengths': 'Pontos fortes',
-    'What is already working and should be protected.': 'O que já funciona e deve ser protegido.',
-    'Weaknesses': 'Pontos fracos',
-    'The specific gaps holding back trust, visibility, or conversion.': 'As lacunas específicas que travam confiança, visibilidade ou conversão.',
-    'Corrections': 'Correções',
-    'The next fixes, ranked by business impact.': 'As próximas correções, priorizadas por impacto no negócio.',
-    'Case Studies': 'Estudos de caso',
-    'Two businesses. Two lead paths. Same operating principle.': 'Duas empresas. Dois caminhos de lead. O mesmo princípio operacional.',
-    'Golden Paws needed stronger booking visibility. AlphaGutterCo needed clearer quote and call paths from local traffic. Both needed cleaner structure, better tracking, and pages that search engines and AI tools can understand more easily.': 'A Golden Paws precisava de mais visibilidade para agendamentos. A AlphaGutterCo precisava de caminhos mais claros para orçamento e ligação a partir do tráfego local. Ambas precisavam de estrutura mais limpa, melhor rastreamento e páginas mais fáceis de entender para busca e IA.',
-    'Pet services': 'Serviços para pets',
-    'Goal — more bookings & calls': 'Objetivo — mais agendamentos e ligações',
-    'A booking-focused site with lead tracking built in.': 'Um site focado em agendamentos com rastreamento integrado.',
-    'Improved around appointment intent: homepage CTAs, booking page support, service-area links, and GA4 tracking for booking clicks, phone taps, SMS taps, and booking widget activity. The structure also gives search engines clearer information about what Golden Paws offers and where it serves.': 'Melhorado em torno da intenção de agendar: CTAs na página inicial, suporte à página de reserva, links de área atendida e rastreamento no GA4 para cliques de reserva, telefone, SMS e widget. A estrutura também dá aos buscadores informações mais claras sobre o que a Golden Paws oferece e onde atende.',
-    'Website rebuild': 'Reconstrução do site',
-    'Booking funnel': 'Funil de agendamento',
-    'GA4 tracking': 'Rastreamento GA4',
-    'Local SEO': 'SEO local',
-    'Ask about this build': 'Perguntar sobre este projeto',
-    'Home services': 'Serviços residenciais',
-    'Goal — more quote requests': 'Objetivo — mais pedidos de orçamento',
-    'A local SEO and quote-path build for a service business.': 'Um projeto de SEO local e caminho de orçamento para uma empresa de serviços.',
-    'Improved around quote intent: clearer homepage offer, tracked quote actions, phone-first CTAs, and location pages that connect local traffic to quote and call paths. The town-page structure also makes service areas and offers easier for local search and AI tools to understand.': 'Melhorado em torno da intenção de pedir orçamento: oferta mais clara na página inicial, ações de orçamento rastreadas, CTAs voltados a telefone e páginas de local que conectam tráfego local aos caminhos de orçamento e ligação.',
-    'Local landing pages': 'Páginas locais',
-    'Quote funnel': 'Funil de orçamento',
-    'Town pages': 'Páginas por cidade',
-    'Questions, answered straight.': 'Perguntas, respondidas direto.',
-    'Do you build new sites or improve existing ones?': 'Vocês criam sites novos ou melhoram sites existentes?',
-    "Both. Many businesses already have a site that just isn't converting or being found. North Atlas Studio rebuilds the pages that matter and adds tracking — you don't always need to start from scratch.": 'Os dois. Muitas empresas já têm um site que simplesmente não converte ou não é encontrado. O North Atlas Studio reconstrói as páginas que importam e adiciona rastreamento — nem sempre é preciso começar do zero.',
-    'What counts as a real lead?': 'O que conta como lead real?',
-    'A real lead is an action with business intent: a phone tap, form submission, booking click, or quote request. Pageviews and scroll depth help diagnose behavior, but they are not leads.': 'Um lead real é uma ação com intenção comercial: clique no telefone, envio de formulário, clique de agendamento ou pedido de orçamento. Visualizações de página e rolagem ajudam a diagnosticar comportamento, mas não são leads.',
-    'Do you optimize for AI-assisted discovery too?': 'Vocês também otimizam para descoberta assistida por IA?',
-    "Yes — but exactly how Google says to. Google's own AI optimization guide is clear that there's no special trick: no": 'Sim — mas exatamente do jeito que o Google orienta. O próprio guia de otimização para IA do Google deixa claro que não existe truque especial: sem',
-    'file, no rewriting content for robots. What gets cited in AI answers is genuinely helpful, original content with clear services, locations, FAQs, structured data, and a complete Google Business Profile. North Atlas Studio builds that foundation so your business is easier for Google and AI-assisted tools to understand. We don\'t promise specific rankings or AI placements — no one credibly can — and we track the leads that come through either way.': 'nem reescrever conteúdo para robôs. O que é citado em respostas de IA é conteúdo original e realmente útil, com serviços, locais, perguntas frequentes, dados estruturados e um Perfil da Empresa no Google completo. O North Atlas Studio constrói essa base para sua empresa ser mais fácil de entender pelo Google e ferramentas assistidas por IA. Não prometemos rankings ou posições em IA — ninguém sério consegue — e rastreamos os leads que chegam de qualquer forma.',
-    "Can you guarantee I'll rank #1 or appear in AI answers?": 'Vocês garantem que vou ficar em primeiro lugar ou aparecer em respostas de IA?',
-    "No, and be cautious of anyone who does. Search placement depends on factors outside any agency's control. What North Atlas Studio controls is the quality and structure of your site: clear content, fast pages, correct schema, and verified tracking. That's the work that gives you the best chance of being found — and lets you measure what actually happens.": 'Não, e desconfie de quem promete isso. Posicionamento em busca depende de fatores fora do controle de qualquer agência. O que o North Atlas Studio controla é a qualidade e a estrutura do seu site: conteúdo claro, páginas rápidas, schema correto e rastreamento verificado. Esse trabalho aumenta suas chances de ser encontrado e permite medir o que realmente acontece.',
-    'Is North Atlas Studio an AI agency?': 'O North Atlas Studio é uma agência de IA?',
-    "No. North Atlas Studio is a practical website, local SEO, and lead tracking service for local businesses. AI is used behind the scenes when it helps production, reporting, or operations move faster. What you're buying is a clearer website, stronger visibility, and real lead tracking.": 'Não. O North Atlas Studio é um serviço prático de sites, SEO local e rastreamento de leads para empresas locais. A IA é usada nos bastidores quando ajuda produção, relatórios ou operações a andarem mais rápido. O que você compra é um site mais claro, mais visibilidade e rastreamento real de leads.',
-    'What types of businesses do you work with?': 'Com quais tipos de empresas vocês trabalham?',
-    'Local, owner-operated service businesses: contractors, home services, pet services, cleaning, landscaping, and similar. If you rely on local customers calling, booking, or requesting quotes, this is built for you.': 'Empresas locais de serviços operadas pelo próprio dono: empreiteiros, serviços residenciais, pet services, limpeza, jardinagem e similares. Se você depende de clientes locais ligando, agendando ou pedindo orçamento, isso foi feito para você.',
-    'Free Site Audit': 'Auditoria gratuita do site',
-    'Find out what your website is really doing.': 'Descubra o que seu site realmente está fazendo.',
-    "Send your website and North Atlas Studio will review the main conversion gaps, local SEO and AI-assisted discovery readiness, and whether your site is tracking real leads. You'll leave with clear next steps — even if we don't work together.": 'Envie seu site e o North Atlas Studio vai revisar as principais lacunas de conversão, SEO local, preparação para descoberta assistida por IA e se seu site rastreia leads reais. Você sai com próximos passos claros — mesmo que não trabalhemos juntos.',
-    'Built for local service businesses.': 'Feito para empresas locais de serviços.',
-    'You get findings specific to your site, not a template. If the biggest problems are things you can fix yourself, the audit says so.': 'Você recebe achados específicos do seu site, não um modelo genérico. Se os maiores problemas forem coisas que você pode corrigir sozinho, a auditoria vai dizer isso.',
-    'Working with local service businesses across Greater Boston, MetroWest, and Southcoast Massachusetts — and remotely anywhere in the U.S.': 'Atendendo empresas locais de serviços em Greater Boston, MetroWest e Southcoast Massachusetts — e remotamente em qualquer lugar dos EUA.',
-    'Your name': 'Seu nome',
-    'Business name': 'Nome da empresa',
-    'Website URL': 'URL do site',
-    'Best email': 'Melhor email',
-    'What do you want more of?': 'O que você quer receber mais?',
-    'Choose one': 'Escolha uma opção',
-    'Phone calls': 'Ligações',
-    'Quote requests': 'Pedidos de orçamento',
-    'Bookings / appointments': 'Agendamentos',
-    'Local search visibility': 'Visibilidade em busca local',
-    'All of the above': 'Tudo acima',
-    'Request Free Site Audit': 'Solicitar auditoria gratuita',
-    'Typically responds same day · Local service businesses only': 'Normalmente respondo no mesmo dia · Apenas empresas locais de serviços',
-    'Websites, local SEO, AI-assisted discovery readiness, and lead tracking for local service businesses across Greater Boston, MetroWest, and Southcoast MA — and remote across the U.S.': 'Sites, SEO local, preparação para descoberta assistida por IA e rastreamento de leads para empresas locais de serviços em Greater Boston, MetroWest e Southcoast MA — e atendimento remoto nos EUA.',
-    'Explore': 'Explorar',
-    'Get Started': 'Começar',
-    'Email North Atlas Studio': 'Enviar email para o North Atlas Studio',
-    'North Atlas Studio. All rights reserved.': 'North Atlas Studio. Todos os direitos reservados.',
-    'Strategic · Data-Driven · Local-First · Future-Ready': 'Estratégico · Orientado a Dados · Local em Primeiro Lugar · Pronto para o Futuro',
-    'Jane Smith': 'João Silva',
-    'Acme Plumbing': 'Empresa Exemplo',
-    'https://yourbusiness.com': 'https://suaempresa.com',
-    'you@yourbusiness.com': 'voce@suaempresa.com'
-  }
-};
-var originalText = new WeakMap();
-var originalPlaceholders = new WeakMap();
-
-function normalizeText(value){
-  return value.replace(/\s+/g, ' ').trim();
-}
-
-function translateTextNode(node, lang){
-  if(!originalText.has(node)) originalText.set(node, node.nodeValue);
-  var original = originalText.get(node);
-  var key = normalizeText(original);
-  if(!key) return;
-  if(lang === 'en'){
-    node.nodeValue = original;
-    return;
-  }
-  var translated = i18n[lang] && i18n[lang][key];
-  if(translated){
-    var leading = original.match(/^\s*/)[0];
-    var trailing = original.match(/\s*$/)[0];
-    node.nodeValue = leading + translated + trailing;
-  }
-}
-
-function applyLanguage(lang){
-  currentLang = lang;
-  document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
-  document.title = pageTitle[lang] || pageTitle.en;
-  var desc = document.querySelector('meta[name="description"]');
-  if(desc) desc.setAttribute('content', metaDescriptions[lang] || metaDescriptions.en);
-  var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-    acceptNode: function(node){
-      var parent = node.parentElement;
-      if(!parent || ['SCRIPT','STYLE'].indexOf(parent.tagName) > -1) return NodeFilter.FILTER_REJECT;
-      return normalizeText(node.nodeValue) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-    }
-  });
-  var nodes = [];
-  while(walker.nextNode()) nodes.push(walker.currentNode);
-  nodes.forEach(function(node){ translateTextNode(node, lang); });
-  document.querySelectorAll('[placeholder]').forEach(function(el){
-    if(!originalPlaceholders.has(el)) originalPlaceholders.set(el, el.getAttribute('placeholder'));
-    var original = originalPlaceholders.get(el);
-    el.setAttribute('placeholder', lang === 'en' ? original : (i18n[lang][original] || original));
-  });
-  document.querySelectorAll('.lang-btn').forEach(function(btn){
-    var active = btn.getAttribute('data-lang') === lang;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-  });
-  try{ localStorage.setItem('nas-lang', lang); }catch(e){}
-}
 
 document.querySelectorAll('.lang-btn').forEach(function(btn){
   btn.addEventListener('click', function(){
     var url = btn.getAttribute('data-url');
-    if(url){ window.location.href = url; return; }
-    applyLanguage(btn.getAttribute('data-lang'));
+    if(url){ window.location.href = url; }
   });
 });
-try{
-  var savedLang = localStorage.getItem('nas-lang');
-  if(savedLang === 'pt') applyLanguage('pt');
-}catch(e){}
 
 document.getElementById('yr').textContent = new Date().getFullYear();
 
@@ -1405,15 +1134,15 @@ if(form){
     }).then(function(res){
       if(res.ok){
         form.reset();
-        statusEl.textContent = formMessages[currentLang].success;
+        statusEl.textContent = formMessages.success;
         statusEl.classList.add('is-success');
         if(typeof gtag === 'function'){ gtag('event', 'generate_lead', { method: 'free_site_audit_form' }); }
       }else{
-        statusEl.textContent = formMessages[currentLang].error;
+        statusEl.textContent = formMessages.error;
         statusEl.classList.add('is-error');
       }
     }).catch(function(){
-      statusEl.textContent = formMessages[currentLang].error;
+      statusEl.textContent = formMessages.error;
       statusEl.classList.add('is-error');
     }).finally(function(){
       submitBtn.disabled = false;
