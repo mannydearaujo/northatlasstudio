@@ -247,7 +247,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,20,40,.84);backdrop-fi
 .logo{font-family:var(--nas-font-heading);font-weight:600;font-size:18px;letter-spacing:-.04em;display:flex;align-items:center;gap:10px;min-height:44px;color:var(--text)}
 .logo-mark{width:32px;height:32px;display:block;flex:0 0 auto;filter:drop-shadow(0 0 12px rgba(37,99,235,.3))}
 .nav-links{display:flex;gap:8px;align-items:center;background:rgba(20,26,37,.82);border:1px solid var(--line);border-radius:999px;padding:5px 6px}
-.nav-links a{font-size:14px;font-weight:450;color:var(--muted);transition:color .2s,background .2s;padding:8px 15px;border-radius:999px}
+.nav-links a{font-size:14px;font-weight:450;color:#EEF5FF;transition:color .2s,background .2s;padding:8px 15px;border-radius:999px}
 .nav-links a:hover{color:var(--text);background:var(--card-2)}
 .nav-right{display:flex;align-items:center;gap:12px}
 .nav .btn{padding:10px 18px;font-size:14px}
@@ -260,18 +260,21 @@ header{position:sticky;top:0;z-index:50;background:rgba(8,20,40,.84);backdrop-fi
 .nav.is-open .menu-toggle-line:nth-child(1){top:6px;transform:rotate(45deg)}
 .nav.is-open .menu-toggle-line:nth-child(2){opacity:0}
 .nav.is-open .menu-toggle-line:nth-child(3){top:6px;transform:rotate(-45deg)}
+.mobile-quick-cta{display:none;align-items:center;justify-content:center;min-height:40px;padding:9px 12px;border-radius:4px;background:#0B63FF;color:#fff;text-decoration:none;font-family:var(--nas-font-heading);font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;box-shadow:0 10px 24px rgba(11,99,255,.24)}
 .lang-switch{display:inline-flex;align-items:center;gap:3px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px}
 .lang-btn{display:inline-flex;align-items:center;gap:6px;min-height:34px;padding:6px 10px;border:0;border-radius:999px;background:transparent;color:var(--muted);font-family:var(--nas-font-heading);font-size:13px;font-weight:600;cursor:pointer;transition:background .2s,color .2s}
 .lang-btn:hover,.lang-btn.active{background:var(--cyan);color:#FFFFFF}
 .lang-btn .flag{font-size:14px;line-height:1}
 @media(max-width:880px){
-  .nav{height:auto;min-height:70px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;padding:12px 0;gap:12px}
+  header .wrap{padding-left:16px;padding-right:16px}
+  .nav{height:auto;min-height:70px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;padding:12px 0;gap:10px}
   .logo{min-width:0}
-  .menu-toggle{display:inline-flex}
+  .mobile-quick-cta{display:inline-flex}
+  .menu-toggle{display:inline-flex;margin-right:2px;border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.1)}
   .nav-links,.nav-right{grid-column:1/-1;display:none;width:100%}
   .nav.is-open .nav-links,.nav.is-open .nav-right{display:flex}
   .nav-links{align-items:stretch;flex-direction:column;gap:0;padding:8px 0 0;border-top:1px solid var(--line);background:transparent;border-radius:0}
-  .nav-links a{padding:13px 0;border-bottom:1px solid var(--line);border-radius:0}
+  .nav-links a{padding:13px 2px;border-bottom:1px solid var(--line);border-radius:0;color:#F2F7FF}
   .nav-links a:hover{background:transparent;color:#fff}
   .nav-right{justify-content:space-between}
 }
@@ -556,7 +559,7 @@ header{background:#071A34;border-bottom:1px solid rgba(255,255,255,.08);box-shad
 .hero-art{position:relative;z-index:1;min-height:390px;align-self:stretch;display:flex;align-items:center;justify-content:center}
 .hero h1{font-size:clamp(40px,5.6vw,70px);max-width:13ch;margin:22px 0 0;color:#fff;line-height:1.08}
 .hero h1 .grad{background:none;-webkit-text-fill-color:currentColor;color:#fff}
-.hero .lede{font-size:14px;color:#D7E2F4;max-width:52ch;margin:20px 0 0;line-height:1.7}
+.hero .lede{font-size:15px;color:#F2F7FF;max-width:52ch;margin:20px 0 0;line-height:1.7}
 .hero-cta{justify-content:flex-start;margin-top:26px}
 .hero-sub{color:#C7D5EB;font-size:13px;max-width:46ch}
 .atlas-map{position:absolute;right:-58px;top:42px;width:min(560px,50vw);height:320px;opacity:.56;background:
@@ -586,6 +589,8 @@ section{background:#fff;color:#0B1D3A}
 .b-card:hover,.thesis-card:hover,.proof-card:hover,.why-card:hover,.step:hover,.case-card:hover{border-color:#B8C7DD;box-shadow:0 20px 52px rgba(11,29,58,.1)}
 .b-ic,.step-n{background:#EFF6FF;border-color:#C7D8F5;color:#0B63FF}
 .b-list li,.standard-list li,.pc-list li,.ai-points li,.report-points li{color:#334155}
+.standard-box .standard-list li,.ai-panel .ai-points li,.dash-preview .report-points li{color:#EAF2FF}
+.standard-box svg,.ai-panel svg,.dash-preview svg{color:#76A6FF}
 .standard-box,.ai-panel,.dash-preview,.contact-card{background:#061833;border:0;color:#fff;box-shadow:0 30px 80px rgba(6,24,51,.18)}
 .standard-box h3,.ai-panel h3,.dash-preview h3,.contact-card h2{color:#fff}
 .standard-box p,.ai-panel p,.dash-panel p,.contact-card p,.contact-card .contact-reassure{color:#D7E2F4}
@@ -640,6 +645,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       </span>
     </button>
     <nav class="nav-links" id="site-menu">
+      <a href="./">Home</a>
       <a href="services/">Services</a>
       <a href="service-area/eastern-massachusetts/">Service Area</a>
       <a href="about/">About</a>
@@ -662,7 +668,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
   <div class="hero-glow"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <span class="pill reveal"><b>Web Design</b> · Local SEO · Tracking · AI Search Readiness</span>
+      <span class="pill reveal"><b>Website Optimization</b> · Local SEO · Tracking · AI Search Readiness</span>
       <h1 class="reveal">Websites that turn <span class="grad">local searches into leads.</span></h1>
       <p class="lede reveal">
         North Atlas Studio builds and improves websites for local service businesses. We structure your pages
@@ -716,16 +722,16 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       <div class="b-card feature reveal">
         <div class="b-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 8h18M7 21h10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
         <div class="b-num">Service 01</div>
-        <h3><a href="services/conversion-websites/">Conversion Website Builds</a></h3>
-        <p>New websites and rebuilds for service businesses that need visitors to call, book, or request a quote.
-           Every page gets one job and one obvious next step. Fewer dead ends. A layout that points at the
-           phone number or the quote form instead of making people hunt for it.</p>
+        <h3><a href="services/conversion-websites/">Website Optimization &amp; Rebuilds</a></h3>
+        <p>New websites, rebuilds, and optimization passes for service businesses that need visitors to call,
+           book, or request a quote. Every page gets one job and one obvious next step. Fewer dead ends. A
+           layout that points at the phone number or the quote form instead of making people hunt for it.</p>
         <ul class="b-list">
           <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Built around one clear lead action per page</li>
           <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Fast, mobile-first, and easy to scan</li>
           <li><svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8.5l3 3L13 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Phone-first CTAs for high-intent visitors</li>
         </ul>
-        <a class="text-link" href="services/conversion-websites/">Explore conversion websites</a>
+        <a class="text-link" href="services/conversion-websites/">Explore website optimization</a>
       </div>
       <div class="b-card reveal">
         <div class="b-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.7"/><path d="M16 16l4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
@@ -1078,6 +1084,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
       </div>
       <div class="foot-col">
         <h4>Explore</h4>
+        <a href="./">Home</a>
         <a href="services/">Services</a>
         <a href="services/conversion-websites/">Conversion Websites</a>
         <a href="services/local-seo-ai-search-readiness/">Local SEO &amp; AI Readiness</a>

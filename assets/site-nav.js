@@ -7,7 +7,18 @@
   document.querySelectorAll('[data-mobile-nav]').forEach(function(nav){
     var toggle = nav.querySelector('.menu-toggle');
     var menu = nav.querySelector('.nav-links');
+    var actions = nav.querySelector('.nav-actions, .nav-right');
+    var primaryCta = actions ? actions.querySelector('.btn-primary') : null;
     if(!toggle || !menu) return;
+
+    if(primaryCta && !nav.querySelector('.mobile-quick-cta')){
+      var quickCta = primaryCta.cloneNode(false);
+      var isPortuguese = (document.documentElement.lang || '').toLowerCase().indexOf('pt') === 0;
+      quickCta.className = 'mobile-quick-cta';
+      quickCta.textContent = isPortuguese ? 'Auditoria' : 'Audit';
+      quickCta.setAttribute('aria-label', primaryCta.textContent.trim());
+      nav.insertBefore(quickCta, toggle);
+    }
 
     function setOpen(open){
       nav.classList.toggle('is-open', open);
