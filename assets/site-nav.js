@@ -69,4 +69,14 @@
     form.addEventListener('focusin', markStart);
     form.addEventListener('input', markStart);
   });
+
+  document.querySelectorAll('form.domain-audit-form').forEach(function(form){
+    form.addEventListener('submit', function(){
+      track('quote_request_click', {
+        link_text: 'Get My Free Audit',
+        destination: form.getAttribute('action') || '',
+        form_id: form.id || 'domain_audit_form'
+      });
+    });
+  });
 })();

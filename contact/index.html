@@ -25,6 +25,9 @@
 <meta name="twitter:title" content="Contact North Atlas Studio | Free Site Audit" />
 <meta name="twitter:description" content="Request a free site audit from North Atlas Studio for your local service business website, local SEO, AI-assisted discovery readiness, and lead tracking." />
 <meta name="twitter:image" content="https://www.northatlasstudio.com/og-image.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;450;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../styles/atlas-brand.css" /><link rel="stylesheet" href="../styles/site-pages.css" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"ContactPage","@id":"https://www.northatlasstudio.com/contact/#webpage","url":"https://www.northatlasstudio.com/contact/","name":"Contact North Atlas Studio","about":{"@id":"https://www.northatlasstudio.com/#business"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.northatlasstudio.com/"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.northatlasstudio.com/contact/"}]}]}
@@ -40,6 +43,13 @@
 <script>
 var form=document.getElementById('audit-form');
 if(form){var statusEl=document.getElementById('form-status');form.addEventListener('submit',function(e){e.preventDefault();statusEl.className='form-status';statusEl.textContent='Sending...';fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}}).then(function(response){if(response.ok){form.reset();statusEl.className='form-status is-success';statusEl.textContent='Request received. You will hear back the same business day in most cases.';if(typeof gtag==='function'){gtag('event','generate_lead',{method:'free_site_audit_form_contact_page'});gtag('event','contact_form_submit',{form_id:'audit-form',method:'free_site_audit_form_contact_page'});}}else{throw new Error('Form failed')}}).catch(function(){statusEl.className='form-status is-error';statusEl.textContent='Something went wrong sending the form. Please try again in a moment.';});});}
+(function(){
+  var site = new URLSearchParams(location.search).get('site');
+  var input = document.getElementById('f-url');
+  if(site && input && !input.value){
+    input.value = /^https?:\/\//i.test(site) ? site : 'https://' + site;
+  }
+})();
 </script>
 <script src="../assets/site-nav.js" defer></script>
 </body>
