@@ -28,10 +28,16 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html 404.html robots.txt sitemap.xml CNAME .nojekyll og-image.png google*.html _site/
+          cp -R assets styles services service-area about contact faq pt _site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
 
       - name: Deploy to GitHub Pages
         id: deployment
