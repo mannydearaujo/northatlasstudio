@@ -32,8 +32,8 @@
   --nas-radius: 14px;
   --nas-radius-lg: 22px;
   --nas-radius-sm: 12px;
-  --nas-font-heading: 'Sora', 'Inter Tight', Inter, system-ui, sans-serif;
-  --nas-font-body: Inter, system-ui, sans-serif;
+  --nas-font-heading: Sora, "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+  --nas-font-body: Inter, "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --nas-ease: cubic-bezier(.2,.7,.2,1);
   --nas-grid:
     radial-gradient(circle at 78% 0%, rgba(37,99,235,.16), transparent 32%),
