@@ -88,8 +88,8 @@ When production-facing strategy changes, update `BUSINESS-BLUEPRINT.md` in the s
 
 ## Repo Shape
 
-- `index.html` - production homepage. The site is multi-page: `about/`, `services/` (three service sub-pages), `faq/`, `contact/`, `who-we-help/`, `service-area/eastern-massachusetts/`, plus a full Brazilian Portuguese tree under `pt/` with localized slugs, reciprocal hreflang, and matching schema.
-- `robots.txt` and `sitemap.xml` - crawl and sitemap metadata (sitemap lists all 20 indexable EN + PT pages).
+- `index.html` - production homepage. The site is multi-page: `about/`, `services/` (three service sub-pages), `faq/`, `contact/`, `who-we-help/`, `website-optimization-process/`, `free-site-audit/`, `service-area/eastern-massachusetts/`, plus a full Brazilian Portuguese tree under `pt/` with localized slugs, reciprocal hreflang, and matching schema.
+- `robots.txt` and `sitemap.xml` - crawl and sitemap metadata (sitemap lists all 24 indexable EN + PT pages).
 - `og-image.png` - social preview image.
 - `assets/brand/` - approved SVG, PNG, and mockup brand assets.
 - `client-templates/` - tracked reusable private-client workspace templates.
@@ -330,7 +330,7 @@ From the 90-day plan, Phase 1 priorities remain:
 
 ## Agency Skill Library
 
-North Atlas Studio now maintains a shared, platform-neutral skill library at `agency-skills/`. This is the source of truth for reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, reporting, review workflows, launch QA, and proof packaging.
+North Atlas Studio now maintains a shared, platform-neutral skill library at `agency-skills/`. This is the source of truth for reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, website build checklists, reporting, review workflows, launch QA, and proof packaging.
 
 Install/sync targets:
 
@@ -345,7 +345,7 @@ Future agency sessions should apply the relevant North Atlas skill automatically
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
 - Existing website audit or Free Site Audit deliverable: use `ai-search-readiness-audit`.
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.
-- New client site/rebuild: use `client-site-operating-manual`, `client-voice-pack-builder`, `local-service-site-builder`, and `lead-tracking-installer`.
+- New client site/rebuild: use `website-build-checklist`, `client-site-operating-manual`, `client-voice-pack-builder`, `local-service-site-builder`, and `lead-tracking-installer`.
 - Location/service page clusters: use `city-service-cluster-builder` and verify local detail before publishing.
 - Writing, rewriting, or optimizing an SEO page or blog post (not just planning or auditing one): use `seo-content-writer` — it hands off to `city-service-cluster-builder`/`localized-blog-opportunity-finder` for planning first and to `schema-and-faq-sync-auditor` afterward. Use `alpha-seo-content` instead when the client is Alpha Seamless Gutter specifically.
 - Launch QA: use `static-local-seo-launch-system`, `schema-and-faq-sync-auditor`, and `lighthouse-technical-seo-fixer`.

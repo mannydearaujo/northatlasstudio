@@ -1,6 +1,6 @@
 # North Atlas Studio
 
-Conversion-focused landing page for North Atlas Studio, a practical website,
+Conversion-focused static website for North Atlas Studio, a practical website,
 local SEO, AI-assisted discovery readiness, and lead tracking agency for local
 service businesses.
 
@@ -10,6 +10,7 @@ tracking.
 
 Static multi-page site with no build step: `index.html` plus `about/`,
 `services/` (three service sub-pages), `faq/`, `contact/`, `who-we-help/`,
+`website-optimization-process/`, `free-site-audit/`,
 `service-area/eastern-massachusetts/`, and a full Brazilian Portuguese route
 tree under `pt/` with localized slugs and reciprocal hreflang. Deployed with
 GitHub Pages from the `main` branch.
