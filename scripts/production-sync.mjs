@@ -27,6 +27,7 @@ const skillInstallTargets = [
 const sourceFiles = [
   "index.html",
   "README.md",
+  "BUSINESS-BLUEPRINT.md",
   "90-day-rollout-plan.md",
   "GA4-lead-logic.md",
   "weekly-report-template.md",

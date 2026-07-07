@@ -88,8 +88,8 @@ When production-facing strategy changes, update `BUSINESS-BLUEPRINT.md` in the s
 
 ## Repo Shape
 
-- `index.html` - single-file production landing page.
-- `robots.txt` and `sitemap.xml` - crawl and sitemap metadata.
+- `index.html` - production homepage. The site is multi-page: `about/`, `services/` (three service sub-pages), `faq/`, `contact/`, `who-we-help/`, `service-area/eastern-massachusetts/`, plus a full Brazilian Portuguese tree under `pt/` with localized slugs, reciprocal hreflang, and matching schema.
+- `robots.txt` and `sitemap.xml` - crawl and sitemap metadata (sitemap lists all 20 indexable EN + PT pages).
 - `og-image.png` - social preview image.
 - `assets/brand/` - approved SVG, PNG, and mockup brand assets.
 - `client-templates/` - tracked reusable private-client workspace templates.
@@ -100,7 +100,7 @@ When production-facing strategy changes, update `BUSINESS-BLUEPRINT.md` in the s
 - Internal strategy docs remain local/gitignored even though future sessions should read them when present.
 - `clients/` is the local/private workspace root for real client intake, notes, reports, and assets.
 
-There is no build step for the static site. Open `index.html` directly for local review. Pushes to `main` auto-deploy through Vercel.
+There is no build step for the static site. Open `index.html` directly for local review. Pushes to `main` auto-deploy through GitHub Pages (custom domain via root `CNAME`).
 
 ## Production Sync Workflow
 
@@ -125,7 +125,7 @@ That script checks:
 
 ## Current Site
 
-- Brand: North Atlas Studio (renamed from North Atlas Studio on 2026-07-05; "North Atlas" is now a stale pattern the production sync flags).
+- Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
 - Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; GitHub Pages serves the site).
 - WARNING: `https://northatlasstudio.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
@@ -325,7 +325,7 @@ From the 90-day plan, Phase 1 priorities remain:
 - Use Google and web.dev sources as the basis for public AI/search education.
 - Use Ahrefs AI Overview research only as directional market context with attribution, not as a universal claim.
 - Keep public copy careful: "readiness", "structure", "visibility", "easier to understand", "easier to cite", never guaranteed placement.
-- Preserve the single-page static site unless the user explicitly asks for a larger restructure.
+- Preserve the current static multi-page structure (no build step, no framework) unless the user explicitly asks for a larger restructure.
 - After production copy or metadata edits, run the production sync check.
 
 ## Agency Skill Library

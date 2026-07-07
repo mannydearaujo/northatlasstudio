@@ -8,7 +8,11 @@ The homepage positions North Atlas Studio around websites that turn local
 searches into calls, quote requests, and bookings, measured with GA4 lead
 tracking.
 
-Static single-file site (`index.html`). Deployed with GitHub Pages.
+Static multi-page site with no build step: `index.html` plus `about/`,
+`services/` (three service sub-pages), `faq/`, `contact/`, `who-we-help/`,
+`service-area/eastern-massachusetts/`, and a full Brazilian Portuguese route
+tree under `pt/` with localized slugs and reciprocal hreflang. Deployed with
+GitHub Pages from the `main` branch.
 The landing page follows the brand pack's Digital & Social Applications layout:
 dark Atlas Navy hero, white feature strip, Atlas Blue CTA, and clean white
 sections without the older grid-line background.

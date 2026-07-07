@@ -50,3 +50,10 @@ alpha-gutter/
 
 # Brand pack archive — folder is tracked, zip is redundant
 North_Atlas_Studio_Brand_Pack.zip
+
+# Raw research inputs — keep local, never deploy
+AI Search Readiness Research/
+
+# Rebuilt brand asset pack — interim, untracked until a canonical brand-asset
+# source is chosen (see NEXT-STEPS.md top-tier upgrades)
+North_Atlas_Studio_REBUILT_Production_Assets/

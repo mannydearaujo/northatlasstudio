@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -436,6 +436,7 @@ section{padding:clamp(76px,9vw,116px) 0}
 .dash-top{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
 .dash-title{font-family:var(--nas-font-heading);font-weight:700;font-size:20px}
 .dash-sub{font-size:13px;color:var(--muted);margin-top:5px}
+.dash-note{font-size:12px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--line-2);letter-spacing:.02em}
 .dash-score{text-align:right;font-family:var(--nas-font-heading);font-weight:700;font-size:38px;color:var(--cyan);line-height:1}
 .dash-score span{font-size:15px;color:var(--muted)}
 .dash-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
@@ -611,7 +612,7 @@ section{background:#fff;color:#0B1D3A}
 .case-vis{background-image:none;background-color:#061833}
 .dash-kpi,.dash-panel{background:#F8FAFC;border:1px solid #E2E8F0}
 .dash-title,.dash-kpi .val{color:#0B1D3A}
-.dash-sub,.dash-kpi .lab,.dash-kpi p,.dash-score span{color:#64748B}
+.dash-sub,.dash-note,.dash-kpi .lab,.dash-kpi p,.dash-score span{color:#64748B}
 .contact-left{border-right:1px solid rgba(255,255,255,.12)}
 .form-group label{color:#D7E2F4}
 .form-group input,.form-group select{background:#fff;border-color:#C9D4E5;color:#0B1D3A}
@@ -994,6 +995,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
           <div class="dash-panel"><h3>Weaknesses</h3><p>The specific gaps holding back trust, visibility, or conversion.</p></div>
           <div class="dash-panel"><h3>Corrections</h3><p>The next fixes, ranked by business impact.</p></div>
         </div>
+        <p class="dash-note">Sample report — illustrative scores showing the format, not real client results.</p>
       </div>
     </div>
   </div>
