@@ -131,7 +131,7 @@ That script checks:
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
 - Deployment: GitHub Pages from the `main` branch repository root. The repo root includes `CNAME` set to `www.northatlasstudio.com` and `.nojekyll` to keep GitHub Pages from running Jekyll processing.
 - GA4 property installed: measurement ID `G-N7Q7ZZ4E64`; `generate_lead` fires on audit-form success.
-- Google Search Console verification files `google43697d4e4131ee21.html` and `google18038ce1f52d5cfa.html` are tracked at the repo root, and the homepage includes meta token `thEPkSWpGlUy5tHTng0ZGTCb6wVoXkBwHeN4rC2u6iQ`. Keep all three verification methods until Chrome/Search Console confirms the active ownership method; only then remove unused tokens in a separate cleanup.
+- Google Search Console: the HTTPS URL-prefix property `https://www.northatlasstudio.com/` is verified as of 2026-07-07. Chrome/Search Console showed successful verification by HTML file, HTML tag, and Google Analytics; the old `http://www.northatlasstudio.com/` property was removed from the account. Root verification files `google43697d4e4131ee21.html` and `google18038ce1f52d5cfa.html` remain tracked, and the HTML meta verification token `thEPkSWpGlUy5tHTng0ZGTCb6wVoXkBwHeN4rC2u6iQ` belongs on the canonical homepage only.
 - Contact form posts to Formspree endpoint `https://formspree.io/f/xbdvwyka` with inline success/error states; footer keeps a `mailto:` fallback link.
 - Future upgrade: branded email such as `hello@northatlasstudio.com`.
 - Header includes an English/Portuguese language switcher for English-speaking and Brazilian Portuguese-speaking local business owners. This is a usability/sales layer, not a full Portuguese SEO route yet.
