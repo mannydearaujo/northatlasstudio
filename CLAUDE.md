@@ -127,11 +127,11 @@ That script checks:
 
 - Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
 - Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; GitHub Pages serves the site).
-- WARNING: `https://northatlasstudio.vercel.app/` is a stale copy owned by a DIFFERENT Vercel account — find and delete that old account/project.
+- Vercel duplicate status: `https://northatlasstudio.vercel.app/` was rechecked on 2026-07-07 and returns Vercel `DEPLOYMENT_NOT_FOUND`. Treat GitHub Pages from `main` as the only production deployment. Periodically recheck the Vercel URL after major launch changes; if it ever serves a copy again, recover/delete the old Vercel project before requesting indexing.
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
 - Deployment: GitHub Pages from the `main` branch repository root. The repo root includes `CNAME` set to `www.northatlasstudio.com` and `.nojekyll` to keep GitHub Pages from running Jekyll processing.
 - GA4 property installed: measurement ID `G-N7Q7ZZ4E64`; `generate_lead` fires on audit-form success.
-- Google Search Console verification file `google43697d4e4131ee21.html` is tracked at the repo root and must keep deploying.
+- Google Search Console verification files `google43697d4e4131ee21.html` and `google18038ce1f52d5cfa.html` are tracked at the repo root, and the homepage includes meta token `thEPkSWpGlUy5tHTng0ZGTCb6wVoXkBwHeN4rC2u6iQ`. Keep all three verification methods until Chrome/Search Console confirms the active ownership method; only then remove unused tokens in a separate cleanup.
 - Contact form posts to Formspree endpoint `https://formspree.io/f/xbdvwyka` with inline success/error states; footer keeps a `mailto:` fallback link.
 - Future upgrade: branded email such as `hello@northatlasstudio.com`.
 - Header includes an English/Portuguese language switcher for English-speaking and Brazilian Portuguese-speaking local business owners. This is a usability/sales layer, not a full Portuguese SEO route yet.
