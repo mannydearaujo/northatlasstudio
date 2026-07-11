@@ -1197,6 +1197,18 @@ if(form){
   });
 }
 
+(function(){
+  var hf = document.getElementById('hero-domain-form');
+  if(hf){
+    hf.addEventListener('submit', function(e){
+      e.preventDefault();
+      var val = document.getElementById('hero-domain-input').value.trim();
+      if(!val){ document.getElementById('hero-domain-input').focus(); return; }
+      window.location.href = 'contact/?site=' + encodeURIComponent(val) + '#audit-form';
+    });
+  }
+})();
+
 var io = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
 }, {threshold:.1, rootMargin:'0px 0px -30px 0px'});

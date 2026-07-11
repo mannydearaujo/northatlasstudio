@@ -40,6 +40,20 @@
 <section class="cta-band"><div class="wrap cta-row"><div><h2>Quer saber o que está bloqueando seus leads?</h2><p>Envie o site e receba uma leitura prática do caminho de conversão, SEO local e rastreamento.</p></div><a class="btn btn-primary" href="auditoria-gratis-site/">Pedir auditoria grátis</a></div></section>
 </main>
 <footer class="site-footer"><div class="wrap footer-grid"><div><a class="brand" href="./"><img src="../assets/brand/atlas/atlas-mark-white.svg" alt="" />North Atlas Studio</a><p>Sites, SEO local e rastreamento para empresas locais de serviços.</p></div><div><h2>Serviços</h2><a href="servicos/sites-de-conversao/">Sites de conversão</a><a href="servicos/seo-local-busca-ia/">SEO local e IA</a><a href="servicos/rastreamento-leads-relatorios/">Rastreamento</a></div><div><h2>Empresa</h2><a href="./">Início</a><a href="quem-atendemos/">Quem atendemos</a><a href="processo-de-otimizacao-de-sites/">Processo</a><a href="auditoria-gratis-site/">Auditoria grátis</a><a href="contato/">Contato</a></div></div><div class="wrap footer-bottom"><span>© 2026 North Atlas Studio.</span><span>Estratégico · Local · Mensurável</span></div></footer>
+<script>
+(function(){
+  var forms = document.querySelectorAll('.domain-audit-form');
+  forms.forEach(function(hf){
+    hf.addEventListener('submit', function(e){
+      e.preventDefault();
+      var input = hf.querySelector('input[name="site"]');
+      var val = input ? input.value.trim() : '';
+      if(!val){ if(input){ input.focus(); } return; }
+      window.location.href = 'contato/?site=' + encodeURIComponent(val) + '#audit-form';
+    });
+  });
+})();
+</script>
 <script src="../assets/site-nav.js" defer></script>
 </body>
 </html>
