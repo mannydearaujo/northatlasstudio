@@ -2,6 +2,11 @@
 
 Use este guia quando o prospect veio pelo `/pt/`, prefere português, ou Manny pede uma versão em português brasileiro.
 
+Tom: formal, direto e amigável. Prefira "sua empresa" quando falar do negócio.
+O remetente/prestador deve ser North Atlas Studio.
+Para HTML, use `../assets/offer-template.pt-BR.html`. Para uma proposta mais completa após aprovação
+de escopo, use `client-templates/new-client/sales/proposal-contract-style.pt-BR.md` como base.
+
 ## Papel Deste Documento
 
 Este é o material que o prospect pode receber. Ele nasce do dashboard interno `ai-search-audit-[business-slug].html`, mas não copia o dashboard inteiro.
@@ -27,7 +32,7 @@ Não inclua:
 ## Estrutura Recomendada
 
 1. **O que encontramos**
-   Resuma em 2 a 3 pontos que o dono consegue conferir. Exemplo: "O site explica o serviço, mas não deixa claro quais cidades você atende nem quais ações viram leads no GA4."
+   Resuma em 2 a 3 pontos que o dono consegue conferir. Exemplo: "O site explica o serviço, mas não deixa claro quais cidades sua empresa atende nem quais ações viram leads no GA4."
 
 2. **Por que isso importa**
    Conecte com ligações, pedidos de orçamento, agendamentos e formulários. Evite jargão.
@@ -42,7 +47,7 @@ Não inclua:
    Use a faixa de `offer-stack.md` ou o valor definido por Manny.
 
 6. **Sem promessa falsa**
-   Use linguagem simples: "Não prometo primeira posição nem aparição em respostas de IA. O trabalho é melhorar estrutura, clareza, prova e rastreamento para que o site seja mais fácil de encontrar, entender e medir."
+   Use linguagem simples: "A North Atlas Studio não promete primeira posição nem aparição em respostas de IA. O trabalho é melhorar estrutura, clareza, prova e rastreamento para que o site da sua empresa seja mais fácil de encontrar, entender e medir."
 
 7. **Próximo passo**
    Uma ação: aprovar escopo, marcar chamada, enviar acessos ou responder até uma data real.
@@ -69,7 +74,7 @@ Não inclua:
 
 # Próximo passo recomendado para [Empresa]
 
-Depois da revisão do site, os principais pontos são:
+Depois da revisão do site da sua empresa, os principais pontos são:
 
 - [Achado 1 em linguagem simples]
 - [Achado 2 em linguagem simples]
@@ -77,7 +82,7 @@ Depois da revisão do site, os principais pontos são:
 
 Isso importa porque hoje o site pode estar deixando [ligações/orçamentos/agendamentos] mais difíceis de medir ou de gerar.
 
-Minha recomendação é: **[nome da oferta]**.
+A recomendação da North Atlas Studio é: **[nome da oferta]**.
 
 Escopo:
 
@@ -89,6 +94,6 @@ Escopo:
 
 Investimento: [valor/faixa]
 
-Não prometo primeira posição no Google, Google Maps ou respostas de IA. O foco é melhorar estrutura, clareza, prova e rastreamento para que o site seja mais fácil de encontrar, entender e medir.
+A North Atlas Studio não promete primeira posição no Google, Google Maps ou respostas de IA. O foco é melhorar estrutura, clareza, prova e rastreamento para que o site da sua empresa seja mais fácil de encontrar, entender e medir.
 
 Próximo passo: [ação clara].

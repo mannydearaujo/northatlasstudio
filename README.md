@@ -98,7 +98,8 @@ print-ready file.
 If a lead comes through the `/pt/` route or the owner prefers Portuguese, use
 the `.pt-BR` client templates and produce client-facing materials in natural
 Brazilian Portuguese. Internal notes may remain in English unless Manny asks
-otherwise.
+otherwise. Use a formal owner-friendly tone built around "sua empresa" and name
+North Atlas Studio as the provider/sender.
 
 Use `styles/atlas-brand.css` as the shared style source for the landing page
 and report/audit templates. Self-contained reports can inline the same tokens,
@@ -138,6 +139,10 @@ For each new prospect/client, copy `client-templates/new-client/` into
 For Portuguese-speaking owners, use the parallel `.pt-BR` onboarding, access,
 task-list, operating-manual, report, and offer guidance files alongside the
 English originals.
+
+Portuguese delivery assets now include sample report language, a branded offer
+sheet HTML shell, proof/screenshot collection guidance, and a proposal/contract
+style template under `client-templates/new-client/`.
 
 For tracking, ask for GA4, GTM, Search Console, website/CMS, and domain/DNS
 access during onboarding. If old analytics/search access cannot be recovered,

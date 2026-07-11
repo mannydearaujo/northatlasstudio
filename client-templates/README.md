@@ -31,8 +31,13 @@ clients/client-slug/
     README.md
   assets/
     README.md
+    proof-examples.pt-BR.md
+  sales/
+    proposal-contract-style.pt-BR.md
   reports/
     README.md
+    samples/
+      weekly-report-sample.pt-BR.md
   notes/
     README.md
 ```

@@ -8,7 +8,7 @@ Use esta estrutura markdown como mapa de conteúdo ou fallback em texto.
 **Preparado por:** North Atlas Studio · **Enviado:** [data]
 **Comparação:** vs. 7 dias anteriores
 
-> Regra simples: comece com o resultado que o dono quer ver (leads reais e ligações), depois mostre a tendência, uma ação feita pela North Atlas Studio e o próximo passo claro.
+> Regra simples: comece com o resultado que o dono quer ver para sua empresa (leads reais e ligações), depois mostre a tendência, uma ação feita pela North Atlas Studio e o próximo passo claro.
 
 ---
 

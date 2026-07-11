@@ -195,7 +195,8 @@ If a prospect/client language is Brazilian Portuguese, or the lead came through 
 route, client-facing materials default to natural pt-BR: onboarding, access requests, concise audit
 follow-ups, offer sheets, weekly reports, and owner communication. Keep English templates intact and
 add Portuguese versions alongside them. Internal audit dashboards, raw findings, and pricing/scope
-notes may remain in English unless Manny asks otherwise.
+notes may remain in English unless Manny asks otherwise. Use a formal owner-friendly tone built around
+"sua empresa" and name North Atlas Studio as the provider/sender in Portuguese-facing documents.
 
 Default delivery format is **HTML** because it preserves the interactive/dashboard feel, works well in
 the browser, can be hosted or shared as a file, and can still be printed or exported to PDF when needed.

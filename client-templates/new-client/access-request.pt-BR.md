@@ -2,7 +2,7 @@
 
 Oi [Nome],
 
-Para revisar o site com cuidado e configurar o rastreamento de forma honesta, preciso de alguns acessos. O objetivo é medir ações reais: ligações, pedidos de orçamento, agendamentos e formulários.
+Para revisar o site da sua empresa com cuidado e configurar o rastreamento de forma honesta, a North Atlas Studio precisa de alguns acessos. O objetivo é medir ações reais: ligações, pedidos de orçamento, agendamentos e formulários.
 
 ## Acessos Necessários
 
@@ -15,7 +15,7 @@ Para revisar o site com cuidado e configurar o rastreamento de forma honesta, pr
 
 ## Se Algum Acesso Não Existir
 
-Sem problema. Me avise o que você tem hoje. Se o GA4/GTM/Search Console antigo não puder ser recuperado, podemos criar uma configuração nova e registrar a data de início. Nesse caso, os relatórios começam a partir da nova instalação, sem inventar histórico.
+Sem problema. Informe quais acessos sua empresa tem hoje. Se o GA4/GTM/Search Console antigo não puder ser recuperado, podemos criar uma configuração nova e registrar a data de início. Nesse caso, os relatórios começam a partir da nova instalação, sem inventar histórico.
 
 ## Arquivos Úteis
 
@@ -27,4 +27,4 @@ Sem problema. Me avise o que você tem hoje. Se o GA4/GTM/Search Console antigo 
 - Qualquer oferta, preço inicial ou pergunta frequente que o cliente costuma fazer
 
 Obrigado,
-Manny
+North Atlas Studio

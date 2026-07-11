@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+  North Atlas Studio — template HTML de offer sheet / follow-up de auditoria em pt-BR.
+  Cliente recebe este arquivo, não o dashboard interno ai-search-audit-*.html.
+  Preencha todos os {{PLACEHOLDER}} e remova blocos vazios antes de enviar.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Próximo Passo Recomendado — {{BUSINESS_NAME}}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;700&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1017;--card:#141a25;--card-2:#1a212e;--line:rgba(255,255,255,.09);--line-2:rgba(255,255,255,.16);--text:#f0f4fa;--muted:#8a98a8;--cyan:#06b6d4;--blue:#2563eb;--green:#34d399;--amber:#fbbf24;--maxw:1060px;--r:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--text);line-height:1.55;background:radial-gradient(circle at 82% 0%,rgba(37,99,235,.18),transparent 28%),linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),var(--bg);background-size:auto,54px 54px,54px 54px;padding-bottom:64px}
+h1,h2,h3{font-family:"Inter Tight",Inter,sans-serif;letter-spacing:-.03em;line-height:1.06}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--line);background:rgba(13,16,23,.9);padding:22px 0}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Inter Tight";font-weight:700;font-size:18px}
+.brand svg{width:28px;height:28px;filter:drop-shadow(0 0 12px rgba(6,182,212,.18))}
+.meta{color:var(--muted);font-size:13px;margin-top:6px}
+.hero{padding:48px 0 22px}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(34px,5vw,58px);max-width:820px;margin-top:14px}
+.hero p{max-width:760px;color:#d7e0ec;font-size:17px;margin-top:16px}
+.shell{margin-top:18px;border:1px solid var(--line-2);border-radius:22px;background:rgba(16,23,34,.78);box-shadow:0 30px 90px rgba(0,0,0,.34),0 0 80px -42px var(--cyan);padding:22px}
+.grid{display:grid;grid-template-columns:1.08fr .92fr;gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.panel h2{font-size:21px;margin-bottom:12px}
+.items{display:grid;gap:12px}
+.item{border-top:1px solid var(--line);padding-top:12px}
+.item:first-child{border-top:0;padding-top:0}
+.item b{display:block;font-size:14.5px;margin-bottom:4px}
+.item span{display:block;color:var(--muted);font-size:13.5px}
+.price{background:linear-gradient(135deg,rgba(6,182,212,.14),rgba(37,99,235,.11));border-color:rgba(6,182,212,.32)}
+.price .value{font-family:"Inter Tight";font-size:36px;font-weight:700;margin-top:6px}
+.pill{display:inline-flex;align-items:center;border:1px solid rgba(6,182,212,.35);border-radius:999px;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;margin-bottom:12px}
+.scope{display:grid;gap:10px;margin-top:10px}
+.scope li{list-style:none;display:flex;gap:10px;color:#d7e0ec;font-size:14.5px}
+.scope li::before{content:"✓";color:var(--green);font-weight:800}
+.note{margin-top:14px;border:1px solid rgba(251,191,36,.24);background:rgba(251,191,36,.06);border-radius:var(--r);padding:16px;color:#e8edf5;font-size:14px}
+.next{margin-top:14px;border:1px solid rgba(6,182,212,.28);background:linear-gradient(135deg,rgba(6,182,212,.12),rgba(255,255,255,.02));border-radius:var(--r);padding:20px}
+.btn{display:inline-flex;margin-top:14px;align-items:center;gap:9px;font-family:"Inter Tight";font-weight:700;font-size:15px;padding:13px 22px;border-radius:999px;background:var(--cyan);color:#04141a;text-decoration:none}
+footer{border-top:1px solid var(--line);margin-top:42px;padding:24px 0;color:var(--muted);font-size:13px}
+@media(max-width:820px){.grid{grid-template-columns:1fr}.shell{padding:16px}.hero h1{font-size:34px}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand"><svg viewBox="0 0 64 64" role="img" aria-label="Marca da North Atlas Studio"><path d="M41.4 21.1 A19 19 0 1 1 22.6 21.1" fill="none" stroke="#FFFFFF" stroke-width="4.6" stroke-linecap="round"/><g stroke="#FFFFFF" stroke-width="1.9" fill="none" stroke-linecap="round"><path d="M15.6 43.5 H48.4"/><path d="M19.8 50 H44.2"/><path d="M32 40.5 V55.4"/><path d="M24.5 41.5 C23 46 23.5 50.5 26.5 54.2"/><path d="M39.5 41.5 C41 46 40.5 50.5 37.5 54.2"/></g><path d="M32 19.5 c-7.6 0-12.6 5.4-12.6 11.8 0 8.4 12.6 17.2 12.6 17.2 s12.6-8.8 12.6-17.2 C44.6 24.9 39.6 19.5 32 19.5 z" fill="#0B1D3A"/><path d="M32 22 c-6.2 0-10.2 4.4-10.2 9.6 0 6.9 10.2 14.1 10.2 14.1 s10.2-7.2 10.2-14.1 C42.2 26.4 38.2 22 32 22 z" fill="#FFFFFF"/><circle cx="32" cy="31.6" r="3.4" fill="#0B1D3A"/><path d="M32 2.6 L39.4 19.2 L32 15.2 L24.6 19.2 Z" fill="#2563EB"/></svg>North Atlas Studio</div>
+  <div class="meta">Follow-up de auditoria · {{DATE}} · {{BUSINESS_NAME}}</div>
+</div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Próximo passo recomendado</div>
+    <h1>{{OFFER_TITLE}}</h1>
+    <p>{{OPENING_SUMMARY}}</p>
+  </section>
+  <section class="shell">
+    <div class="grid">
+      <div class="panel">
+        <span class="pill">O que encontramos</span>
+        <div class="items">{{SELECTED_FINDINGS}}</div>
+      </div>
+      <div class="panel price">
+        <span class="pill">Investimento</span>
+        <h2>{{RECOMMENDED_OFFER}}</h2>
+        <div class="value">{{PRICE}}</div>
+        <p class="meta">{{PRICE_NOTE}}</p>
+      </div>
+      <div class="panel">
+        <h2>Escopo recomendado</h2>
+        <ul class="scope">{{SCOPE_ITEMS}}</ul>
+      </div>
+      <div class="panel">
+        <h2>Prova / contexto</h2>
+        <div class="items">{{PROOF_ITEMS}}</div>
+      </div>
+    </div>
+    <div class="note"><b>Sem promessa falsa:</b> A North Atlas Studio não promete primeira posição no Google, Google Maps ou respostas de IA. O foco é melhorar estrutura, clareza, prova e rastreamento para que o site da sua empresa seja mais fácil de encontrar, entender e medir.</div>
+    <div class="next">
+      <h2>Próximo passo</h2>
+      <p>{{NEXT_STEP}}</p>
+      <a class="btn" href="mailto:{{CONTACT_EMAIL}}">{{CTA_LABEL}}</a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap">North Atlas Studio · Follow-up de auditoria · {{BUSINESS_NAME}}</div></footer>
+</body>
+</html>

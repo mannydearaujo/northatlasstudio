@@ -18,7 +18,9 @@ template is a content map and fallback draft format only.
 If the client/prospect language is Brazilian Portuguese, the lead came through the `/pt/` website route,
 or Manny asks for Portuguese delivery, produce the client-facing report in natural pt-BR. Use
 `references/weekly-report-template.pt-BR.md` as the content map and `assets/report-template.pt-BR.html`
-for the polished dashboard. Internal QA notes may remain in English unless Manny asks otherwise.
+for the polished dashboard. Use a formal owner-friendly tone built around "sua empresa" and name
+North Atlas Studio as the prepared-by/provider. Internal QA notes may remain in English unless Manny
+asks otherwise.
 
 ## Workflow
 

@@ -21,8 +21,12 @@ Use it to keep intake, tasks, audit notes, reports, assets, and delivery status 
 - `crm.md` - CRM/deal notes and follow-up dates.
 - `audit/` - website, GBP, SEO, and tracking audit notes.
 - `assets/` - screenshots, logos, photos, testimonials, and proof.
+- `sales/` - offer sheets, proposal/contract drafts, and client-facing sales follow-up.
 - `reports/` - weekly reports, audit deliverables, proposals, and PDF exports when needed.
 - `notes/` - call notes, decisions, risks, and deferred ideas.
+
+For Portuguese-speaking owners, use the parallel `.pt-BR` templates and keep the tone formal,
+clear, and owner-friendly. Default to "sua empresa" and name North Atlas Studio as the provider.
 
 ## PageSpeed
 
