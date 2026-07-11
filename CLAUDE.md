@@ -1,8 +1,39 @@
 # North Atlas Studio - Agent Operating Guide
 
-Last reviewed: 2026-07-05
+Last reviewed: 2026-07-11
 
 This file is the shared project memory for AI assistants working on North Atlas Studio. `AGENTS.md` is generated from this file; after editing this file, run `node scripts/sync-agent-docs.mjs`.
+
+## Agentic OS Startup Rule
+
+Every new North Atlas Studio Codex session must start from Manny's Agentic OS, not from repo memory alone.
+
+Before doing build, audit, documentation, strategy, or content work:
+
+1. Read the current Codex project-build prompt:
+   `/Users/mannydearaujo/Agentic OS Build/codex/codex-project-build-prompt.md`
+2. Read the engine config:
+   `/Users/mannydearaujo/Agentic OS Build/config/os.config`
+3. Use `VAULT_PATH` from that config to locate the Manny AI OS vault. Do not guess or hardcode the vault path beyond reading the config.
+4. Read the North Atlas vault files:
+   - `01-projects/north-atlas-studio/CURRENT-STATE.md`
+   - `01-projects/north-atlas-studio/TASKS.md`
+   - `01-projects/north-atlas-studio/HANDOFF.md`
+5. Read this repo's local `AGENTS.md`.
+6. If `graphify-out/graph.json` exists, use `graphify query/path/explain` before broad file reading.
+
+After orienting, restate the current task and plan in 3-6 bullets. Wait for Manny's go-ahead before non-trivial changes.
+
+For current North Atlas task selection, work from the next pending item in the vault. Codex should handle deterministic, repo-scoped code or structured documentation tasks. If the task requires strategy, copywriting, positioning, offer judgment, pricing judgment, or client-facing prose, stop and ask Manny whether Claude should handle it instead.
+
+Do not deploy, change DNS, or publish without Manny's explicit approval. Do not push site/content changes directly to `main`; this repo deploys through GitHub Pages from `main`. Use a feature branch for anything that changes public site content, behavior, design, SEO, schema, or public-facing copy. Tooling/config-only changes may stay on `main` when Manny approves.
+
+After meaningful work, sync back to the vault:
+
+- update `CURRENT-STATE.md` with what changed;
+- update `TASKS.md` with done/next status;
+- update `HANDOFF.md` so Claude/Codex can continue;
+- run `graphify update .` after code changes.
 
 ## Sync Rule
 

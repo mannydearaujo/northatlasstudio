@@ -82,6 +82,7 @@ h3{font-size:22px}
 .form-status{font-size:14px;margin-top:12px}
 .form-status.is-success{color:#047857}
 .form-status.is-error{color:#B91C1C}
+#audit-form{scroll-margin-top:88px}
 .site-footer{background:#071529;color:#D8E4F6;padding:44px 0 26px}
 .footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:28px}
 .site-footer a{color:#D8E4F6;text-decoration:none;display:block;margin:8px 0}

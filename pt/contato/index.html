@@ -48,6 +48,11 @@ if(form){var statusEl=document.getElementById('form-status');form.addEventListen
   if(site && input && !input.value){
     input.value = /^https?:\/\//i.test(site) ? site : 'https://' + site;
   }
+  var shouldScroll = site || location.hash === '#audit-form';
+  if(shouldScroll){
+    var el = document.getElementById('audit-form');
+    if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); }, 120); }
+  }
 })();
 </script>
 <script src="../../assets/site-nav.js" defer></script>
