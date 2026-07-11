@@ -1,2 +1,20 @@
+# Generated code graph
 graphify-out/
 graph.json
+
+# Secrets and local env
+.env
+.env.*
+
+# Private/generated work
+clients/
+ai-search-audit-*.html
+launch-qa-*.md
+
+# Internal strategy docs
+BUSINESS-BLUEPRINT.md
+90-day-rollout-plan.md
+NEXT-STEPS.md
+GA4-lead-logic.md
+weekly-report-template.md
+ai-search-reference.md
