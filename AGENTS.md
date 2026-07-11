@@ -130,7 +130,7 @@ That script checks:
 
 ## Current Site
 
-- Brand: North Atlas Studio (renamed from NorthPoint Digital on 2026-07-05; "NorthPoint" is now a stale pattern the production sync flags).
+- Brand: North Atlas Studio (renamed from the prior brand on 2026-07-05; old brand names are stale patterns the production sync flags).
 - Live/canonical URL: `https://www.northatlasstudio.com/` (registered on Namecheap 2026-07-05; GitHub Pages serves the site).
 - Vercel duplicate status: `https://northatlasstudio.vercel.app/` was rechecked on 2026-07-07 and returns Vercel `DEPLOYMENT_NOT_FOUND`. Treat GitHub Pages from `main` as the only production deployment. Periodically recheck the Vercel URL after major launch changes; if it ever serves a copy again, recover/delete the old Vercel project before requesting indexing.
 - Repository: `github.com/mannydearaujo/northatlasstudio` (public; also the schema `sameAs` entity link).
@@ -193,6 +193,14 @@ Every audited site produces two distinct documents — do not collapse them into
 When in doubt about whether something belongs in a deliverable: if it helps Manny price/scope the
 work, it goes in the audit dashboard. If it's part of the pitch the client actually sees, it goes in
 the offer pack.
+
+### Portuguese client delivery rule
+
+If a prospect/client language is Brazilian Portuguese, or the lead came through the `/pt/` website
+route, client-facing materials default to natural pt-BR: onboarding, access requests, concise audit
+follow-ups, offer sheets, weekly reports, and owner communication. Keep English templates intact and
+add Portuguese versions alongside them. Internal audit dashboards, raw findings, and pricing/scope
+notes may remain in English unless Manny asks otherwise.
 
 Default delivery format is **HTML** because it preserves the interactive/dashboard feel, works well in
 the browser, can be hosted or shared as a file, and can still be printed or exported to PDF when needed.

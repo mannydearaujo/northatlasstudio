@@ -26,7 +26,8 @@ Relevant workflow: `apify-local-lead-prospecting`
 - [ ] Status: Not started - Run PageSpeed Insights for mobile and desktop, then save `audit/pagespeed.json`.
 - [ ] Status: Not started - Score AI/search readiness.
 - [ ] Status: Not started - Recommend GA4 real-lead and secondary events.
-- [ ] Status: Not started - Save audit deliverable in `reports/`.
+- [ ] Status: Not started - Save the internal audit dashboard as `audit/ai-search-audit-[business-slug].html`.
+- [ ] Status: Not started - Do not send the internal audit dashboard to the client as-is.
 
 Relevant workflows: `ai-search-readiness-audit`, `lighthouse-technical-seo-fixer`
 
@@ -42,7 +43,8 @@ Relevant workflows: `google-business-profile-optimizer`, `gbp-posting-calendar`
 
 - [ ] Status: Not started - Summarize top fixes and business impact.
 - [ ] Status: Not started - Match to offer: rebuild, local pages, tracking setup, or retainer (audit itself stays free).
-- [ ] Status: Not started - Draft next-step offer.
+- [ ] Status: Not started - Draft the client-facing audit follow-up / offer sheet in `sales/` or `reports/`.
+- [ ] Status: Not started - Include selected findings, scope, price, proof, no-guarantee language, and one clear next step.
 
 Relevant workflow: `offer-sheet-builder`
 

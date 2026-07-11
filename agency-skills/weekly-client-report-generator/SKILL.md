@@ -13,10 +13,17 @@ Default client-facing output should be a branded **KPI dashboard HTML report**, 
 Use `assets/report-template.html` when producing a polished report for a client. The markdown reference
 template is a content map and fallback draft format only.
 
+## Language routing
+
+If the client/prospect language is Brazilian Portuguese, the lead came through the `/pt/` website route,
+or Manny asks for Portuguese delivery, produce the client-facing report in natural pt-BR. Use
+`references/weekly-report-template.pt-BR.md` as the content map and `assets/report-template.pt-BR.html`
+for the polished dashboard. Internal QA notes may remain in English unless Manny asks otherwise.
+
 ## Workflow
 
 1. **Confirm inputs:** client, reporting window, GA4 data (screenshots/exports), Search Console if relevant, GBP activity, and the work log (what North Atlas actually did this week). Read the client's event conventions from their operating manual — headline numbers use the REAL-lead definitions from `lead-tracking-installer`, nothing else.
-2. **Read `references/weekly-report-template.md`** for the content map: real leads (headline) → supporting activity (secondary intent, honestly labeled) → funnel health → work completed → next week's work → owner asks.
+2. **Read `references/weekly-report-template.md`** for English reports, or `references/weekly-report-template.pt-BR.md` for pt-BR reports. Content order stays the same: real leads (headline) → supporting activity (secondary intent, honestly labeled) → funnel health → work completed → next week's work → owner asks.
 3. **Verify every number against its source before it goes in the report.** If a number can't be verified, it doesn't ship — write "not yet measurable" instead. Never fill gaps with estimates.
 4. **Write plain-English trend context:** what moved, why (if known), what we're doing about it. One honest sentence beats a chart the owner won't read. Vanity metrics (impressions without clicks, sessions without leads) appear only as context, never as wins.
 5. **Produce the branded HTML dashboard** from `assets/report-template.html`, filling every placeholder. Save as `weekly-report-[client-slug]-[YYYY-MM-DD].html` in `clients/[client-slug]/reports/`. Include the internal-notes section (QA observations, upsell signals) as a SEPARATE internal file, never in the client deliverable.

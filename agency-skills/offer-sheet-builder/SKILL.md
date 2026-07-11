@@ -11,10 +11,17 @@ Turn audit findings into the one-page pitch a prospect actually reads: the probl
 
 **This is the client-facing deliverable.** When an `ai-search-readiness-audit` dashboard exists, treat it as internal source material only — pull the findings and the suggested price band from it, but never copy its internal pricing exploration, margin notes, or raw audit detail into the offer sheet. The output here is the polished pitch the client actually sees. See the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`.
 
+## Language routing
+
+If the prospect/client language is Brazilian Portuguese, the lead came through the `/pt/` website route,
+or Manny asks for Portuguese delivery, produce the client-facing offer/fix pack in natural pt-BR. Read
+`references/client-facing-offer-pt-BR.md` after `references/offer-stack.md`. Keep internal audit notes
+in English unless Manny asks otherwise.
+
 ## Workflow
 
 1. **Confirm inputs:** the prospect, the internal audit (if one exists), any conversation notes about their pain points and budget signals, and which proof assets are approved for use.
-2. **Read `references/offer-stack.md`** and pick the ONE offer that fixes their diagnosed problem. Menu-dumping all four offers is the classic mistake — the sheet recommends, the conversation negotiates.
+2. **Read `references/offer-stack.md`** and pick the ONE offer that fixes their diagnosed problem. For pt-BR delivery, also read `references/client-facing-offer-pt-BR.md`. Menu-dumping all four offers is the classic mistake — the sheet recommends, the conversation negotiates.
 3. **Structure the sheet:** (a) their problem in plain language, anchored to 2–3 specific audit findings they can verify themselves; (b) what I'll do — itemized deliverables; (c) price (band from the stack, tightened to a number when scope is clear); (d) proof block (from `case-study-and-proof-builder`); (e) the required no-guarantee language; (f) ONE next step with a real response window.
 4. **Translate, don't paste:** internal findings become client-safe language ("your site has no way to know which calls come from Google" not "GA4 tel: click events unconfigured").
 5. **Voice check:** run the sheet through the `human-copy-editor` standard — owners smell agency-speak; write like Manny talks.

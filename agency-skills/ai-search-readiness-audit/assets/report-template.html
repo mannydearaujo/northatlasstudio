@@ -3,7 +3,9 @@
   North Atlas Studio — AI Search Readiness Audit KPI dashboard template.
   Fill every {{PLACEHOLDER}}. Repeatable regions are marked with HTML comments showing one example
   block — duplicate the example per item and delete the comment. Keep it a single self-contained file.
-  This is the default client-facing audit style. It follows the approved branding-package dashboard:
+  This is the internal diagnostic dashboard for Manny. It is detailed source material for scope,
+  pricing, severity, and recommendations, and must be repackaged with offer-sheet-builder before
+  anything is sent to a prospect or client. It follows the approved branding-package dashboard:
   charcoal grid, cyan mark, glowing KPI cards, strengths, weaknesses, and corrections needed.
   Band colors: Strong=green, Developing=cyan, Foundational=amber, At risk=red (see --band-* vars below;
   set --band on <body> to one of: strong | developing | foundational | risk).
@@ -131,7 +133,7 @@ section h2{font-size:22px;margin-bottom:6px}
 .good li::before{content:"✓";color:var(--green);font-weight:700;flex:0 0 auto}
 .note{background:var(--card);border:1px solid var(--line);border-radius:var(--r-sm);padding:18px 20px;font-size:14.5px;color:var(--text)}
 
-/* cta */
+/* internal next step */
 .cta{margin-top:48px;background:linear-gradient(180deg,var(--card-2),var(--card));border:1px solid var(--line-2);border-radius:var(--r);padding:34px 30px;text-align:center}
 .cta h2{font-size:22px;margin-bottom:10px}
 .cta p{color:var(--muted);font-size:15px;max-width:520px;margin:0 auto 18px}
@@ -269,14 +271,14 @@ footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0;font-size
     <div class="note">{{GA4_BLOCK}}</div>
   </section>
 
-  <!-- ── CTA ──────────────────────────────────────── -->
+  <!-- ── INTERNAL NEXT STEP ───────────────────────── -->
   <div class="cta">
-    <h2>Want North Atlas to action these fixes?</h2>
+    <h2>Internal next step</h2>
     <p>{{CTA_TEXT}}</p>
-    <a class="btn" href="mailto:{{CONTACT_EMAIL}}">Reply to this audit →</a>
+    <a class="btn" href="{{OFFER_SHEET_PATH}}">Package client-facing offer</a>
   </div>
 
-  <p class="disc">This audit assesses how clearly your website is structured for Google and AI search tools to read, understand, and cite. It is a readiness and structure review — not a guarantee of rankings or placement in any AI result. The outcome North Atlas Studio guarantees is measurement: clear tracking of the calls, quotes, and bookings your site generates.</p>
+  <p class="disc">Internal diagnostic only. This dashboard may include raw findings, severity calls, and pricing/scope thinking for Manny. Do not send it to the prospect or client as-is; use offer-sheet-builder to create the client-facing audit summary or offer sheet.</p>
 
 </div>
 

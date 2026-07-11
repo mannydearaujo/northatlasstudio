@@ -30,6 +30,13 @@ go to the client, hand off to `offer-sheet-builder` to produce the actual client
 document, which presents only the chosen offer, price, and scope — no internal pricing exploration or
 audit minutiae.
 
+## Language routing
+
+If a lead came through `/pt/` or the owner/client prefers Portuguese, keep this internal diagnostic in
+English unless Manny asks otherwise, then hand off to `offer-sheet-builder` for the natural pt-BR
+client-facing audit summary, offer sheet, or fix pack. Do not translate and send this internal dashboard
+as the client deliverable.
+
 It is a **scorer/diagnostic**, not a page generator. When the audit recommends rebuilding or adding a
 page, that hand-off goes to a builder skill — `alpha-seo-content` for Alpha Gutter, otherwise
 `local-service-site-builder` (site plan) + `seo-content-writer` (copy). Keep the division clean: this

@@ -88,10 +88,17 @@ source of truth, then mirror changed skills into both `~/.codex/skills/` and
 prospecting, audits, GBP optimization, client builds, tracking, reporting,
 launch QA, proof, and retainers.
 
-Client-facing audits and weekly reports should default to the North Atlas KPI
-dashboard HTML style: compact score cards, strengths, weaknesses, corrections
-needed, real-lead metrics, and plain-English next steps. Export to PDF only when
-a client needs a static attachment or print-ready file.
+Internal audit dashboards are diagnostic source material for Manny and should
+not be sent to prospects as-is. Client-facing audit follow-ups, offer sheets,
+and weekly reports should default to the North Atlas KPI dashboard HTML style:
+compact score cards, selected findings, real-lead metrics, and plain-English
+next steps. Export to PDF only when a client needs a static attachment or
+print-ready file.
+
+If a lead comes through the `/pt/` route or the owner prefers Portuguese, use
+the `.pt-BR` client templates and produce client-facing materials in natural
+Brazilian Portuguese. Internal notes may remain in English unless Manny asks
+otherwise.
 
 Use `styles/atlas-brand.css` as the shared style source for the landing page
 and report/audit templates. Self-contained reports can inline the same tokens,
@@ -127,6 +134,10 @@ For each new prospect/client, copy `client-templates/new-client/` into
 `clients/client-slug/`, then fill `intake.md`, `task-list.md`,
 `client-operating-manual.md`, and `crm.md`. The demo workspace at
 `clients/demo-brighton-roofing/` shows the full local folder structure.
+
+For Portuguese-speaking owners, use the parallel `.pt-BR` onboarding, access,
+task-list, operating-manual, report, and offer guidance files alongside the
+English originals.
 
 For tracking, ask for GA4, GTM, Search Console, website/CMS, and domain/DNS
 access during onboarding. If old analytics/search access cannot be recovered,
