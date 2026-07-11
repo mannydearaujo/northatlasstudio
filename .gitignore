@@ -21,6 +21,10 @@ copy-rewrites-*.md
 domain-cutover-checklist.md
 launch-qa-*.md
 
+# Generated code graph — keep local, never deploy
+graphify-out/
+graph.json
+
 # Internal strategy docs — keep local, never deploy
 GA4-lead-logic.md
 weekly-report-template.md
