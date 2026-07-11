@@ -51,7 +51,11 @@ if(form){var statusEl=document.getElementById('form-status');form.addEventListen
   var shouldScroll = site || location.hash === '#audit-form';
   if(shouldScroll){
     var el = document.getElementById('audit-form');
-    if(el){ setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); }, 120); }
+    if(el){
+      [50, 350, 800, 1500].forEach(function(delay){
+        setTimeout(function(){ el.scrollIntoView({behavior:'smooth',block:'start'}); }, delay);
+      });
+    }
   }
 })();
 </script>
