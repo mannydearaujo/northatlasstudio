@@ -2,12 +2,22 @@
 name: case-study-and-proof-builder
 description: Create North Atlas Studio case studies, proof blocks, testimonial requests, and sales proof from verified client work. Use when packaging Golden Paws, AlphaGutterCo, or future client results with real screenshots, GA4 events, before/after evidence, live URLs, structural improvements, and no fake performance claims. Also use when someone says "build a case study", "package the proof", "write up the results", or "I need something to show prospects".
 metadata:
-  updated: "2026-07-04"
+  updated: "2026-07-22"
 ---
 
 # Case Study And Proof Builder
 
 Turn verified client work into sales assets: full case studies, short proof blocks for the website/offer sheets, and testimonial requests. Every claim must trace to evidence you actually have in hand.
+
+## Language routing
+
+If the proof block is feeding a Portuguese-language deliverable (the lead came through `/pt/`, the
+prospect/client prefers Portuguese, or the calling skill — e.g. `offer-sheet-builder` or
+`north-atlas-audit-lead-autodraft` — says so), produce the proof block in natural pt-BR: translate
+it, don't paste the English version and hope it reads naturally. Use a formal, owner-friendly tone
+built around "sua empresa" per `CLAUDE.md`'s Portuguese client delivery rule. Full case studies and
+internal proof-evidence notes can stay in English unless Manny asks for Portuguese — this rule is
+specifically about the short-form proof block that ends up in client-facing copy.
 
 ## Workflow
 

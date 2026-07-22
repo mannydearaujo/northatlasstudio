@@ -1,0 +1,24 @@
+{
+  "_comment": "Registry of properties the Phase 3 signal loop watches. Add a new entry here (and grant the service account Viewer/Restricted access on the new GA4 property + Search Console site) to add a new property to the health-watch — no code changes needed. See agency-skills/north-atlas-signal-health-watch/SKILL.md.",
+  "serviceAccountEmail": "north-atlas-signal-reader@propane-facet-503201-b9.iam.gserviceaccount.com",
+  "properties": [
+    {
+      "name": "North Atlas Studio",
+      "ga4PropertyId": "544258578",
+      "realLeadEvents": ["generate_lead"],
+      "searchConsoleSiteUrl": "https://www.northatlasstudio.com/"
+    },
+    {
+      "name": "Golden Paws Pet Grooming",
+      "ga4PropertyId": "531392086",
+      "realLeadEvents": ["booking_click", "phone_tap"],
+      "searchConsoleSiteUrl": "https://goldenpawspetgrooming.com/"
+    },
+    {
+      "name": "AlphaGutterCo",
+      "ga4PropertyId": "538277590",
+      "realLeadEvents": ["quote_request_submit", "phone_tap"],
+      "searchConsoleSiteUrl": "https://alphagutterco.com/"
+    }
+  ]
+}

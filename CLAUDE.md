@@ -246,6 +246,16 @@ aligned with `styles/atlas-brand.css`.
 
 ## Messaging Guardrails
 
+**Voice: "we," never "I," in North Atlas Studio's own client-facing voice** (added 2026-07-22).
+Offer sheets, outreach, testimonial requests, proposals, reports, and any other copy where North
+Atlas Studio itself is speaking to a prospect or client use "we"/"us"/"our" — never "I"/"me"/"my."
+This applies even when Manny sends something personally (e.g. a testimonial request signed "—
+Manny") — the voice speaking is the business, the signature can still be personal. This is
+separate from a *client's own* voice pack (`client-voice-pack-builder`), where a real solo-owner
+client may legitimately speak as "I" in their own site copy or review requests to their own
+customers — don't force "we" onto a client's authentic voice. `human-copy-editor` checks for this
+on every pre-publish pass.
+
 Use plain, practical language. The offer is local growth infrastructure:
 
 - clearer local service business websites;
@@ -338,6 +348,40 @@ Every client page should serve one of four jobs:
 
 Use semantic HTML. Buttons should be buttons, links should be links, forms should be labeled, headings should be hierarchical, and important content should be visible and stable.
 
+## AI Operations Service Line
+
+Added 2026-07-13, planning stage. North Atlas is adding a fourth core service line — practical AI automation installed inside a client's existing tools (reports, missed-call/lead capture, review and invoice follow-up) — documented in full in `BUSINESS-BLUEPRINT.md` (Core Services #4, Offer Stack, Sales Motion/WhatsApp) and in the internal planning doc `ai-consulting-offer-plan.html` (gitignored, not deployed).
+
+Architecture: **Claude is the brain** (skills do the parsing, drafting, and judgment), **n8n Cloud Starter is the plumbing** (webhooks, schedules, transport between tools), **the WhatsApp Business app on +1 617-356-7756 is the front door** (lead capture, client comms, proposal/report delivery). Do not build a second automation runtime without checking `05-automations/AUTOMATION-REGISTRY.md` in the vault first — duplicate automations have already happened once (see the AI news watcher below) and are easy to create by accident.
+
+Demo/reference files (repo root, gitignored, internal only): `demo-ai-ops-landing.html` (bilingual EN/PT landing page for this line, WhatsApp-based CTA, not deployed), `fabio-borges-ig-analysis.xlsx` (competitor content-model analysis backing the content rules below).
+
+Content rule for this line's Reels/social content: pick at most two comment-word CTAs and hold them for the full push (currently: AUDITORIA and REPORT) rather than a new word per post — this matches the only validated high-performing pattern found in the competitor analysis. Same-day news-jacking of Anthropic/OpenAI/Google launches, translated into local-owner value, is the single highest-performing content type found in that analysis; the vault's `ai-news-brief` autopilot (daily, `.claude/skills/ai-news-brief/` in the engine repo) now includes an optional "Reels content hooks (North Atlas)" section for exactly this.
+
+Messaging guardrail specific to this line: every pitch, page, and piece of content frames AI as giving the owner's existing team time back for higher-value work — never as reducing headcount or replacing staff.
+
+Do not put "AI Operations" client-facing copy on the public site until at least one paid install is complete (see `BUSINESS-BLUEPRINT.md` Core Services #4). The positioning paragraph in `BUSINESS-BLUEPRINT.md` was updated 2026-07-13 to make room for this line without touching public site copy yet.
+
+## AI-Native Operating Loop
+
+Added 2026-07-21. North Atlas Studio is closing its own capture → curate → store → execute → experience → signal loop internally before externalizing the AI Operations line to clients — you don't sell a system you haven't proven on yourself. Full phased plan (Phase 0 bootstrap through Phase 6 externalize) lives in the vault's `01-projects/north-atlas-studio/HANDOFF.md`.
+
+Status as of 2026-07-21:
+
+- **Store:** full. The vault + this repo's docs are the brain.
+- **Execute:** full for the audit-lead chain specifically (see Phase 2 below, built 2026-07-22); other skill chains still mostly invoked by hand.
+- **Capture:** built and live as of 2026-07-22. `north-atlas-inbox-capture` connects to `northatlasstudio@gmail.com` (re-verified each run via a sent-message header check — a 2026-07-21 check caught it pointed at Golden Paws' inbox instead, so this check is load-bearing, not optional) and pulls new items into `01-projects/north-atlas-studio/INBOX.md`.
+- **Curate:** built and live as of 2026-07-22. `north-atlas-inbox-curate` files captured items into `TASKS.md`/`CURRENT-STATE.md`, discards noise, and flags most triggers (a prospect reply, a client question) as needing Manny's go-ahead — **except** a recognized Free Site Audit form submission, which it hands to `north-atlas-audit-lead-autodraft` automatically (see Phase 2).
+- **Phase 2 (audit-lead auto-draft):** built and proven with a real lead 2026-07-22. The Free Site Audit form (`formspree.io/f/xbdvwyka`) notifies `mannydearaujo@gmail.com`; a Gmail filter there (matched by **Subject**, not sender, to avoid ever mixing in Alpha Gutter's separate Formspree form) forwards just that notification to `northatlasstudio@gmail.com`, where capture/curate pick it up. `north-atlas-audit-lead-autodraft` runs `ai-search-readiness-audit` → `offer-sheet-builder` → `case-study-and-proof-builder` → `human-copy-editor` on the submitted website and files a draft offer pack under `clients/prospecting/` for Manny's review. It only ever drafts — sending anything to the prospect stays a fully separate, manual, explicitly-approved step. Guards against auditing an unrelated real business if the submission looks like test/placeholder data (caught once during testing — a fake submission used a real pizza restaurant's URL as a placeholder). **First real lead processed 2026-07-22**: "So Clean of Woburn," scored 71/100 (Developing), draft offer pack at `clients/prospecting/2026-07-22-so-clean/offer-so-clean-2026-07-22.html` — awaiting Manny's review, unsent.
+- **`north-atlas-audit-lead-watch`** (built 2026-07-22, retuned same day): a narrow companion to the daily capture/curate sweep — checks only for new Formspree Free Site Audit notifications (ignores everything else in the inbox) and hands off to `north-atlas-audit-lead-autodraft` immediately, so a fresh prospect doesn't wait until next-day 6 AM. Runs every **15 minutes** (`com.northatlasstudio.audit-lead-watch`, `StartInterval: 900`) — Manny asked for faster-than-hourly on 2026-07-22.
+- **Instant-results email (added 2026-07-22):** a third, lighter output alongside the internal audit dashboard and the priced offer sheet — score/band + 2-3 top findings + strengths, no price, no specific package, a line noting a personalized follow-up is coming. Manny decided this tier is **policy-approved to send without per-email review** (unlike the offer sheet, which always needs explicit review). Mechanically it still lands as a Gmail draft, not a sent email: the connected Gmail tool has no send action, only `create_draft` — confirmed twice, including after Manny re-authorized the connector specifically looking for a send scope. So today this means "auto-drafted, one click to send," not literally zero-touch; revisit the moment real send capability exists. Content rules: `north-atlas-audit-lead-autodraft`'s `references/instant-results-email.md` (EN + pt-BR templates).
+- **Known Gmail-tool bugs found 2026-07-22, now fixed in the skills:** (1) the Gmail search tool's `label:` operator requires the label **ID** (e.g. `Label_1`), not its display name — using the name silently matched nothing, so capture's exclusion of already-processed items never actually worked; (2) `get_thread`/`label_thread` sometimes report "not found" for an ID `search_threads` returned as a thread's top-level `id` when that ID is actually a message ID — `get_message`/`label_message` work as the fallback. Both are documented directly in `north-atlas-inbox-capture`'s `SKILL.md` so they aren't rediscovered from scratch.
+- **Signal:** built and live as of 2026-07-22. `scripts/ga4-report.mjs` and `scripts/search-console-report.mjs` use a GA4 Data API + Search Console API service account (`north-atlas-signal-reader@propane-facet-503201-b9.iam.gserviceaccount.com`, key at `GA4_SERVICE_ACCOUNT_KEY_PATH` in `.env`, stored outside the repo in `~/.secrets/`) — headless, no interactive OAuth, so it can run from scheduled/cron jobs. Watches North Atlas Studio, Golden Paws, and AlphaGutterCo (registry: `scripts/signal-registry.json`; add a property there + grant service-account access to watch more, no code change needed). The `north-atlas-signal-health-watch` skill pulls real-lead GA4 events + Search Console data, writes current numbers into the vault's `01-projects/north-atlas-studio/CURRENT-STATE.md` "Signal Watch" section, tracks run-over-run history in `SIGNAL-HISTORY.json`, and raises regressions as `INBOX.md` triggers for `north-atlas-inbox-curate`. This is a machine-readable path for automated health-watch reporting, separate from the human-facing Looker Studio dashboards already decided in `NEXT-STEPS.md` — both coexist. Not yet scheduled to run automatically (first run was manual, 2026-07-22) — see `TASKS.md`.
+  - Known gotcha if this is ever rebuilt: `google-auth-library`'s `JWT` class with the `keyFile` option silently failed with `invalid_grant: Invalid grant: account not found` in this environment, even against a valid, active service account (confirmed via `gcloud auth activate-service-account` with the identical key succeeding). Fix: read the key file yourself and construct `new JWT({ email, key, scopes })` explicitly instead of `new JWT({ keyFile, scopes })`. Both scripts already do this — don't regress it.
+- **n8n Cloud Starter (Phase 4 plumbing):** deferred — Manny will sign up himself when Phase 4 starts; do not plan concrete build work around it until then.
+
+When picking up this thread in a future session: check `01-projects/north-atlas-studio/INBOX.md` and the Automation Registry entries for "North Atlas inbox capture"/"North Atlas inbox curate" for current status before re-deriving this from scratch.
+
 ## Active Priorities
 
 From `NEXT-STEPS.md`, the AI Search Readiness Audit skill and the broader agency skill library are built, tested, and mirrored into Codex and Claude. Do not rebuild them from scratch.
@@ -382,6 +426,9 @@ Keep the shared `agency-skills/` source authoritative, then mirror skills into C
 Future agency sessions should apply the relevant North Atlas skill automatically:
 
 - New prospect, audit form, or client start: use `north-atlas-project-sync` and create a practical phase-by-phase task list.
+- North Atlas Studio's own operational inbox (capture/curate step of the AI-native loop): use `north-atlas-inbox-capture` to pull new items into the vault, then `north-atlas-inbox-curate` to file/flag them. See the "AI-Native Operating Loop" section above for current status.
+- Checking GA4/Search Console health for any watched property, or running the scheduled signal-loop job (signal step of the AI-native loop): use `north-atlas-signal-health-watch`.
+- A captured Free Site Audit form submission (Phase 2 of the AI-native loop): `north-atlas-inbox-curate` hands this to `north-atlas-audit-lead-autodraft` automatically — it is not normally invoked directly. `north-atlas-audit-lead-watch` also catches these hourly, independent of the daily sweep.
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
 - Existing website audit or Free Site Audit deliverable: use `ai-search-readiness-audit`.
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.

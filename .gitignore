@@ -38,6 +38,15 @@ scripts/
 !scripts/production-sync.mjs
 !scripts/pagespeed-insights.mjs
 !scripts/sync-agent-docs.mjs
+!scripts/ga4-report.mjs
+!scripts/search-console-report.mjs
+!scripts/signal-registry.json
+
+# Defensive: service-account/credential files should live outside this repo entirely
+# (e.g. ~/.secrets/), but ignore them here too in case a copy ever lands in-tree.
+*.serviceaccount.json
+secrets/
+.secrets/
 
 # Design exploration samples — not for deploy
 sample-*.html
@@ -61,3 +70,9 @@ AI Search Readiness Research/
 # Rebuilt brand asset pack — interim, untracked until a canonical brand-asset
 # source is chosen (see NEXT-STEPS.md top-tier upgrades)
 North_Atlas_Studio_REBUILT_Production_Assets/
+
+# AI consulting offer plan — internal, keep local, never deploy
+ai-consulting-offer-plan.html
+fabio-borges-ig-analysis.xlsx
+demo-ai-ops-landing.html
+30-day-revenue-sprint.html

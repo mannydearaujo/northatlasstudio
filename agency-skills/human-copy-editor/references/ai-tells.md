@@ -13,6 +13,16 @@ elevate · unlock · unleash · seamless(ly) · effortless(ly) · transform(ativ
 - **Hedge-stacking:** "can help," "may provide," "is designed to" — commit or cut.
 - **Empty transitions:** "Additionally," "Furthermore," "Moreover," "In conclusion" starting paragraphs.
 
+## Voice/pronoun check (severity: high — North Atlas's own client-facing copy only)
+
+North Atlas Studio speaks as "we"/"us"/"our," never "I"/"me"/"my," in any copy where the business
+itself is the speaker — offer sheets, outreach, testimonial requests, proposals, reports (see
+`CLAUDE.md` "Messaging Guardrails," added 2026-07-22). A personal sign-off ("— Manny") is fine; the
+body copy still isn't first-person-singular. **Do not apply this to a client's own voice pack** —
+a real solo-owner client speaking as "I" in their own site copy or their own review requests to
+their own customers is a different, legitimate voice context; only flag this for North-Atlas-as-
+speaker copy.
+
 ## Vagueness tells (severity: medium)
 - Benefit with no mechanism: "we make it easy" (HOW?).
 - Superlative with no evidence: "the best gutter service in MA."

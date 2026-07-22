@@ -11,12 +11,17 @@
     "lighthouse": "lighthouse",
     "sync:agents": "node scripts/sync-agent-docs.mjs",
     "sync:production": "node scripts/production-sync.mjs",
-    "check:production": "node scripts/production-sync.mjs --check"
+    "check:production": "node scripts/production-sync.mjs --check",
+    "ga4-report": "node scripts/ga4-report.mjs",
+    "check:ga4-report-tool": "node --check scripts/ga4-report.mjs",
+    "search-console-report": "node scripts/search-console-report.mjs",
+    "check:search-console-report-tool": "node --check scripts/search-console-report.mjs"
   },
   "engines": {
     "node": ">=18"
   },
   "devDependencies": {
+    "google-auth-library": "^10.9.0",
     "lighthouse": "^13.4.0"
   }
 }
