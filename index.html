@@ -1089,6 +1089,7 @@ footer .foot-brand p,footer .foot-col a,footer .foot-bottom{color:#BFD0EA}
               <option value="all">All of the above</option>
             </select>
           </div>
+          <div class="form-group"><label for="f-message">Anything we should know?</label><textarea id="f-message" name="message" placeholder="What feels broken or unclear right now?"></textarea></div>
           <button type="submit" class="form-submit">Request Free Site Audit
             <svg width="15" height="15" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
@@ -1198,15 +1199,16 @@ if(form){
 }
 
 (function(){
-  var hf = document.getElementById('hero-domain-form');
-  if(hf){
+  var forms = document.querySelectorAll('.domain-audit-form');
+  forms.forEach(function(hf){
     hf.addEventListener('submit', function(e){
       e.preventDefault();
-      var val = document.getElementById('hero-domain-input').value.trim();
-      if(!val){ document.getElementById('hero-domain-input').focus(); return; }
+      var input = hf.querySelector('input[name="site"]');
+      var val = input ? input.value.trim() : '';
+      if(!val){ if(input){ input.focus(); } return; }
       window.location.href = 'contact/?site=' + encodeURIComponent(val) + '#audit-form';
     });
-  }
+  });
 })();
 
 var io = new IntersectionObserver(function(entries){
