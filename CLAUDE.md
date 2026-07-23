@@ -431,6 +431,7 @@ Future agency sessions should apply the relevant North Atlas skill automatically
 - A captured Free Site Audit form submission (Phase 2 of the AI-native loop): `north-atlas-inbox-curate` hands this to `north-atlas-audit-lead-autodraft` automatically — it is not normally invoked directly. `north-atlas-audit-lead-watch` also catches these hourly, independent of the daily sweep.
 - Scraped/Apify/Maps lead lists: use `apify-local-lead-prospecting`.
 - Existing website audit or Free Site Audit deliverable: use `ai-search-readiness-audit`.
+- Running or following up on a free AI Operations Check call (Core Service #4's discovery call), or analyzing a business-workflow discovery-call transcript to scope/price an AI Operations install: use `ai-operations-check`. Internal diagnostic only — hands off to `offer-sheet-builder` for anything client-facing, same split as `ai-search-readiness-audit`.
 - GBP screenshots, profile data, reviews, posts, categories, or service areas: use `google-business-profile-optimizer`.
 - New client site/rebuild: use `website-build-checklist`, `client-site-operating-manual`, `client-voice-pack-builder`, `local-service-site-builder`, and `lead-tracking-installer`.
 - Location/service page clusters: use `city-service-cluster-builder` and verify local detail before publishing.
