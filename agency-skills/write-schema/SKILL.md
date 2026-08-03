@@ -1,5 +1,6 @@
 ---
-name: advanced-schema-architect
+name: write-schema
+allowed-tools: Read, Write, Bash
 description: Design and write complete JSON-LD structured data for local service business sites, beyond basic LocalBusiness/FAQPage — Service, Offer, OpeningHoursSpecification, Organization, BreadcrumbList, Review/AggregateRating (policy-safe), areaServed, and sameAs entity linking for AI search. Use when adding schema to new pages, upgrading thin schema, connecting a business's entity across the web, or answering "what schema should this page have". Trigger on "add schema", "structured data", "JSON-LD", "rich results", or "entity".
 metadata:
   updated: "2026-07-04"
@@ -7,7 +8,7 @@ metadata:
 
 # Advanced Schema Architect
 
-Design the full structured-data layer for a local service site: the right types per page, correct nesting, entity linking that helps Google and AI systems understand WHO this business is — grounded in schema.org and Google's structured-data documentation. This skill DESIGNS and WRITES schema; `schema-and-faq-sync-auditor` verifies it against the visible page.
+Design the full structured-data layer for a local service site: the right types per page, correct nesting, entity linking that helps Google and AI systems understand WHO this business is — grounded in schema.org and Google's structured-data documentation. This skill DESIGNS and WRITES schema; `check-schema` verifies it against the visible page.
 
 ## Workflow
 
@@ -15,7 +16,7 @@ Design the full structured-data layer for a local service site: the right types 
 2. **Map types to pages** with `references/schema-type-map.md`: LocalBusiness subtype sitewide (pick the most specific — `HairSalon`? no: `PetGroomingService` isn't a type; use the map's subtype guidance), Service + Offer per service page, breadcrumbs everywhere, FAQPage where visible FAQs exist, Organization/entity block on the homepage.
 3. **Write the JSON-LD** per the patterns in `references/jsonld-patterns.md`: one `@graph` per page with stable `@id`s linking entities (business ↦ services ↦ offers ↦ areaServed), not disconnected blobs.
 4. **Entity-linking pass:** homepage `sameAs` array covering every verifiable official profile; consistent `@id` for the business across all pages; NAP character-identical to GBP. This cross-referencing is what lets AI search connect the site, the GBP, and the reviews into one entity it can cite confidently.
-5. **Validate:** every block parses (run through a JSON parser), passes Google's Rich Results Test expectations (required/recommended properties present per the type map), and — the honesty gate — **every value is visible or verifiable on the page or GBP.** Then hand to `schema-and-faq-sync-auditor` for the sync audit.
+5. **Validate:** every block parses (run through a JSON parser), passes Google's Rich Results Test expectations (required/recommended properties present per the type map), and — the honesty gate — **every value is visible or verifiable on the page or GBP.** Then hand to `check-schema` for the sync audit.
 6. **Document** the schema decisions in the client operating manual (which types live where, what to update when hours/services change).
 
 ## Output
@@ -28,5 +29,5 @@ Schema states only what the page/GBP visibly supports — schema that inflates (
 
 ## After this skill
 
-- `schema-and-faq-sync-auditor` verifies schema-vs-visible-content before launch; `static-local-seo-launch-system` gates the launch.
+- `check-schema` verifies schema-vs-visible-content before launch; `launch-check` gates the launch.
 - Hours/service/price changes → schema updates are part of retainer maintenance; note in the operating manual.

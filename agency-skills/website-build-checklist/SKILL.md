@@ -1,5 +1,6 @@
 ---
 name: website-build-checklist
+allowed-tools: Read, Write, Bash
 description: Create or run a practical North Atlas Studio website build checklist for local service business sites, from intake through launch. Use when Manny asks for a build checklist, pre-build checklist, handoff checklist, client website build steps, launch prep list, or future website build QA covering pages, copy, SEO metadata, schema, forms, tracking, mobile, Search Console, GBP, and post-launch follow-up.
 metadata:
   updated: "2026-07-07"
@@ -7,7 +8,7 @@ metadata:
 
 # Website Build Checklist
 
-Use this skill to keep a local service business website build organized from first intake through launch and the first follow-up report. It is the checklist layer between `local-service-site-builder` and `static-local-seo-launch-system`.
+Use this skill to keep a local service business website build organized from first intake through launch and the first follow-up report. It is the checklist layer between `local-service-site-builder` and `launch-check`.
 
 ## Workflow
 
@@ -16,11 +17,11 @@ Use this skill to keep a local service business website build organized from fir
 3. **Route specialist work.**
    - Site structure and page inventory: `local-service-site-builder`.
    - City/service clusters: `city-service-cluster-builder`.
-   - Copy: `seo-content-writer`, then `human-copy-editor`.
-   - Schema: `advanced-schema-architect`, then `schema-and-faq-sync-auditor`.
+   - Copy: `seo-content-writer`, then `de-ai-copy`.
+   - Schema: `write-schema`, then `check-schema`.
    - Tracking: `lead-tracking-installer`.
    - Design QA: `website-design-standards`.
-   - Launch gate: `static-local-seo-launch-system`.
+   - Launch gate: `launch-check`.
 4. **Mark blockers separately from polish.** Block launch for noindex/canonical errors, broken forms, missing GA4, wrong domain, bad redirects, inaccessible pages, broken mobile nav, or unsupported claims. Track visual polish and optional content separately.
 5. **End with owner asks.** Every checklist should say what Manny still needs from the owner: photos, proof, access, service details, local details, testimonials, approvals, or DNS action.
 

@@ -1,5 +1,6 @@
 ---
 name: lighthouse-technical-seo-fixer
+allowed-tools: Read, Write, Bash, WebFetch
 description: Interpret Lighthouse, PageSpeed, Core Web Vitals, accessibility, mobile, and technical SEO findings for North Atlas Studio client sites. Use when prioritizing performance fixes, accessibility improvements, crawlability issues, image optimization, render blocking resources, semantic HTML, and local-site launch quality. Trigger on "pagespeed", "lighthouse", "core web vitals", "site is slow", or performance scores.
 metadata:
   updated: "2026-07-04"
@@ -31,4 +32,4 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- Accessibility findings that are design-level (contrast, tap targets) → `website-design-standards`. Pre-launch → results feed `static-local-seo-launch-system`. Before/after proof → `case-study-and-proof-builder`.
+- Accessibility findings that are design-level (contrast, tap targets) → `website-design-standards`. Pre-launch → results feed `launch-check`. Before/after proof → `case-study-and-proof-builder`.

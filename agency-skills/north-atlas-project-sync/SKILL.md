@@ -1,5 +1,6 @@
 ---
 name: north-atlas-project-sync
+allowed-tools: Read, Write, Edit, Bash
 description: Maintain North Atlas Studio project documentation and production sync rules. Use when changing the agency site, offers, proof, positioning, project structure, tooling roadmap, skill library, CLAUDE.md, AGENTS.md, BUSINESS-BLUEPRINT.md, NEXT-STEPS.md, ai-search-reference.md, GA4-lead-logic.md, or production-facing copy. Trigger after ANY change to agency skills or production-facing agency files.
 metadata:
   updated: "2026-07-04"

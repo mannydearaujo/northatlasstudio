@@ -14,7 +14,7 @@
 ## Structure rules
 - Flat URLs: `/gutter-installation/`, `/dog-grooming-lexington-ma/` — no `/services/category/item/` nesting for small sites.
 - Pick the canonical URL format before building page clusters. Extensionless clean URLs are the default for new static/Vercel builds, and file output, internal links, canonical tags, and `sitemap.xml` must all agree.
-- Some static hosts can serve both `/page` and `/page.html` as separate 200 URLs. Before launch, spot-check representative pages and route any duplicate-URL findings to `static-local-seo-launch-system`.
+- Some static hosts can serve both `/page` and `/page.html` as separate 200 URLs. Before launch, spot-check representative pages and route any duplicate-URL findings to `launch-check`.
 - Internal links: every service page ↔ relevant location pages ↔ homepage. Location pages are the most orphan-prone — link them from a visible service-area section, not just the sitemap.
 - Navigation: max 7 top-level items; primary CTA as a visually distinct nav button; phone number in header (tap-to-call on mobile).
 - 404 page with nav + CTA. Favicon set. `robots.txt` + `sitemap.xml` from day one.

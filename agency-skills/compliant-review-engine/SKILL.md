@@ -1,5 +1,6 @@
 ---
 name: compliant-review-engine
+allowed-tools: Read, Write, Bash
 description: Create review request, follow-up, reply, and service recovery workflows for North Atlas Studio clients. Use when asking customers for honest reviews, drafting Google review replies, building review velocity plans, handling negative reviews manually, or avoiding review gating and policy violations. Trigger on "review requests", "reply to this review", "get more Google reviews", or "bad review" situations.
 metadata:
   updated: "2026-07-04"

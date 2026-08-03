@@ -1,5 +1,6 @@
 ---
 name: website-design-standards
+allowed-tools: Read, Write, Bash, WebFetch
 description: Apply North Atlas Studio's conversion-first design standards to local service business websites — layout, visual hierarchy, typography, spacing, color/contrast, mobile patterns, form UX, trust-block placement, and WCAG 2.1 AA accessibility baseline. Use when designing or reviewing any client site's look and usability, running a pre-launch design QA, or answering "does this page look professional / why does this feel off / is this mobile-friendly". Trigger on "design review", "design QA", "make it look better", "check the layout", or before any client build ships.
 metadata:
   updated: "2026-07-04"
@@ -30,4 +31,4 @@ Design serves conversion and trust, not novelty — no trends that cost clarity 
 ## After this skill
 
 - QA blockers route back to the build (`local-service-site-builder`); performance-flavored findings to `lighthouse-technical-seo-fixer`.
-- Design QA pass is a prerequisite for `static-local-seo-launch-system`'s launch gate.
+- Design QA pass is a prerequisite for `launch-check`'s launch gate.

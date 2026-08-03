@@ -1,6 +1,7 @@
 ---
 name: seo-content-writer
-description: Write, rewrite, draft, or optimize SEO page and blog content for North Atlas Studio clients — homepage/service/location copy, blog posts, and the social captions distributed from them. Use when someone asks to write, rewrite, draft, create, or optimize a page or blog post (not just plan or audit one), ports the Autonomous SEO Content & Distribution Engine ruleset (business-context confirmation, competitive/keyword research, anti-doorway-page rule for location pages, E-E-A-T operator voice, GA4/Search Console technical embedding rule, social caption distribution). This is the WRITER — hand off to city-service-cluster-builder or localized-blog-opportunity-finder first if the topic/cluster isn't planned yet, and to schema-and-faq-sync-auditor or ai-search-readiness-audit afterward to check the result.
+allowed-tools: Read, Write, Bash, WebSearch, WebFetch, Skill
+description: Write, rewrite, draft, or optimize SEO page and blog content for North Atlas Studio clients — homepage/service/location copy, blog posts, and the social captions distributed from them. Use when someone asks to write, rewrite, draft, create, or optimize a page or blog post (not just plan or audit one), ports the Autonomous SEO Content & Distribution Engine ruleset (business-context confirmation, competitive/keyword research, anti-doorway-page rule for location pages, E-E-A-T operator voice, GA4/Search Console technical embedding rule, social caption distribution). This is the WRITER — hand off to city-service-cluster-builder or localized-blog-opportunity-finder first if the topic/cluster isn't planned yet, and to check-schema or audit-site afterward to check the result.
 metadata:
   updated: "2026-07-04"
 ---
@@ -8,8 +9,8 @@ metadata:
 # SEO Content Writer
 
 This skill is the gap-filler between North Atlas's *planners* (`city-service-cluster-builder`,
-`localized-blog-opportunity-finder`) and *auditors* (`schema-and-faq-sync-auditor`,
-`ai-search-readiness-audit`) — it's the one that actually produces page and blog copy. It ports the
+`localized-blog-opportunity-finder`) and *auditors* (`check-schema`,
+`audit-site`) — it's the one that actually produces page and blog copy. It ports the
 rules from the Golden Paws "Autonomous SEO Content & Distribution Engine" so any North Atlas client
 gets the same discipline: confirm real business facts first, research before writing, never template
 a location page, write in the owner's real voice, and never invent what can't be verified.
@@ -22,8 +23,8 @@ a location page, write in the owner's real voice, and never invent what can't be
 - **Need the client's voice defined?** Run `client-voice-pack-builder` first if no voice pack exists yet.
 - **Writing for Alpha Seamless Gutter specifically?** Use the existing `alpha-seo-content` skill instead
   — do not duplicate its work here. This skill is for other North Atlas clients.
-- **After writing:** hand off to `schema-and-faq-sync-auditor` (schema/FAQ/canonical check) and, before
-  launch, `static-local-seo-launch-system`.
+- **After writing:** hand off to `check-schema` (schema/FAQ/canonical check) and, before
+  launch, `launch-check`.
 - **Distributing the finished post to GBP:** hand off to `gbp-posting-calendar`. This skill only drafts
   Instagram/Facebook captions for the post itself (Step 5 below) when asked — it does not schedule or
   post them.
@@ -42,7 +43,7 @@ a location page, write in the owner's real voice, and never invent what can't be
 5. **Technical embedding check** — apply `references/technical-embedding-rule.md` before calling the
    page done.
 6. **Quality control** — run `references/quality-control-checklist.md` before handing off for audit/launch,
-   then run the copy through the `human-copy-editor` skill's audit pass — no page ships reading like AI filler.
+   then run the copy through the `de-ai-copy` skill's audit pass — no page ships reading like AI filler.
 
 ## Guardrails
 

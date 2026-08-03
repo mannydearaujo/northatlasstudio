@@ -7,14 +7,14 @@ The task list should keep him on track across the whole service lifecycle:
 1. **Lead intake** - business name, website, GBP/Maps link, contact info, niche, city/service area, source, and why they may be a fit.
 2. **Pre-audit setup** - create client/prospect folder, save submitted form details, note Apify/Maps data source, check suppression/opt-out status for outreach if applicable.
 3. **Prospect qualification** - use `apify-local-lead-prospecting` when the lead came from scraped data; note likely opportunity and evidence.
-4. **Website audit** - use `ai-search-readiness-audit`; gather homepage, service, location, FAQ, contact, sitemap, robots, and schema findings.
+4. **Website audit** - use `audit-site`; gather homepage, service, location, FAQ, contact, sitemap, robots, and schema findings.
 5. **GBP/local audit** - use `google-business-profile-optimizer`; request screenshots/intake when profile data is incomplete.
 6. **Findings and offer match** - summarize top fixes, business impact, and whether to recommend rebuild, local pages, tracking setup, or retainer (the audit itself stays free, never a separate line item).
 7. **Proposal/next step** - use `offer-sheet-builder`; include price band, deliverables, proof, no-ranking-guarantee language, and next action.
 8. **Client onboarding** - use `client-site-operating-manual`, `client-voice-pack-builder`, and `lead-tracking-installer`; collect logins, assets, photos, testimonials, services, areas, and tracking access.
-9. **Build/fix delivery** - use `local-service-site-builder`, `city-service-cluster-builder`, `schema-and-faq-sync-auditor`, and `lighthouse-technical-seo-fixer` as needed.
-10. **Launch and QA** - use `static-local-seo-launch-system`; verify domain, forms, CTAs, tracking, schema, sitemap, robots, and mobile.
-11. **Reporting and retainer** - use `weekly-client-report-generator`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, and `case-study-and-proof-builder`.
+9. **Build/fix delivery** - use `local-service-site-builder`, `city-service-cluster-builder`, `check-schema`, and `lighthouse-technical-seo-fixer` as needed.
+10. **Launch and QA** - use `launch-check`; verify domain, forms, CTAs, tracking, schema, sitemap, robots, and mobile.
+11. **Reporting and retainer** - use `report-to-client`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, and `case-study-and-proof-builder`.
 
 Each task list should include:
 

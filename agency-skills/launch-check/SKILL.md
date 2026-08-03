@@ -1,5 +1,6 @@
 ---
-name: static-local-seo-launch-system
+name: launch-check
+allowed-tools: Read, Write, Bash, WebFetch
 description: Run final launch QA for North Atlas Studio static or SSG local business websites. Use before publishing or after domain changes to check canonical URLs, sitemap, robots, schema, metadata, favicons, social previews, forms, CTAs, tracking, mobile layout, Search Console readiness, GBP website alignment, and deployment visibility. Trigger on "launch QA", "ready to publish?", "pre-launch check", or after any new page cluster ships.
 metadata:
   updated: "2026-07-04"
@@ -14,7 +15,7 @@ The launch gate: nothing client-facing publishes until this passes. Catches the 
 1. **Confirm scope:** full-site launch, new page cluster, or domain change. Get the production URL(s) and access to the deployed (or staging) environment — QA runs against what users will actually receive, not local files, whenever possible.
 2. **Crawl/index pass:** domain + HTTPS + www/apex redirect, `robots.txt` allows the site and references the sitemap, `sitemap.xml` complete with fresh `<lastmod>`, canonical on every page pointing at the real production URL (staging canonicals are the classic launch killer), no stray `noindex`, no auth wall, 404 page works.
 3. **Page-level pass (every new/changed page):** unique title + meta description, one H1, OG/Twitter tags render (test a share preview), favicon set, images have alt text and load, no lorem/placeholder text, no broken internal links.
-4. **Schema pass:** run `schema-and-faq-sync-auditor` (script: `check-schema-faq-sync.js`) — JSON-LD parses, visible FAQ matches FAQPage schema, LocalBusiness NAP matches GBP exactly.
+4. **Schema pass:** run `check-schema` (script: `check-schema-faq-sync.js`) — JSON-LD parses, visible FAQ matches FAQPage schema, LocalBusiness NAP matches GBP exactly.
 5. **Conversion pass — actually operate the site:** submit the real form (then delete the test lead and tell the owner one is coming), tap every tel:/sms:/mailto: link, click the booking CTA through to its destination, verify the confirmation states.
 6. **Tracking pass:** GA4 fires on the production domain (Realtime check), lead events fire with the names defined by `lead-tracking-installer`, GTM container published not just previewed, no duplicate GA4 tags.
 7. **Mobile pass:** 375px width — sticky CTA bar works, no horizontal scroll, tap targets usable, forms usable with the right keyboards.
@@ -31,5 +32,5 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- Failures route to the owning skill: schema → `schema-and-faq-sync-auditor`, performance → `lighthouse-technical-seo-fixer`, design → `website-design-standards`, tracking → `lead-tracking-installer`.
+- Failures route to the owning skill: schema → `check-schema`, performance → `lighthouse-technical-seo-fixer`, design → `website-design-standards`, tracking → `lead-tracking-installer`.
 - Record launch date + submission log in the client operating manual (`client-site-operating-manual`).

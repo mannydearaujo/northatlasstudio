@@ -1,6 +1,6 @@
 ---
-name: north-atlas-inbox-capture
-description: Pull new North Atlas Studio operational items (inbox messages, and GBP messages when a connector exists) into the vault's raw capture inbox on a schedule, without judging or filing them. Use when running the scheduled AI-native capture job, or when Manny asks to "check the North Atlas inbox" or "pull in what's new." Does not decide what matters — that is north-atlas-inbox-curate's job.
+name: inbox-pull
+description: Pull new North Atlas Studio operational items (inbox messages, and GBP messages when a connector exists) into the vault's raw capture inbox on a schedule, without judging or filing them. Use when running the scheduled AI-native capture job, or when Manny asks to "check the North Atlas inbox" or "pull in what's new." Does not decide what matters — that is inbox-file's job.
 metadata:
   updated: "2026-07-22"
 ---
@@ -10,7 +10,7 @@ metadata:
 Mechanical pull step of the capture → curate → store → execute → experience → signal loop (see
 `references/ai-native-loop.md`). This skill only moves raw items into the vault's
 `01-projects/north-atlas-studio/INBOX.md`. It never decides what's important, never replies, never
-files anything into `CURRENT-STATE.md`/`TASKS.md` — that's `north-atlas-inbox-curate`.
+files anything into `CURRENT-STATE.md`/`TASKS.md` — that's `inbox-file`.
 
 ## Hard guardrail: verify the account before touching anything
 
@@ -52,7 +52,7 @@ authenticated as Golden Paws' inbox, not North Atlas's own — confirmed before 
    `label_message` using the same ID instead.
 8. Update `last_run` in the INBOX.md frontmatter to now.
 9. Report a one-line count: "Captured N new items since <last_run>." Do not editorialize about
-   what they mean — that's the curate skill's job, run separately (see `north-atlas-inbox-curate`).
+   what they mean — that's the curate skill's job, run separately (see `inbox-file`).
 
 ## What this skill must never do
 
@@ -60,5 +60,5 @@ authenticated as Golden Paws' inbox, not North Atlas's own — confirmed before 
 - Never touch a client's own inbox (Golden Paws, Alpha Gutter, or any future client) — this skill is
   scoped to North Atlas Studio's own operational inbox only.
 - Never file captured items into `CURRENT-STATE.md`/`TASKS.md` directly; that's a separate,
-  deliberate step (`north-atlas-inbox-curate`) so a bad capture run can't silently corrupt the
+  deliberate step (`inbox-file`) so a bad capture run can't silently corrupt the
   project's source of truth.

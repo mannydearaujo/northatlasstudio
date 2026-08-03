@@ -29,7 +29,7 @@ Local markers: [towns, neighborhoods, landmarks the owner references naturally]
 # [Client] — Banned
 Client-specific: [e.g., "one dog at a time", em-dashes anywhere on site]
 Unsupported claims: [e.g., "best in Boston", "guaranteed lowest price"]
-Universal AI-tells: inherit the full list from the human-copy-editor skill; do not restate.
+Universal AI-tells: inherit the full list from the de-ai-copy skill; do not restate.
 ```
 
 ## proof-points.md

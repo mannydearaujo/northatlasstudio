@@ -22,7 +22,7 @@
 - Service pages answer who it is for, what is included, pricing factors, process, proof, FAQ, and CTA.
 - About page includes real team/company trust signals without invented biographies.
 - FAQ answers match real customer concerns and avoid schema-only questions.
-- Copy passes `human-copy-editor` before launch.
+- Copy passes `de-ai-copy` before launch.
 
 ## Phase 4: SEO And Schema
 

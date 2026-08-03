@@ -1,5 +1,6 @@
 ---
 name: offer-sheet-builder
+allowed-tools: Read, Write, Bash
 description: Create North Atlas Studio one-page offer sheets, audit follow-up offers, rebuild proposals, and retainer pitch summaries. Use when packaging the Free Site Audit follow-up, Conversion Website Build/Rebuild, Local SEO plus AI Search Pages, Growth Retainer, pricing bands, deliverables, proof, and no-guarantee language. Trigger on "offer sheet", "proposal", "pitch", "what do I send them after the audit", or pricing a specific prospect.
 metadata:
   updated: "2026-07-04"
@@ -9,7 +10,7 @@ metadata:
 
 Turn audit findings into the one-page pitch a prospect actually reads: the problem in their terms, ONE recommended offer, the price, the proof, the next step.
 
-**This is the client-facing deliverable.** When an `ai-search-readiness-audit` dashboard exists, treat it as internal source material only — pull the findings and the suggested price band from it, but never copy its internal pricing exploration, margin notes, or raw audit detail into the offer sheet. The output here is the polished pitch the client actually sees. See the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`.
+**This is the client-facing deliverable.** When an `audit-site` dashboard exists, treat it as internal source material only — pull the findings and the suggested price band from it, but never copy its internal pricing exploration, margin notes, or raw audit detail into the offer sheet. The output here is the polished pitch the client actually sees. See the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`.
 
 ## Language routing
 
@@ -25,7 +26,7 @@ and name North Atlas Studio as the sender/provider.
 2. **Read `references/offer-stack.md`** and pick the ONE offer that fixes their diagnosed problem. For pt-BR delivery, also read `references/client-facing-offer-pt-BR.md`. Menu-dumping all four offers is the classic mistake — the sheet recommends, the conversation negotiates.
 3. **Structure the sheet:** (a) their problem in plain language, anchored to 2–3 specific audit findings they can verify themselves; (b) what North Atlas Studio will do — itemized deliverables; (c) price (band from the stack, tightened to a number when scope is clear); (d) proof block (from `case-study-and-proof-builder`); (e) the required no-guarantee language; (f) ONE next step with a real response window.
 4. **Translate, don't paste:** internal findings become client-safe language ("your site has no way to know which calls come from Google" not "GA4 tel: click events unconfigured").
-5. **Voice check:** run the sheet through the `human-copy-editor` standard — owners smell agency-speak; write like Manny talks.
+5. **Voice check:** run the sheet through the `de-ai-copy` standard — owners smell agency-speak; write like Manny talks.
 
 ## Output
 

@@ -1,5 +1,6 @@
 ---
-name: weekly-client-report-generator
+name: report-to-client
+allowed-tools: Read, Write, Bash
 description: Generate North Atlas Studio weekly client reports from GA4, Search Console, GBP, and work-log inputs. Use for retainer reporting, real-lead summaries, secondary-intent context, funnel health, owner-facing next steps, internal notes, and plain-English reporting that avoids vanity metrics. Trigger on "weekly report", "client report", or "what do I send the client this week".
 metadata:
   updated: "2026-07-04"

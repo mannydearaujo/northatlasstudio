@@ -152,5 +152,5 @@ to Formspree's submission count against the account's plan limits.
 - **Never treat "captured but not yet declined" as a failure inside the 48-hour window** — Gmail
   delivery and the watch cadence both take a little real time; only flag after the window elapses.
 - **Never touch anything else in the inbox.** Like `north-atlas-audit-lead-watch`, this skill only
-  ever looks for its own marker — general inbox triage stays `north-atlas-inbox-capture`/`curate`'s
+  ever looks for its own marker — general inbox triage stays `inbox-pull`/`curate`'s
   job.

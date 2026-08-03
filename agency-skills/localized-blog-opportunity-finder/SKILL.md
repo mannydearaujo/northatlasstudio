@@ -1,5 +1,6 @@
 ---
 name: localized-blog-opportunity-finder
+allowed-tools: Read, Write, Bash, WebSearch
 description: Find and prioritize localized blog/content opportunities for North Atlas Studio clients. Use when planning next-of-kin content, service-adjacent local guides, seasonal support content, internal link opportunities, blog briefs, FAQ expansion, social/GBP repurposing, and retainer content that supports real customer intent. Trigger on "what should we blog about", "content ideas", "blog calendar", or planning retainer content.
 metadata:
   updated: "2026-07-04"
@@ -28,4 +29,4 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- Briefs → `seo-content-writer` (which reads the voice pack). Published posts → repurpose via `gbp-posting-calendar` → verify schema/links via `schema-and-faq-sync-auditor`.
+- Briefs → `seo-content-writer` (which reads the voice pack). Published posts → repurpose via `gbp-posting-calendar` → verify schema/links via `check-schema`.

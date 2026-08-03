@@ -1,5 +1,6 @@
 ---
 name: case-study-and-proof-builder
+allowed-tools: Read, Write, Bash
 description: Create North Atlas Studio case studies, proof blocks, testimonial requests, and sales proof from verified client work. Use when packaging Golden Paws, AlphaGutterCo, or future client results with real screenshots, GA4 events, before/after evidence, live URLs, structural improvements, and no fake performance claims. Also use when someone says "build a case study", "package the proof", "write up the results", or "I need something to show prospects".
 metadata:
   updated: "2026-07-22"
@@ -33,7 +34,7 @@ specifically about the short-form proof block that ends up in client-facing copy
 4. **Draft the case study** using the structure in `references/case-study-structure.md`. Lead with the business problem, not the technology. Metrics get exact numbers with date ranges; structural work gets before/after specifics.
 5. **Draft the short-form derivatives** in the same pass: a 3–4 sentence proof block (website/offer-sheet ready), a 1-sentence stat line, and a LinkedIn/GBP-post version.
 6. **If no testimonial exists yet**, draft the request using `references/testimonial-request-templates.md` — Manny sends it personally; never send on the client's behalf.
-7. **QA pass:** re-check every number against its screenshot, confirm client-name approval, confirm no banned claim types, run copy through the `human-copy-editor` skill if it reads like marketing filler.
+7. **QA pass:** re-check every number against its screenshot, confirm client-name approval, confirm no banned claim types, run copy through the `de-ai-copy` skill if it reads like marketing filler.
 
 ## Output
 
@@ -50,4 +51,4 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 ## After this skill
 
 - Feed the proof block into `offer-sheet-builder` (proof section) and the agency site via `north-atlas-project-sync`.
-- New GA4 evidence worth capturing? Note it in the client workspace so `weekly-client-report-generator` and future case studies can reuse it.
+- New GA4 evidence worth capturing? Note it in the client workspace so `report-to-client` and future case studies can reuse it.

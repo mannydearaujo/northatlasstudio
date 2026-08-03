@@ -1,7 +1,7 @@
 # Relatório Semanal Do Cliente - [Nome Do Cliente]
 
 **Formato polido padrão:** dashboard KPI em HTML usando
-`agency-skills/weekly-client-report-generator/assets/report-template.pt-BR.html`.
+`agency-skills/report-to-client/assets/report-template.pt-BR.html`.
 Use esta estrutura markdown como mapa de conteúdo ou fallback em texto.
 
 **Semana de:** [DD/MM] a [DD/MM/AAAA]

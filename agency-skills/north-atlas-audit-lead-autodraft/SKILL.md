@@ -1,6 +1,6 @@
 ---
 name: north-atlas-audit-lead-autodraft
-description: Turn a captured Free Site Audit form submission into (1) a drafted, ready-to-review offer pack and (2) an auto-drafted client-safe instant-results email, ready in Gmail for Manny to send with one click. Runs ai-search-readiness-audit, then both offer-sheet-builder (+ case-study-and-proof-builder + human-copy-editor) and the instant-results email in parallel. Invoked by north-atlas-inbox-curate or north-atlas-audit-lead-watch when it recognizes a Formspree "Free Site Audit request"/"Pedido de auditoria gratuita" email; not normally invoked directly. This is Phase 2 of the AI-native operating loop (see CLAUDE.md).
+description: Turn a captured Free Site Audit form submission into (1) a drafted, ready-to-review offer pack and (2) an auto-drafted client-safe instant-results email, ready in Gmail for Manny to send with one click. Runs audit-site, then both offer-sheet-builder (+ case-study-and-proof-builder + de-ai-copy) and the instant-results email in parallel. Invoked by inbox-file or north-atlas-audit-lead-watch when it recognizes a Formspree "Free Site Audit request"/"Pedido de auditoria gratuita" email; not normally invoked directly. This is Phase 2 of the AI-native operating loop (see CLAUDE.md).
 metadata:
   updated: "2026-07-22"
 ---
@@ -9,7 +9,7 @@ metadata:
 
 Closes the "execute" gap Phase 2 of the AI-native operating loop names: instead of Manny noticing a
 Free Site Audit submission and invoking the audit → offer chain by hand, this skill runs it the
-moment `north-atlas-inbox-curate`/`north-atlas-audit-lead-watch` recognize the trigger.
+moment `inbox-file`/`north-atlas-audit-lead-watch` recognize the trigger.
 
 **Two outputs, two different approval bars (decided 2026-07-22):**
 - The **offer sheet / proposal** (priced, specific) stays fully manual — drafted only, needs Manny's
@@ -24,7 +24,7 @@ moment `north-atlas-inbox-curate`/`north-atlas-audit-lead-watch` recognize the t
 
 ## When this runs
 
-`north-atlas-inbox-curate` invokes this skill when a captured item is from `noreply@formspree.io`
+`inbox-file` invokes this skill when a captured item is from `noreply@formspree.io`
 with subject `Free Site Audit request` (English) or `Pedido de auditoria gratuita` (Portuguese).
 Don't invoke this skill for anything else — it is not a general lead-processing tool.
 
@@ -45,7 +45,7 @@ Don't invoke this skill for anything else — it is not a general lead-processin
      just paste the English version, per the same Portuguese delivery rule)
    - any future client-facing addition to this chain — default new outputs to following this same
      rule rather than treating language routing as a one-off feature of the offer sheet specifically.
-   **The internal audit dashboard (`ai-search-readiness-audit`'s output) stays English regardless**
+   **The internal audit dashboard (`audit-site`'s output) stays English regardless**
    — it's for Manny's own use, never sent to the prospect, so there's nothing to route.
 3. **Require a usable `website` value** (a real URL). If missing or clearly not a URL, don't run the
    chain — file this in `TASKS.md` as "needs manual follow-up: no website provided" instead, with
@@ -67,7 +67,7 @@ workspace convention already used elsewhere in this repo). Everything below save
 
 ## Step 2 — Run the chain
 
-1. **`ai-search-readiness-audit`** on the submitted `website`. This produces the internal
+1. **`audit-site`** on the submitted `website`. This produces the internal
    `ai-search-audit-<business-slug>.html` dashboard (findings, severity, suggested pricing/scope).
    Keep this internal — never send it to the prospect as-is.
 2. **`offer-sheet-builder`**, using that audit's findings plus the submitted `goal` and `message` as
@@ -76,10 +76,10 @@ workspace convention already used elsewhere in this repo). Everything below save
 3. **`case-study-and-proof-builder`**, to attach the most relevant existing proof (Golden Paws or
    AlphaGutterCo) if the prospect's business type is a reasonable match. Skip this step rather than
    force a bad fit — no proof is better than mismatched proof.
-4. **`human-copy-editor`**, as the mandatory pre-publish pass on the offer sheet draft — this is the
+4. **`de-ai-copy`**, as the mandatory pre-publish pass on the offer sheet draft — this is the
    standard gate this repo already requires before any client-facing copy ships.
 5. **Instant-results email** — compose using `references/instant-results-email.md` (English or
-   Portuguese per Step 0's language detection). Run this through `human-copy-editor` too — same
+   Portuguese per Step 0's language detection). Run this through `de-ai-copy` too — same
    pre-publish bar as the offer sheet, just because it auto-drafts doesn't mean it skips the voice/
    quality gate. Then call `create_draft`:
    - `to`: the submitter's own `email` field (not the Formspree notification address — those differ,
@@ -117,7 +117,7 @@ valid outcome; silently dropping a processed lead is not.
 - Never email, message, or otherwise contact the prospect beyond the drafted (not sent)
   instant-results email. It produces files/drafts for Manny to review or one-click send, nothing
   more.
-- Never skip `human-copy-editor` — a chain-generated offer sheet is exactly the case that rule
+- Never skip `de-ai-copy` — a chain-generated offer sheet is exactly the case that rule
   exists for.
 - Never fabricate proof, metrics, or guarantees — all the usual proof rules
   (`BUSINESS-BLUEPRINT.md` "Proof Rules") and no-guarantee language apply exactly as they would to a

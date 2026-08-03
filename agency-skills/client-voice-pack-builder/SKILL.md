@@ -1,5 +1,6 @@
 ---
 name: client-voice-pack-builder
+allowed-tools: Read, Write, Bash, WebSearch, WebFetch
 description: Create reusable client voice reference files for North Atlas Studio website copy, GBP posts, blogs, outreach, reports, and case studies. Use when onboarding a client, extracting tone from existing copy/reviews/social/email, defining vocabulary, banned phrases, proof points, offer language, owner voice, or preventing generic AI-sounding content. Also use when copy "doesn't sound like the client" or a new client needs a voice pack before any writing starts.
 metadata:
   updated: "2026-07-04"
@@ -20,7 +21,7 @@ Extract how a real business owner actually talks and lock it into five compact f
 3. **Write the five files** using the templates in `references/voice-pack-file-templates.md`:
    - `tone.md` — register, rhythm, 3 verbatim owner lines as calibration examples
    - `vocabulary.md` — words the owner/customers use, including "wrong" trade terms customers search for
-   - `banned-phrases.md` — client-specific bans + the universal AI-tell list (inherit from `human-copy-editor`)
+   - `banned-phrases.md` — client-specific bans + the universal AI-tell list (inherit from `de-ai-copy`)
    - `proof-points.md` — verifiable facts only (years in business, certifications, real differentiators); mark anything unconfirmed as NEEDS CONFIRMATION
    - `service-language.md` — how THEY describe each service, price-talk rules (e.g., Golden Paws: "cash discount," never "card price"), CTA phrasing
 4. **Calibration test:** write two 3-sentence samples about the same service — one in-voice, one generic. Show the owner (or Manny). If they can't instantly pick theirs, extract deeper.
@@ -36,5 +37,5 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- `seo-content-writer`, `gbp-posting-calendar`, `case-study-and-proof-builder`, and `human-copy-editor` must read the voice pack before producing client copy.
+- `seo-content-writer`, `gbp-posting-calendar`, `case-study-and-proof-builder`, and `de-ai-copy` must read the voice pack before producing client copy.
 - Register the pack in the client operating manual via `client-site-operating-manual`.

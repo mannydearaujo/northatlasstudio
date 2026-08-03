@@ -1,5 +1,6 @@
 ---
 name: city-service-cluster-builder
+allowed-tools: Read, Write, Bash, WebSearch
 description: Plan service-area, town, city plus service, or localized service page clusters for local SEO and AI-search readiness. Use when applying the zipper strategy, creating unique location/service briefs, researching keyword clusters, requiring verifiable local detail, avoiding doorway pages, syncing FAQs/schema, and building internal-link plans for North Atlas Studio clients. Trigger on "town pages", "location pages", "service area pages", or planning which cities get pages.
 metadata:
   updated: "2026-07-04"
@@ -28,4 +29,4 @@ Do not make near-duplicate pages that only swap city names. Do not invent drive 
 
 ## After this skill
 
-- Briefs → `seo-content-writer` (with the client voice pack) → `schema-and-faq-sync-auditor` → `static-local-seo-launch-system` (includes sitemap/indexing submissions for the new cluster).
+- Briefs → `seo-content-writer` (with the client voice pack) → `check-schema` → `launch-check` (includes sitemap/indexing submissions for the new cluster).

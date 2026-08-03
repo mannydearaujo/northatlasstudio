@@ -1,5 +1,6 @@
 ---
 name: lead-tracking-installer
+allowed-tools: Read, Write, Bash
 description: Plan, install, or audit GA4/GTM lead tracking for North Atlas Studio client sites. Use when defining real-lead events, secondary-intent events, diagnostic events, phone taps, quote forms, booking clicks, SMS/email taps, widget interactions, Key Events, Realtime QA, or weekly reporting event conventions. Trigger on "GA4", "tracking", "are we counting calls", or "install analytics".
 metadata:
   updated: "2026-07-04"
@@ -24,5 +25,5 @@ Do not count form opens, widget loads, or quote clicks as headline leads. Count 
 
 ## After this skill
 
-- Event names/definitions get recorded in the client operating manual (`client-site-operating-manual`) — they are the contract `weekly-client-report-generator` and `cro-offer-optimizer` report against.
-- Realtime QA is part of `static-local-seo-launch-system`'s launch gate.
+- Event names/definitions get recorded in the client operating manual (`client-site-operating-manual`) — they are the contract `report-to-client` and `cro-offer-optimizer` report against.
+- Realtime QA is part of `launch-check`'s launch gate.

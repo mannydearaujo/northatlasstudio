@@ -29,7 +29,7 @@ Fluxo relevante: `apify-local-lead-prospecting`
 - [ ] Status: Não iniciado - Salvar o dashboard interno como `audit/ai-search-audit-[business-slug].html`.
 - [ ] Status: Não iniciado - Não enviar o dashboard interno ao cliente como está.
 
-Fluxos relevantes: `ai-search-readiness-audit`, `lighthouse-technical-seo-fixer`
+Fluxos relevantes: `audit-site`, `lighthouse-technical-seo-fixer`
 
 ## Fase 4 - GBP / Auditoria Local
 
@@ -65,7 +65,7 @@ Fluxos relevantes: `client-site-operating-manual`, `client-voice-pack-builder`, 
 - [ ] Status: Não iniciado - Construir/corrigir homepage, páginas de serviço, páginas locais, FAQ, prova, CTAs, schema e pontos de rastreamento.
 - [ ] Status: Não iniciado - Evitar páginas doorway e verificar detalhes locais antes de publicar.
 
-Fluxos relevantes: `local-service-site-builder`, `city-service-cluster-builder`, `schema-and-faq-sync-auditor`, `lighthouse-technical-seo-fixer`
+Fluxos relevantes: `local-service-site-builder`, `city-service-cluster-builder`, `check-schema`, `lighthouse-technical-seo-fixer`
 
 ## Fase 8 - Lançamento E QA
 
@@ -73,7 +73,7 @@ Fluxos relevantes: `local-service-site-builder`, `city-service-cluster-builder`,
 - [ ] Status: Não iniciado - Confirmar que o site ao vivo não está bloqueado por staging, senha ou noindex.
 - [ ] Status: Não iniciado - Salvar notas de lançamento.
 
-Fluxo relevante: `static-local-seo-launch-system`
+Fluxo relevante: `launch-check`
 
 ## Fase 9 - Relatórios E Retainer
 
@@ -81,7 +81,7 @@ Fluxo relevante: `static-local-seo-launch-system`
 - [ ] Status: Não iniciado - Planejar posts GBP, pedidos/respostas de avaliações, conteúdo local, ajustes de conversão e coleta de provas.
 - [ ] Status: Não iniciado - Pedir depoimento/indicação quando houver prova real.
 
-Fluxos relevantes: `weekly-client-report-generator`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, `case-study-and-proof-builder`
+Fluxos relevantes: `report-to-client`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, `case-study-and-proof-builder`
 
 ## Próximas 3 Ações
 

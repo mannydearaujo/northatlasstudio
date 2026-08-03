@@ -53,7 +53,7 @@ One `<script type="application/ld+json">` per page containing a single `@graph`.
 (Offer/price block ONLY with owner-approved public pricing — otherwise omit `offers` entirely.)
 
 ## FAQPage (sync rule is absolute)
-`Question.name` and `acceptedAnswer.text` match the visible FAQ text exactly — same wording, all visible FAQs or a subset, never questions that aren't on the page. `schema-and-faq-sync-auditor` will diff them.
+`Question.name` and `acceptedAnswer.text` match the visible FAQ text exactly — same wording, all visible FAQs or a subset, never questions that aren't on the page. `check-schema` will diff them.
 
 ## Hygiene
 - Escape quotes properly; validate JSON parses before shipping; no trailing commas.

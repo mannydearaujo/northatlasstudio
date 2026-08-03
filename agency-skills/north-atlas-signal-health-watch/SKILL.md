@@ -1,6 +1,7 @@
 ---
 name: north-atlas-signal-health-watch
-description: Pull real-lead GA4 events and Search Console performance for every property in scripts/signal-registry.json, compare against the last run, write current numbers into the vault's north-atlas-studio CURRENT-STATE.md, and raise anomalies (a lead-volume drop, a ranking/clicks drop) as new INBOX.md items for north-atlas-inbox-curate to act on. Use when running the scheduled signal-loop job, or when Manny asks "how are the tracked properties doing" or "did anything drop this week."
+allowed-tools: Read, Write, Edit, Bash
+description: Pull real-lead GA4 events and Search Console performance for every property in scripts/signal-registry.json, compare against the last run, write current numbers into the vault's north-atlas-studio CURRENT-STATE.md, and raise anomalies (a lead-volume drop, a ranking/clicks drop) as new INBOX.md items for inbox-file to act on. Use when running the scheduled signal-loop job, or when Manny asks "how are the tracked properties doing" or "did anything drop this week."
 metadata:
   updated: "2026-07-22"
 ---
@@ -8,7 +9,7 @@ metadata:
 # North Atlas Signal Health Watch
 
 The "signal" stage of the capture → curate → store → execute → experience → signal AI-native loop
-(see `north-atlas-inbox-capture`'s `references/ai-native-loop.md`). Pulls real GA4/Search Console
+(see `inbox-pull`'s `references/ai-native-loop.md`). Pulls real GA4/Search Console
 data via a service account (headless, no interactive OAuth — see `scripts/ga4-report.mjs` and
 `scripts/search-console-report.mjs`), writes findings back into the brain, and flags anomalies as
 triggers — closing the loop from "something changed in the market" back to "something to work on."
@@ -47,8 +48,8 @@ triggers — closing the loop from "something changed in the market" back to "so
    `01-projects/north-atlas-studio/CURRENT-STATE.md` with the latest numbers per property and the
    run timestamp — this section always reflects the most recent pull, not a growing log.
 5. For each anomaly found, append a new entry to `01-projects/north-atlas-studio/INBOX.md` under
-   "Captured, unprocessed" (same file `north-atlas-inbox-capture` writes to), tagged as a signal
-   trigger so `north-atlas-inbox-curate` picks it up on its next pass like any other trigger — it
+   "Captured, unprocessed" (same file `inbox-pull` writes to), tagged as a signal
+   trigger so `inbox-file` picks it up on its next pass like any other trigger — it
    still defaults to "needs Manny's go-ahead," never auto-acts.
 6. Write `SIGNAL-HISTORY.json` back to the vault.
 7. Report a short summary: current numbers per property, and call out any anomalies by name. If
@@ -57,7 +58,7 @@ triggers — closing the loop from "something changed in the market" back to "so
 ## Guardrails
 
 - This is internal signal only — it feeds the vault's own task/priority tracking, never a
-  client-facing report. Weekly client reports still go through `weekly-client-report-generator`.
+  client-facing report. Weekly client reports still go through `report-to-client`.
 - Apply the same measurement philosophy as everywhere else in this repo (see `CLAUDE.md`
   "Measurement Rules" and `BUSINESS-BLUEPRINT.md` "Proof Rules"): a phone tap is not a completed
   job or customer; don't editorialize beyond what the numbers actually show.

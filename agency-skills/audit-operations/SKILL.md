@@ -1,5 +1,6 @@
 ---
-name: ai-operations-check
+name: audit-operations
+allowed-tools: Read, Write, Bash, WebSearch, Skill
 description: >-
   Run North Atlas Studio's "AI Operations Check" — the free ~20-minute discovery call named in
   BUSINESS-BLUEPRINT.md's Offer Stack — with a local business owner: pull out real time-consuming
@@ -7,7 +8,7 @@ description: >-
   tools second) sized to a business that small. Use this whenever Manny is prepping for, running, or
   has just finished an AI Operations Check call; needs to analyze a business-workflow discovery call
   transcript; or needs to work out which install(s) to recommend and roughly price for a prospect. It
-  is the AI-operations analog to `ai-search-readiness-audit` — same internal-diagnostic role, applied
+  is the AI-operations analog to `audit-site` — same internal-diagnostic role, applied
   to a business's day-to-day workflows instead of its website. It DIAGNOSES; it does not build the
   automation (that's a hand-built n8n workflow, Claude skill, or custom GPT once scope is agreed) and
   it does not write the client-facing pitch (`offer-sheet-builder` does that from this skill's
@@ -25,7 +26,7 @@ owner's real bottlenecks, and prescribes fixes: **the existing AI Operations cat
 off-the-shelf AI/SaaS tools second.** Output is an internal findings note for Manny's own scoping and
 pricing decision — never a client-facing document.
 
-**This report is internal, not client-facing**, exactly like `ai-search-readiness-audit`. When
+**This report is internal, not client-facing**, exactly like `audit-site`. When
 findings are ready to become a real pitch, hand off to `offer-sheet-builder`. That skill decides the
 client-facing framing, price, and format; this skill only diagnoses and suggests.
 
@@ -52,7 +53,7 @@ client-facing framing, price, and format; this skill only diagnoses and suggests
 - **No fabricated or inflated ROI.** Estimate hours reclaimed conservatively from what the owner
   actually described, not from a generic industry benchmark. If you can't find a real, defensible
   time-saving in the conversation, say so — do not manufacture one to make the report look better,
-  per the no-fake-data guardrails already governing `ai-search-readiness-audit` and
+  per the no-fake-data guardrails already governing `audit-site` and
   `seo-content-writer`.
 - **Right-size every recommendation to the business.** A 3-person landscaping outfit does not need
   Salesforce. Treat any AI-suggested tool as a first draft, not a final answer — always sanity-check
@@ -65,7 +66,7 @@ client-facing framing, price, and format; this skill only diagnoses and suggests
 ## Language routing
 
 Keep this internal diagnostic in English regardless of the prospect's language, same as
-`ai-search-readiness-audit`. If the lead is Portuguese-speaking or came through `/pt/`, the
+`audit-site`. If the lead is Portuguese-speaking or came through `/pt/`, the
 client-facing hand-off (`offer-sheet-builder`) is where Portuguese applies — not here.
 
 ## Workflow
@@ -84,7 +85,7 @@ guessing at what the call covered.
 
 Read the transcript/notes and pull out concrete, specific pain points — not categories. Anchor each
 one to something the owner actually said (a quote or close paraphrase), the way `seo-content-writer`
-and `ai-search-readiness-audit` require evidence over general assertion. Good prompts to listen for,
+and `audit-site` require evidence over general assertion. Good prompts to listen for,
 borrowed from the discovery-call pattern this skill assumes Manny is already running:
 
 - What eats the most time in a typical week?
@@ -142,7 +143,7 @@ For each recommended fix, note which existing Offer Stack row it maps to (with i
 band from `BUSINESS-BLUEPRINT.md`) or, if it's a candidate for something not yet in the Offer Stack
 (process redesign, knowledge system, custom build), say so plainly and **do not assign it a number** —
 that's a pricing decision for Manny, not this skill. This section is for Manny's own scoping, the same
-way `ai-search-readiness-audit`'s Step 7 works — internal shorthand, not a pitch.
+way `audit-site`'s Step 7 works — internal shorthand, not a pitch.
 
 ### Step 7 — Write the internal findings note
 
@@ -159,7 +160,7 @@ that close live, and a full branded dashboard would be overkill for that. Struct
 Save as `clients/prospecting/<slug>/ai-ops-check-<slug>-<date>.md` (or the client's own
 `clients/<slug>/` workspace if this is an existing client, not a new prospect).
 
-**Escalate to the full branded HTML KPI-dashboard format** (matching `ai-search-readiness-audit`'s
+**Escalate to the full branded HTML KPI-dashboard format** (matching `audit-site`'s
 `assets/report-template.html` shell and the shared dashboard styling in `styles/atlas-brand.css`)
 only when the opportunity clearly warrants the fuller writeup — several real findings, a
 larger/higher-value prospect, or Manny explicitly asks for the dashboard version. That template does

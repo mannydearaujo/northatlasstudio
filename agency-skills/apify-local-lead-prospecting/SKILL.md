@@ -38,5 +38,5 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- Top-scored prospects → `ai-search-readiness-audit` (run the real diagnostic before claiming findings in outreach) → `offer-sheet-builder` for the follow-up.
+- Top-scored prospects → `audit-site` (run the real diagnostic before claiming findings in outreach) → `offer-sheet-builder` for the follow-up.
 - Log each cohort (niche, geo, date, count) so replies/meetings/closes are trackable per NEXT-STEPS.md.

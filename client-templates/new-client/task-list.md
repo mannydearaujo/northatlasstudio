@@ -29,7 +29,7 @@ Relevant workflow: `apify-local-lead-prospecting`
 - [ ] Status: Not started - Save the internal audit dashboard as `audit/ai-search-audit-[business-slug].html`.
 - [ ] Status: Not started - Do not send the internal audit dashboard to the client as-is.
 
-Relevant workflows: `ai-search-readiness-audit`, `lighthouse-technical-seo-fixer`
+Relevant workflows: `audit-site`, `lighthouse-technical-seo-fixer`
 
 ## Phase 4 - GBP / Local Audit
 
@@ -64,7 +64,7 @@ Relevant workflows: `client-site-operating-manual`, `client-voice-pack-builder`,
 - [ ] Status: Not started - Build/fix homepage, service pages, location pages, FAQ, trust/proof, CTAs, schema, and tracking hooks as needed.
 - [ ] Status: Not started - Avoid doorway pages and verify local details.
 
-Relevant workflows: `local-service-site-builder`, `city-service-cluster-builder`, `schema-and-faq-sync-auditor`, `lighthouse-technical-seo-fixer`
+Relevant workflows: `local-service-site-builder`, `city-service-cluster-builder`, `check-schema`, `lighthouse-technical-seo-fixer`
 
 ## Phase 8 - Launch And QA
 
@@ -72,7 +72,7 @@ Relevant workflows: `local-service-site-builder`, `city-service-cluster-builder`
 - [ ] Status: Not started - Confirm no staging/auth wall is blocking the live site.
 - [ ] Status: Not started - Save launch notes.
 
-Relevant workflow: `static-local-seo-launch-system`
+Relevant workflow: `launch-check`
 
 ## Phase 9 - Reporting And Retainer
 
@@ -80,7 +80,7 @@ Relevant workflow: `static-local-seo-launch-system`
 - [ ] Status: Not started - Plan GBP posts, review asks/replies, localized content, conversion fixes, and proof collection.
 - [ ] Status: Not started - Ask for testimonial/referral when proof exists.
 
-Relevant workflows: `weekly-client-report-generator`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, `case-study-and-proof-builder`
+Relevant workflows: `report-to-client`, `gbp-posting-calendar`, `compliant-review-engine`, `localized-blog-opportunity-finder`, `case-study-and-proof-builder`
 
 ## Next 3 Actions
 

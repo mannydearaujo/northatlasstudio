@@ -12,7 +12,7 @@ each nearby town), every page must earn its own place in the index:
 - Never invent local facts. If a route, distance, landmark, or local claim can't be verified, leave it
   out rather than guessing.
 - Keep structured data (FAQ, LocalBusiness, BreadcrumbList) consistent with each page's own visible
-  content — keep visible FAQ text and FAQ schema in sync. Hand off to `schema-and-faq-sync-auditor` to
+  content — keep visible FAQ text and FAQ schema in sync. Hand off to `check-schema` to
   verify this after writing.
 
 This mirrors `city-service-cluster-builder`'s doorway-risk guardrails — if a cluster plan already

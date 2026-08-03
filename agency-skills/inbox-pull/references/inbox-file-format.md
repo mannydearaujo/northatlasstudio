@@ -13,7 +13,7 @@ tags: [north-atlas-studio, inbox]
 # North Atlas Studio - Capture Inbox
 
 Raw, unprocessed items land here. Nothing in this file has been judged, filed, or acted on yet —
-that happens in `north-atlas-inbox-curate`, which reads this file and clears processed entries into
+that happens in `inbox-file`, which reads this file and clears processed entries into
 `CURRENT-STATE.md`/`TASKS.md`.
 
 ## Captured, unprocessed

@@ -1,6 +1,7 @@
 ---
-name: north-atlas-inbox-curate
-description: File captured North Atlas Studio inbox items (from north-atlas-inbox-curate's companion capture step) into the vault's CURRENT-STATE.md/TASKS.md, discard noise, and flag anything that looks like a trigger for another skill or workflow. Use after north-atlas-inbox-capture has run, or when Manny asks to "process the North Atlas inbox" or "what's new that needs my attention."
+name: inbox-file
+allowed-tools: Read, Write, Edit, Bash, Skill
+description: File captured North Atlas Studio inbox items (captured by inbox-pull) into the vault's CURRENT-STATE.md/TASKS.md, discard noise, and flag anything that looks like a trigger for another skill or workflow. Use after inbox-pull has run, or when Manny asks to "process the North Atlas inbox" or "what's new that needs my attention."
 metadata:
   updated: "2026-07-22"
 ---

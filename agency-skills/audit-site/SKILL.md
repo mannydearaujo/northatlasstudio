@@ -1,5 +1,6 @@
 ---
-name: ai-search-readiness-audit
+name: audit-site
+allowed-tools: Read, Write, Bash, WebSearch, WebFetch, Skill
 description: >-
   Run a North Atlas Studio "AI Search Readiness Audit" on a prospect's website (and optionally their
   Google Business Profile): fetch the key pages, score them against Google's official AI-search/SEO

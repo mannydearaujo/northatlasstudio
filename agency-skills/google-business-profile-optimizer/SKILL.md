@@ -37,4 +37,4 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## After this skill
 
-- Ongoing posting cadence → `gbp-posting-calendar`. Review operations → `compliant-review-engine`. Website/GBP URL and NAP alignment issues → the site build skills + `static-local-seo-launch-system`.
+- Ongoing posting cadence → `gbp-posting-calendar`. Review operations → `compliant-review-engine`. Website/GBP URL and NAP alignment issues → the site build skills + `launch-check`.
