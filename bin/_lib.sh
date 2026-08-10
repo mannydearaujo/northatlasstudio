@@ -6,6 +6,11 @@ set -euo pipefail
 
 REPO_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
+# launchd hands jobs a minimal PATH that does NOT include ~/.local/bin, so `claude`
+# is not found and every scheduled run dies with "claude: command not found".
+# Mirrors the engine's bin/autopilot.sh, which sets the same PATH for the same reason.
+export PATH="$HOME/.local/bin:$HOME/Library/Python/3.9/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+
 mkdir -p "${REPO_PATH}/.ops/logs"
 LOG="${REPO_PATH}/.ops/logs/runs.log"
 

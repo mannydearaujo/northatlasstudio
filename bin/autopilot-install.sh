@@ -10,7 +10,18 @@ mkdir -p "$LA" "${REPO_PATH}/.ops/logs"
 for label in com.northatlasstudio.capture-curate com.northatlasstudio.signal-watch com.northatlasstudio.audit-lead-watch; do
   SRC="${REPO_PATH}/bin/autopilot/${label}.plist"
   DST="${LA}/${label}.plist"
-  sed "s|__REPO__|${REPO_PATH}|g" "$SRC" > "$DST"
+  # Two separate hazards, both triggered by the "&" in "Website & SEO Agency":
+  #  1. sed treats & (and \) as special in the REPLACEMENT text, so
+  #     sed "s|__REPO__|${REPO_PATH}|" expanded & back to the matched text and
+  #     wrote "/Users/.../Website __REPO__ SEO Agency" — agents died with exit 127.
+  #     Bash parameter expansion substitutes literally, so it is used instead.
+  #  2. A plist is XML, where a bare & is a malformed entity. The path must be
+  #     XML-escaped or launchctl cannot parse the file at all.
+  # Keep both. Fixing only one still yields a broken agent.
+  esc="${REPO_PATH//&/&amp;}"; esc="${esc//</&lt;}"; esc="${esc//>/&gt;}"
+  template="$(cat "$SRC")"
+  printf '%s\n' "${template//__REPO__/${esc}}" > "$DST"
+  plutil -lint "$DST" >/dev/null || { echo "ERROR: generated $DST is not a valid plist" >&2; exit 1; }
   # Reload cleanly if already present.
   launchctl bootout "gui/${UID_NUM}/${label}" 2>/dev/null || true
   launchctl bootstrap "gui/${UID_NUM}" "$DST"
