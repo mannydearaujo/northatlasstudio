@@ -1,7 +1,7 @@
 ---
 name: write-schema
 allowed-tools: Read, Write, Bash
-description: Design and write complete JSON-LD structured data for local service business sites, beyond basic LocalBusiness/FAQPage — Service, Offer, OpeningHoursSpecification, Organization, BreadcrumbList, Review/AggregateRating (policy-safe), areaServed, and sameAs entity linking for AI search. Use when adding schema to new pages, upgrading thin schema, connecting a business's entity across the web, or answering "what schema should this page have". Trigger on "add schema", "structured data", "JSON-LD", "rich results", or "entity".
+description: Design and write complete JSON-LD structured data for local service business sites, beyond basic LocalBusiness/FAQPage - Service, Offer, OpeningHoursSpecification, Organization, BreadcrumbList, Review/AggregateRating (policy-safe), areaServed, and sameAs entity linking for AI search. Use when adding schema to new pages, upgrading thin schema, connecting a business entity across the web, or answering "what schema should this page have". Trigger on "add schema", "write JSON-LD", "rich results", or "entity". This WRITES schema; to verify schema that already exists use check-schema.
 metadata:
   updated: "2026-07-04"
 ---

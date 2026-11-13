@@ -26,7 +26,7 @@ official AI-optimization and SEO guidance**, and produces a **branded KPI dashbo
 GA4 lead-tracking recommendation tied to the business type, and a suggested pricing/scope section.
 
 **This report is internal, not client-facing.** It is never sent to the prospect or owner as-is — see
-the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`. When findings are ready to
+the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`/`AGENTS.md`. When findings are ready to
 go to the client, hand off to `offer-sheet-builder` to produce the actual client-facing offer/fix-pack
 document, which presents only the chosen offer, price, and scope — no internal pricing exploration or
 audit minutiae.
@@ -72,13 +72,13 @@ pages — you need a representative read, not the whole site. If a page type doe
 is itself a finding (e.g., "no FAQ page" weakens AI extractability).
 
 **Use the right fetch for the right check — this matters:**
-- **For content & structure** (reading copy, headings, FAQ presence, scannability) — `WebFetch` is fine;
+- **For content & structure** (reading copy, headings, FAQ presence, scannability) — a plain web-fetch tool (`WebFetch` in Claude Code) is fine;
   its markdown conversion is good for the *body*.
 - **For the technical foundation & schema** (title tag, meta description, viewport, canonical, JSON-LD
   structured data, robots/sitemap) — **fetch the raw HTML**, e.g.
   `curl -sL --max-time 20 <url> -o /tmp/page.html` then grep for `<title>`, `name="description"`,
-  `name="viewport"`, `rel="canonical"`, and `"@type"`. **WebFetch strips the `<head>` and JSON-LD when
-  it converts to markdown** — if you judge schema/meta/title from WebFetch alone you will falsely report
+  `name="viewport"`, `rel="canonical"`, and `"@type"`. **Web-fetch tools strip the `<head>` and JSON-LD when
+  they convert to markdown** — if you judge schema/meta/title from a fetched page alone you will falsely report
   them as missing. Always confirm these from the raw HTML before flagging them.
 
 Also fetch **`/robots.txt`** and note whether a sitemap is referenced and whether anything important is
@@ -91,7 +91,7 @@ that's a Critical finding, not a reason to abandon the audit.
 ### Step 3 — Pull PageSpeed/Lighthouse data
 Check whether PageSpeed/Lighthouse data already exists for this site in `clients/<slug>/audit/` (or
 ask Manny if he has a share link). If not, and the audit is real (not a quick pressure-test), run it
-per the root `CLAUDE.md` "PageSpeed And Lighthouse Workflow":
+per the root `CLAUDE.md`/`AGENTS.md` "PageSpeed And Lighthouse Workflow":
 
 ```bash
 npm run pagespeed -- https://example.com --strategy=both --out=clients/client-slug/audit/pagespeed.json

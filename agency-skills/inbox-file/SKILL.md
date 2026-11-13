@@ -12,6 +12,17 @@ Judgment step of the capture → curate → store loop. Reads
 `01-projects/north-atlas-studio/INBOX.md`'s "Captured, unprocessed" section and decides, per item,
 whether it's noise, a task, a decision Manny needs to make, or a trigger for another skill/workflow.
 
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
+
 ## Workflow
 
 1. Read `01-projects/north-atlas-studio/INBOX.md`. If "Captured, unprocessed" is empty, report that
@@ -23,7 +34,7 @@ whether it's noise, a task, a decision Manny needs to make, or a trigger for ano
      it to `01-projects/north-atlas-studio/TASKS.md` under `## Now` or `## Next` using the existing
      checkbox format, then mark it processed in INBOX.md with a pointer to the TASKS.md line.
    - **Decision Manny needs to make** — pricing, scope, or anything the Clarifying Questions Rule in
-     this repo's `CLAUDE.md` would flag. Add it to TASKS.md tagged `Manny decision needed` (matching
+     this repo's `CLAUDE.md`/`AGENTS.md` would flag. Add it to TASKS.md tagged `Manny decision needed` (matching
      the existing convention already used in `CURRENT-STATE.md`'s "Open Work" section) rather than
      guessing.
    - **Trigger** — an event another workflow should react to: a prospect replied, a client asked a

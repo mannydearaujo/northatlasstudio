@@ -10,7 +10,7 @@ metadata:
 
 Turn audit findings into the one-page pitch a prospect actually reads: the problem in their terms, ONE recommended offer, the price, the proof, the next step.
 
-**This is the client-facing deliverable.** When an `audit-site` dashboard exists, treat it as internal source material only — pull the findings and the suggested price band from it, but never copy its internal pricing exploration, margin notes, or raw audit detail into the offer sheet. The output here is the polished pitch the client actually sees. See the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`.
+**This is the client-facing deliverable.** When an `audit-site` dashboard exists, treat it as internal source material only — pull the findings and the suggested price band from it, but never copy its internal pricing exploration, margin notes, or raw audit detail into the offer sheet. The output here is the polished pitch the client actually sees. See the "Internal vs client-facing deliverable rule" in the root `CLAUDE.md`/`AGENTS.md`.
 
 ## Language routing
 

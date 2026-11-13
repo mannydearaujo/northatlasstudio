@@ -46,7 +46,7 @@ client-facing framing, price, and format; this skill only diagnoses and suggests
 
 ## Messaging guardrails (apply to every word of output)
 
-- **Augment, never replace.** Per `CLAUDE.md`'s AI Operations guardrail: every recommendation frames
+- **Augment, never replace.** Per `CLAUDE.md`/`AGENTS.md`'s AI Operations guardrail: every recommendation frames
   AI as giving the owner (and their existing team) time back for higher-value work. Never suggest or
   imply headcount reduction, "doing more with fewer people," or replacing staff — even as a passing
   aside.
@@ -161,7 +161,7 @@ Save as `clients/prospecting/<slug>/ai-ops-check-<slug>-<date>.md` (or the clien
 `clients/<slug>/` workspace if this is an existing client, not a new prospect).
 
 **Escalate to the full branded HTML KPI-dashboard format** (matching `audit-site`'s
-`assets/report-template.html` shell and the shared dashboard styling in `styles/atlas-brand.css`)
+`../audit-site/assets/report-template.html` shell and the shared dashboard styling in the agency repo's `styles/atlas-brand.css`)
 only when the opportunity clearly warrants the fuller writeup — several real findings, a
 larger/higher-value prospect, or Manny explicitly asks for the dashboard version. That template does
 not exist yet for this skill; build it reusing the existing shell's visual system rather than

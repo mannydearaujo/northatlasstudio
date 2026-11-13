@@ -1,0 +1,6 @@
+interface:
+  display_name: "North Atlas Pipeline Smoke Test"
+  short_description: "Health-check the audit lead pipeline"
+  default_prompt: "Use $north-atlas-pipeline-smoke-test now."
+policy:
+  allow_implicit_invocation: false

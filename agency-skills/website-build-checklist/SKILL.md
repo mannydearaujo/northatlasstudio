@@ -1,7 +1,7 @@
 ---
 name: website-build-checklist
 allowed-tools: Read, Write, Bash
-description: Create or run a practical North Atlas Studio website build checklist for local service business sites, from intake through launch. Use when Manny asks for a build checklist, pre-build checklist, handoff checklist, client website build steps, launch prep list, or future website build QA covering pages, copy, SEO metadata, schema, forms, tracking, mobile, Search Console, GBP, and post-launch follow-up.
+description: Create or run a practical North Atlas Studio website build checklist for local service business sites, from intake through launch. Use when Manny asks for a build checklist, pre-build checklist, handoff checklist, client website build steps, or future website build planning covering pages, copy, SEO metadata, schema, forms, tracking, mobile, Search Console, GBP, and post-launch follow-up. This is the start-to-finish build PLAN; the final go/no-go test of a deployed site is launch-check.
 metadata:
   updated: "2026-07-07"
 ---

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Inbox File"
+  short_description: "File captured North Atlas inbox items"
+  default_prompt: "Use $inbox-file now."
+policy:
+  allow_implicit_invocation: false

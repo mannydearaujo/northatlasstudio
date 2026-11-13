@@ -1,7 +1,7 @@
 ---
 name: website-design-standards
 allowed-tools: Read, Write, Bash, WebFetch
-description: Apply North Atlas Studio's conversion-first design standards to local service business websites — layout, visual hierarchy, typography, spacing, color/contrast, mobile patterns, form UX, trust-block placement, and WCAG 2.1 AA accessibility baseline. Use when designing or reviewing any client site's look and usability, running a pre-launch design QA, or answering "does this page look professional / why does this feel off / is this mobile-friendly". Trigger on "design review", "design QA", "make it look better", "check the layout", or before any client build ships.
+description: Apply North Atlas Studio conversion-first design standards to local service business websites - layout, visual hierarchy, typography, spacing, color/contrast, mobile patterns, form UX, trust-block placement, and WCAG 2.1 AA accessibility baseline. Use when designing or reviewing how a client site looks and how usable it is, or answering "does this page look professional / why does this feel off / is this mobile-friendly". Trigger on "design review", "design QA", "make it look better", or "check the layout". Visual and usability standards only; the technical pre-publish gate is launch-check.
 metadata:
   updated: "2026-07-04"
 ---

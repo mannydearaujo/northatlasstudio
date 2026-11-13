@@ -21,7 +21,7 @@ committing to a specific package before a human has looked at it.
 
 ## Voice
 
-"We," never "I" — see `CLAUDE.md` "Messaging Guardrails." Plain, warm, not salesy. This is a
+"We," never "I" — see `CLAUDE.md`/`AGENTS.md` "Messaging Guardrails." Plain, warm, not salesy. This is a
 delivered-value email, not a pitch.
 
 ## English template
@@ -54,7 +54,7 @@ We'll follow up soon with specific recommendations for your site — no obligati
 
 ## Portuguese template (pt-BR)
 
-Formal, owner-friendly tone built around "sua empresa" per `CLAUDE.md`'s Portuguese client delivery
+Formal, owner-friendly tone built around "sua empresa" per `CLAUDE.md`/`AGENTS.md`'s Portuguese client delivery
 rule. "Nós," never "eu."
 
 ```

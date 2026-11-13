@@ -1,6 +1,6 @@
 ---
 name: north-atlas-audit-lead-autodraft
-description: Turn a captured Free Site Audit form submission into (1) a drafted, ready-to-review offer pack and (2) an auto-drafted client-safe instant-results email, ready in Gmail for Manny to send with one click. Runs audit-site, then both offer-sheet-builder (+ case-study-and-proof-builder + de-ai-copy) and the instant-results email in parallel. Invoked by inbox-file or north-atlas-audit-lead-watch when it recognizes a Formspree "Free Site Audit request"/"Pedido de auditoria gratuita" email; not normally invoked directly. This is Phase 2 of the AI-native operating loop (see CLAUDE.md).
+description: Turn a captured Free Site Audit form submission into (1) a drafted, ready-to-review offer pack and (2) an auto-drafted client-safe instant-results email, ready in Gmail for Manny to send with one click. Runs audit-site, then both offer-sheet-builder (+ case-study-and-proof-builder + de-ai-copy) and the instant-results email in parallel. Invoked by inbox-file or north-atlas-audit-lead-watch when it recognizes a Formspree "Free Site Audit request"/"Pedido de auditoria gratuita" email; not normally invoked directly. This is Phase 2 of the AI-native operating loop (see the agency repo's CLAUDE.md/AGENTS.md).
 metadata:
   updated: "2026-07-22"
 ---
@@ -16,11 +16,26 @@ moment `inbox-file`/`north-atlas-audit-lead-watch` recognize the trigger.
   explicit review and a deliberate send action, same as always.
 - The **instant-results email** (score, top findings, strengths — no price, no specific package) is
   policy-approved to send **without per-email review** once it's genuinely ready (real audit
-  completed, not test/placeholder data). **Mechanically it still lands as a Gmail draft, not a sent
-  email** — the connected Gmail tool has no send action, only `create_draft` (confirmed 2026-07-22,
-  even after Manny re-authorized the connector looking for one). So today "no approval gate" means
-  "auto-drafted, one click to send," not literally zero-touch. Revisit this the moment a real send
-  capability exists (a re-authorized connector with send scope, or a transactional email API).
+  completed, not test/placeholder data). **It still lands as a Gmail draft, not a sent
+  email.** As of 2026-11 the Gmail connector does expose send, reply and forward actions, so this
+  is no longer enforced by the tooling: it is a rule. Create the draft only (the connector's
+  draft-creation action, `create_draft`) and never call send, reply or forward. "No approval
+  gate" means "auto-drafted, one click to send," not zero-touch, until Manny explicitly approves
+  auto-send.
+
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
+- **Gmail actions** are named here as the Gmail connector exposes them in Claude Code
+  (`search_threads`, `list_labels`, `label_thread`, `get_message`, `create_draft`, ...). In Codex or
+  another agent, use that agent's equivalent Gmail search, label, read and draft actions.
 
 ## When this runs
 
@@ -36,10 +51,10 @@ Don't invoke this skill for anything else — it is not a general lead-processin
 2. **Detect language from the subject and apply it to every client-facing output in this chain —
    not just the offer sheet** (made explicit 2026-07-22, per Manny's instruction): English subject
    (`Free Site Audit request`) → English throughout; Portuguese subject (`Pedido de auditoria
-   gratuita`) → natural pt-BR throughout, per `CLAUDE.md`'s "Portuguese client delivery rule"
+   gratuita`) → natural pt-BR throughout, per `CLAUDE.md`/`AGENTS.md`'s "Portuguese client delivery rule"
    (formal tone built around "sua empresa"). This currently covers:
    - the offer sheet (`offer-sheet-builder`'s existing language-routing rule,
-     `assets/offer-template.pt-BR.html` for PT)
+     `../offer-sheet-builder/assets/offer-template.pt-BR.html` for PT)
    - the instant-results email (`references/instant-results-email.md`, both templates included)
    - the proof block pulled in by `case-study-and-proof-builder` (translate the proof language, not
      just paste the English version, per the same Portuguese delivery rule)
@@ -93,7 +108,7 @@ workspace convention already used elsewhere in this repo). Everything below save
 
 ## Step 3 — File it for review, per the new-client task-list rule
 
-Per `CLAUDE.md`'s "New client task-list rule," create a practical phase-by-phase task list for this
+Per `CLAUDE.md`/`AGENTS.md`'s "New client task-list rule," create a practical phase-by-phase task list for this
 prospect (intake → audit → findings → proposal → onboarding → build/fixes → tracking → launch →
 reporting → retainer) in the prospect workspace, using `north-atlas-project-sync`'s conventions.
 
@@ -108,9 +123,9 @@ valid outcome; silently dropping a processed lead is not.
 
 ## What this skill must never do
 
-- **Never actually send anything** — there is no send capability wired up (`create_draft` only), so
-  this is enforced by the tooling today, but don't build toward auto-send without re-confirming a
-  real send mechanism exists and Manny has explicitly approved skipping the click for it.
+- **Never actually send anything.** The Gmail connector now has send, reply and forward actions;
+  do not call any of them. Draft only. Don't build toward auto-send unless Manny has explicitly
+  approved skipping the click for it.
 - If Step 0 declines to run (missing website, likely test/placeholder data), **neither** the offer
   sheet nor the instant-results email gets created — the decline applies to the whole chain, not
   just one output.
