@@ -20,7 +20,8 @@ const paths = {
 };
 
 const skillInstallTargets = [
-  { label: "Codex", directory: path.join(os.homedir(), ".codex", "skills") },
+  // Codex reads user skills from ~/.agents/skills (symlinks into ~/agent-skills since 2026-11-12).
+  { label: "Codex", directory: path.join(os.homedir(), ".agents", "skills") },
   { label: "Claude", directory: path.join(os.homedir(), ".claude", "skills") },
 ];
 
