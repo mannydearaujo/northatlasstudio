@@ -8,7 +8,7 @@ metadata:
 
 # North Atlas Project Sync
 
-Keep the agency's documentation truthful after changes: source-of-truth order respected, AGENTS.md generated from CLAUDE.md, BUSINESS-BLUEPRINT.md synced from production-facing files, skills validated and mirrored.
+Keep the agency's documentation truthful after changes: source-of-truth order respected, AGENTS.md generated from CLAUDE.md, BUSINESS-BLUEPRINT.md synced from production-facing files, skills validated in the shared skills repo.
 
 ## Workflow
 
@@ -20,7 +20,7 @@ Keep the agency's documentation truthful after changes: source-of-truth order re
    npm run sync:production    # BUSINESS-BLUEPRINT.md production snapshot
    npm run check:production   # verify sync is accurate
    ```
-4. **Skill change?** Validate per `references/skill-validation-rule.md`, then re-mirror the skill library to the audit repo (`~/Temp AI Business Research Repo/skills/`) so Codex and other Claude surfaces see the same version.
+4. **Skill change?** Edit the skill in the shared skills repo (`~/agent-skills/<skill-name>`), validate per `references/skill-validation-rule.md`, and commit there. That one folder is symlinked into both Claude Code (`~/.claude/skills`) and Codex (`~/.agents/skills`), so there is nothing to mirror or copy.
 5. **Report what was synced** — files touched, checks run, anything now stale that needs Manny's decision.
 
 ## Guardrails
@@ -29,7 +29,7 @@ Never promise rankings, map-pack placement, AI Overview inclusion, AI Mode citat
 
 ## Skill Validation
 
-Read `references/skill-validation-rule.md` before validating or mirroring agency skills.
+Read `references/skill-validation-rule.md` before validating agency skills.
 
 ## Logo Rule
 

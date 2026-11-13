@@ -440,14 +440,14 @@ From the 90-day plan, Phase 1 priorities remain:
 
 ## Agency Skill Library
 
-North Atlas Studio now maintains a shared, platform-neutral skill library at `agency-skills/`. This is the source of truth for reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, website build checklists, reporting, review workflows, launch QA, and proof packaging.
+North Atlas Studio's skill library is platform-neutral and, since 2026-11-12, lives in the shared skills repo `~/agent-skills/` (one folder per skill). That repo is the source of truth; `agency-skills/` in this repo is a read-only snapshot kept so existing paths resolve. The library covers reusable agency workflows, including AI Search Readiness Audit, Apify local lead prospecting, Google Business Profile optimization, lead tracking, schema/FAQ sync, city-service page planning, website build checklists, reporting, review workflows, launch QA, and proof packaging.
 
-Install/sync targets:
+How the tools get them (symlinks, no copies):
 
-- Codex: `~/.codex/skills/`
+- Codex: `~/.agents/skills/`
 - Claude: `~/.claude/skills/`
 
-Keep the shared `agency-skills/` source authoritative, then mirror skills into Codex and Claude when they change. The existing `audit-site` skill was ported into the shared library and Codex; do not rebuild it from scratch.
+Edit skills only in `~/agent-skills`, then run `~/agent-skills/bin/link-skills.sh --check`. Never copy or mirror a skill by hand. The existing `audit-site` skill was ported into the shared library and Codex; do not rebuild it from scratch.
 
 Future agency sessions should apply the relevant North Atlas skill automatically:
 

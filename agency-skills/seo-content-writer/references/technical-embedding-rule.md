@@ -6,5 +6,5 @@
 - Before marking a new or rewritten page done, confirm it carries the required analytics snippet and
   that homepage verification tags were not accidentally removed during the edit.
 - Whenever a page is newly created or substantially rewritten, also apply the sitemap-and-indexing
-  rule in `launch-check`'s `references/static-launch-checklist.md` — add/update the
+  rule in `../launch-check/references/static-launch-checklist.md` (path relative to this skill's folder) — add/update the
   `sitemap.xml` entry and request indexing for the URL in Search Console.

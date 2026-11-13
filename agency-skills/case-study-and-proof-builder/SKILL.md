@@ -16,7 +16,7 @@ If the proof block is feeding a Portuguese-language deliverable (the lead came t
 prospect/client prefers Portuguese, or the calling skill — e.g. `offer-sheet-builder` or
 `north-atlas-audit-lead-autodraft` — says so), produce the proof block in natural pt-BR: translate
 it, don't paste the English version and hope it reads naturally. Use a formal, owner-friendly tone
-built around "sua empresa" per `CLAUDE.md`'s Portuguese client delivery rule. Full case studies and
+built around "sua empresa" per `CLAUDE.md`/`AGENTS.md`'s Portuguese client delivery rule. Full case studies and
 internal proof-evidence notes can stay in English unless Manny asks for Portuguese — this rule is
 specifically about the short-form proof block that ends up in client-facing copy.
 

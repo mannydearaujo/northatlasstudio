@@ -47,7 +47,7 @@ Never take a tool suggestion (yours or an AI's) at face value. Before it goes in
 
 Two categories of finding come up that don't map to anything in the Offer Stack today. Note them as
 findings when genuinely present — do not assign them a price or pitch them as an offer without
-checking with Manny first, per the pricing-judgment rule in the root `CLAUDE.md`:
+checking with Manny first, per the pricing-judgment rule in the root `CLAUDE.md`/`AGENTS.md`:
 
 - **Process redesign** — the bottleneck is a broken/bloated process (e.g., a 16-step workflow that
   should be 7), not a missing tool. The right fix here is fixing the process itself before any

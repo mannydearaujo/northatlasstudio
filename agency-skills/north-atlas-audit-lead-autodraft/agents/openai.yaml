@@ -1,0 +1,6 @@
+interface:
+  display_name: "North Atlas Audit Lead Autodraft"
+  short_description: "Draft the offer pack for an audit lead"
+  default_prompt: "Use $north-atlas-audit-lead-autodraft now."
+policy:
+  allow_implicit_invocation: false

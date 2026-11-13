@@ -9,10 +9,21 @@ metadata:
 # North Atlas Signal Health Watch
 
 The "signal" stage of the capture → curate → store → execute → experience → signal AI-native loop
-(see `inbox-pull`'s `references/ai-native-loop.md`). Pulls real GA4/Search Console
+(see `../inbox-pull/references/ai-native-loop.md`). Pulls real GA4/Search Console
 data via a service account (headless, no interactive OAuth — see `scripts/ga4-report.mjs` and
 `scripts/search-console-report.mjs`), writes findings back into the brain, and flags anomalies as
 triggers — closing the loop from "something changed in the market" back to "something to work on."
+
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
 
 ## Prerequisites
 
@@ -59,7 +70,7 @@ triggers — closing the loop from "something changed in the market" back to "so
 
 - This is internal signal only — it feeds the vault's own task/priority tracking, never a
   client-facing report. Weekly client reports still go through `report-to-client`.
-- Apply the same measurement philosophy as everywhere else in this repo (see `CLAUDE.md`
+- Apply the same measurement philosophy as everywhere else in this repo (see `CLAUDE.md`/`AGENTS.md`
   "Measurement Rules" and `BUSINESS-BLUEPRINT.md` "Proof Rules"): a phone tap is not a completed
   job or customer; don't editorialize beyond what the numbers actually show.
 - Never make or draft a public/client-facing claim from a health-watch finding without going

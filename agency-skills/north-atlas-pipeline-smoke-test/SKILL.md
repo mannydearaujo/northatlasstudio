@@ -25,6 +25,20 @@ a real audit running against an unrelated business.
 designed to be caught by `north-atlas-audit-lead-autodraft`'s existing Step 0 test-data guardrail
 every time — this skill exercises that guardrail on purpose, it doesn't bypass or duplicate it.
 
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
+- **Gmail actions** are named here as the Gmail connector exposes them in Claude Code
+  (`search_threads`, `list_labels`, `label_thread`, `get_message`, `create_draft`, ...). In Codex or
+  another agent, use that agent's equivalent Gmail search, label, read and draft actions.
+
 ## Why one skill, not "submit" and "check" as two skills
 
 Verifying a submission requires waiting for Gmail delivery and the next `north-atlas-audit-lead-watch`
@@ -132,9 +146,12 @@ one clear flag is enough until it's acknowledged or ages out.
 
 ## Recommended cadence
 
+**Status (2026-11): the scheduled job described here was never installed, and the state file has
+never been created. Until a schedule is deliberately added, run this skill only when asked.**
+
 Once daily, scheduled shortly before the existing 6:00 AM `com.northatlasstudio.capture-curate`
 launchd job (e.g. 5:45 AM) — so a submission has already had a full day (and the 15-minute
-`audit-lead-watch` cadence, many times over) to resolve before the next run checks it. Not tied to
+`north-atlas-audit-lead-watch` cadence, many times over) to resolve before the next run checks it. Not tied to
 Formspree's notification volume in any way that matters at this frequency, but avoid running it more
 often than daily — there's no benefit to catching a break faster than a day, and it needlessly adds
 to Formspree's submission count against the account's plan limits.
@@ -152,5 +169,5 @@ to Formspree's submission count against the account's plan limits.
 - **Never treat "captured but not yet declined" as a failure inside the 48-hour window** — Gmail
   delivery and the watch cadence both take a little real time; only flag after the window elapses.
 - **Never touch anything else in the inbox.** Like `north-atlas-audit-lead-watch`, this skill only
-  ever looks for its own marker — general inbox triage stays `inbox-pull`/`curate`'s
+  ever looks for its own marker — general inbox triage stays `inbox-pull`/`inbox-file`'s
   job.

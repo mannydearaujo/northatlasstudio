@@ -1,6 +1,6 @@
 ---
 name: north-atlas-audit-lead-watch
-description: Hourly, narrow check for new Free Site Audit form submissions specifically — not a general inbox sweep. Labels them captured and hands off directly to north-atlas-audit-lead-autodraft, so a fresh prospect doesn't wait for the once-daily inbox-pull/curate run. Use when running the scheduled hourly audit-lead job, or when Manny asks "did anyone submit the audit form recently."
+description: Frequent, narrow check for new Free Site Audit form submissions specifically — not a general inbox sweep. Labels them captured and hands off directly to north-atlas-audit-lead-autodraft, so a fresh prospect doesn't wait for the once-daily inbox-pull/curate run. Use when running the scheduled audit-lead job, or when Manny asks "did anyone submit the audit form recently."
 metadata:
   updated: "2026-07-22"
 ---
@@ -8,12 +8,26 @@ metadata:
 # North Atlas Audit Lead Watch
 
 A prospect who just filled out the Free Site Audit form shouldn't wait until the next 6 AM
-capture-curate run for a draft offer to start coming together. This skill runs a narrow, hourly
-check for exactly one thing — new Formspree audit-form notifications — and fires the autodraft
+capture-curate run for a draft offer to start coming together. This skill runs a narrow, frequent
+check (every 15 minutes when its launchd job is loaded) for exactly one thing — new Formspree audit-form notifications — and fires the autodraft
 chain immediately. It does **not** replace `inbox-pull`/`inbox-file`,
 which still run daily and handle everything else in the inbox (general noise, other triggers).
 This skill only ever touches audit-form emails; it ignores everything else in the inbox, on
 purpose, so it doesn't duplicate the daily sweep's work.
+
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
+- **Gmail actions** are named here as the Gmail connector exposes them in Claude Code
+  (`search_threads`, `list_labels`, `label_thread`, `get_message`, `create_draft`, ...). In Codex or
+  another agent, use that agent's equivalent Gmail search, label, read and draft actions.
 
 ## Workflow
 
@@ -26,6 +40,11 @@ purpose, so it doesn't duplicate the daily sweep's work.
    `from:noreply@formspree.io subject:("Free Site Audit request" OR "Pedido de auditoria gratuita") -label:<resolved label ID>`
 4. If nothing new: report "No new audit submissions this run" and stop. Don't touch anything else
    in the inbox — that's out of scope for this skill.
+   - **Known gotcha (seen 2026-08-21):** the `-label:<id>` exclusion in the search query is not
+     reliable — it can still return threads/messages that already carry the excluded label. Don't
+     trust the exclusion alone; check each result's own `labelIds` field. If every match already
+     has the `north-atlas-captured` label, treat it as already processed (nothing new), not as a
+     fresh submission.
 5. For each new match:
    a. Fetch the full message body (`get_message`, `FULL_CONTENT`) — if `get_thread`/`label_thread`
       report "not found" for the ID `search_threads` returned, that ID is likely a message ID, not
@@ -43,9 +62,9 @@ purpose, so it doesn't duplicate the daily sweep's work.
 ## What this skill must never do
 
 - Never process anything that isn't a Formspree Free Site Audit notification — general inbox
-  triage stays exclusively `inbox-pull`/`curate`'s job, run daily.
+  triage stays exclusively `inbox-pull`/`inbox-file`'s job, run daily.
 - Never send, publish, or contact the prospect — same drafting-only boundary as
   `north-atlas-audit-lead-autodraft`.
-- Never run more than once an hour in practice — if launchd/the scheduler fires it more often than
-  intended, the label-before-processing step (5b) still prevents double-drafting the same
-  submission, but the schedule itself should stay hourly, not tighter, to avoid unnecessary API use.
+- Never rely on the schedule for de-duplication. The launchd job fires every 15 minutes
+  (`StartInterval=900`); the label-before-processing step (5b) is what prevents double-drafting
+  the same submission. Don't tighten the interval further — it only adds API use.

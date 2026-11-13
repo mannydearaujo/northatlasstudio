@@ -12,6 +12,20 @@ Mechanical pull step of the capture → curate → store → execute → experie
 `01-projects/north-atlas-studio/INBOX.md`. It never decides what's important, never replies, never
 files anything into `CURRENT-STATE.md`/`TASKS.md` — that's `inbox-file`.
 
+## Where things live (resolve before starting)
+
+- **Vault paths** such as `01-projects/north-atlas-studio/...` are relative to the vault root. Read
+  the vault root from `VAULT_PATH` in `~/Agentic OS Build/config/os.config` (or use the one the run
+  prompt supplies). Never guess it.
+- **Repo paths** such as `scripts/...`, `styles/...`, `clients/...` and `CLAUDE.md`/`AGENTS.md` are
+  relative to the agency repo, `~/Website & SEO Agency`. If the session started somewhere else,
+  work from that folder.
+- **Skill files** (`references/...`, `assets/...`, `../other-skill/...`) are relative to this
+  skill's own folder.
+- **Gmail actions** are named here as the Gmail connector exposes them in Claude Code
+  (`search_threads`, `list_labels`, `label_thread`, `get_message`, `create_draft`, ...). In Codex or
+  another agent, use that agent's equivalent Gmail search, label, read and draft actions.
+
 ## Hard guardrail: verify the account before touching anything
 
 North Atlas Studio and Golden Paws Pet Grooming are separate managed businesses with separate
@@ -40,6 +54,9 @@ authenticated as Golden Paws' inbox, not North Atlas's own — confirmed before 
    file or field doesn't exist yet, default to 7 days back for the first run.
 4. Search Gmail for new items since `last_run`: threads in the inbox, excluding ones already
    labeled `north-atlas-captured`. Use a query like `in:inbox after:<last_run date> -label:<resolved label ID>`.
+   **Known gotcha (seen 2026-08-21):** the `-label:<id>` exclusion is not reliable — it can still
+   return items that already carry the label. Check each result's own `labelIds` field and skip
+   anything already labeled `north-atlas-captured`.
 5. If a GBP messaging connector exists in this session (none does as of 2026-07-21 — check the
    available-tools list before assuming), pull new GBP messages the same way.
 6. For each new item, append a raw entry to `01-projects/north-atlas-studio/INBOX.md` under
@@ -52,7 +69,7 @@ authenticated as Golden Paws' inbox, not North Atlas's own — confirmed before 
    `label_message` using the same ID instead.
 8. Update `last_run` in the INBOX.md frontmatter to now.
 9. Report a one-line count: "Captured N new items since <last_run>." Do not editorialize about
-   what they mean — that's the curate skill's job, run separately (see `inbox-file`).
+   what they mean — that's `inbox-file`'s job, run separately.
 
 ## What this skill must never do
 

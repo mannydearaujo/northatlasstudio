@@ -1,24 +1,28 @@
 # Skill Validation Rule
 
-When editing or validating agency skills, run the official Codex skill validator:
+All self-written skills live in one git repo, `~/agent-skills`, one folder per skill. Each folder is
+symlinked into Claude Code (`~/.claude/skills/<name>`) and Codex (`~/.agents/skills/<name>`), so an
+edit in `~/agent-skills` is live in both tools immediately. Never edit the symlinked locations as
+if they were separate copies, and never copy a skill by hand into either runtime.
+
+After editing or adding a skill, run:
 
 ```bash
-PYTHONPATH=/private/tmp/north-atlas-skill-validator-python \
-/Users/mannydearaujo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
-/Users/mannydearaujo/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
-"/Users/mannydearaujo/Website & SEO Agency/agency-skills/<skill-name>"
+~/agent-skills/bin/link-skills.sh --check
 ```
 
-If validation fails with `ModuleNotFoundError: No module named 'yaml'`, install PyYAML into the temporary validation folder:
+It validates every skill (frontmatter parses, `name` matches the folder, description is present and
+at most 1,024 characters, only allowed frontmatter keys, every `../other-skill/...` path resolves)
+and reports any missing or broken links. If it reports missing links, run it with `--link`.
 
-```bash
-/Users/mannydearaujo/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3 \
--m pip install PyYAML --target /private/tmp/north-atlas-skill-validator-python
-```
+Then commit the change in `~/agent-skills`.
 
-Notes:
+Rules that keep one skill working in both Claude Code and Codex:
 
-- The `/private/tmp/north-atlas-skill-validator-python` folder is temporary and may disappear.
-- This folder is only a helper for running `quick_validate.py`; it is not part of the agency skill library.
-- Skills can still be used without this package. It is needed only for official validation after skill edits.
-- After editing shared skills, mirror the changed skill folder into both `~/.codex/skills/` and `~/.claude/skills/`.
+- Frontmatter keys: only `name`, `description`, `license`, `allowed-tools`, `metadata`.
+- Describe capabilities, not one tool's names: "web fetch", "web search", "browser automation",
+  "the Gmail connector's search". A tool name may follow in parentheses as an example.
+- Refer to project instructions as `CLAUDE.md`/`AGENTS.md`.
+- Reference another skill's files as `../<skill-name>/...`, relative to this skill's folder.
+- Skills that must only run when asked get `agents/openai.yaml` with
+  `policy.allow_implicit_invocation: false` (Codex).

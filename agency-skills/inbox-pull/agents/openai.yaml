@@ -1,0 +1,6 @@
+interface:
+  display_name: "Inbox Pull"
+  short_description: "Capture North Atlas inbox items to the vault"
+  default_prompt: "Use $inbox-pull now."
+policy:
+  allow_implicit_invocation: false

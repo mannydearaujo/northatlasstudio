@@ -82,9 +82,9 @@ flags old naming, placeholder proof metrics, missing positioning language,
 
 ## Agency Skills
 
-Reusable North Atlas workflows live in `agency-skills/`. Keep that folder as the
-source of truth, then mirror changed skills into both `~/.codex/skills/` and
-`~/.claude/skills/`. Future agency work should use the relevant skill for
+Reusable North Atlas workflows live in the shared skills repo `~/agent-skills/`, which is
+symlinked into Codex (`~/.agents/skills/`) and Claude (`~/.claude/skills/`). `agency-skills/`
+here is a read-only snapshot. Future agency work should use the relevant skill for
 prospecting, audits, GBP optimization, client builds, tracking, reporting,
 launch QA, proof, and retainers.
 

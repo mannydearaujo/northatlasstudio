@@ -1,7 +1,7 @@
 ---
 name: check-schema
 allowed-tools: Read, Write, Bash, WebFetch
-description: Audit client pages for SEO metadata, canonical URLs, heading structure, LocalBusiness/Service/FAQPage/BreadcrumbList schema, visible FAQ to JSON-LD alignment, sitemap inclusion, and launch readiness. Use before launch, after adding service or location pages, or when checking structured data consistency for local SEO and AI-search readiness. Trigger on "check the schema", "validate structured data", or "FAQ sync".
+description: Verify structured data that already exists on client pages - LocalBusiness/Service/FAQPage/BreadcrumbList JSON-LD parses, matches the visible page (FAQ text, headings, NAP), and agrees with the page title and canonical. Use after adding or editing service or location pages, or when checking structured data consistency for local SEO and AI-search readiness. Trigger on "check the schema", "validate structured data", or "FAQ sync". This CHECKS existing schema; to write new schema use write-schema, and for the full pre-publish gate use launch-check.
 metadata:
   updated: "2026-07-04"
 ---
